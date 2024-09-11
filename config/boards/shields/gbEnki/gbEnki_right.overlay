@@ -22,10 +22,6 @@
             label = "BAT_LED_NODE_3";
             pwms = <&pwm0 2 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
         };
-        pwm_led_3: led_3 {
-            pwms = <&pwm0 3 PWM_MSEC(10) PWM_POLARITY_NORMAL>;
-            label = "STATUS_LED_NODE";
-        };
     };
 };
 
