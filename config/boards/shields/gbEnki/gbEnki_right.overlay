@@ -23,6 +23,31 @@
             , <&pro_micro 21 GPIO_ACTIVE_HIGH>;
     };
 
+    &pwm0 {
+        status = "okay";
+        pinctrl-0 = <&pwm0_default>;
+        pinctrl-1 = <&pwm0_sleep>;
+        pinctrl-names = "default", "sleep";
+    };
+
+    &pinctrl {
+        pwm0_default: pwm0_default {
+            group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 P0.10 (pin 16)
+                    <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 P0.09 (pin 10)
+                    <NRF_PSEL(PWM_OUT2, 1, 4)>;   // LED 2 P1.04 (pin 8)
+            };
+        };
+        pwm0_sleep: pwm0_sleep {
+            group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 P0.10 (pin 16)
+                    <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 P0.09 (pin 10)
+                    <NRF_PSEL(PWM_OUT2, 1, 4)>;   // LED 2 P1.04 (pin 8)
+                low-power-enable;
+            };
+        };
+    };
+
 / {
     backlight: pwmleds {
         compatible = "pwm-leds";
@@ -41,30 +66,7 @@
     };
 };
 
-    &pwm0 {
-        status = "okay";
-        pinctrl-0 = <&pwm0_default>;
-        pinctrl-1 = <&pwm0_sleep>;
-        pinctrl-names = "default", "sleep";
-    };
 
-    &pinctrl {
-        pwm0_default: pwm0_default {
-            group1 {
-                psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 на пине P0.10 (pin 16)
-                        <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 на пине P0.09 (pin 10)
-                        <NRF_PSEL(PWM_OUT2, 1, 4)>;   // LED 2 на пине P1.04 (pin 8)
-            };
-        };
-        pwm0_sleep: pwm0_sleep {
-            group1 {
-                psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 на пине P0.10 (pin 16)
-                        <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 на пине P0.09 (pin 10)
-                        <NRF_PSEL(PWM_OUT2, 1, 4)>;   // LED 2 на пине P1.04 (pin 8)
-                low-power-enable;
-            };
-        };
-    };
 
 
 
