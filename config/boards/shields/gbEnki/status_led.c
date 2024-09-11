@@ -49,8 +49,13 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #define DT_NUM_CHILD(node_id) (DT_FOREACH_CHILD(node_id, CHILD_COUNT))
 #define BACKLIGHT_NUM_LEDS DT_NUM_CHILD(DT_CHOSEN(zmk_backlight))
 
-bool check_conn_working = false;
-static enum zmk_usb_conn_state usb_conn_state = ZMK_USB_CONN_NONE;
+
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+    bool check_conn_working = false;
+    static enum zmk_usb_conn_state usb_conn_state = ZMK_USB_CONN_NONE;
+#else
+    bool peripheral_ble_connected = false;
+#endif
 static bool indicator_busy = false;
 
 struct led {
@@ -120,7 +125,7 @@ void wait_for_indicator_handler(struct k_work *work)
 {
     while (indicator_busy)
     {
-        k_msleep(200); // Ждать 0.5 секунды
+        k_msleep(200); 
     }
     return;
 }
@@ -132,14 +137,14 @@ void usb_animation_work_handler(struct k_work *work)
     k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
     indicator_busy = true;
     #ifdef disable_led_sleep_pc
-    if (usb_conn_state == USB_DC_SUSPEND)
-    {
-        led_all_OFF();
-        indicator_busy = false;
-        return;
-    }
+        if (usb_conn_state == USB_DC_SUSPEND)
+        {
+            led_all_OFF();
+            indicator_busy = false;
+            return;
+        }
     #endif
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < BACKLIGHT_NUM_LEDS; i++)
     {
         led_fade_ON(&pwm_leds[i]);
         k_msleep(LED_BATTERY_BLINK_DELAY / 2);
@@ -202,6 +207,7 @@ void check_ble_conn_handler(struct k_work *work)
                 indicator_busy = false;
                 return ZMK_EV_EVENT_BUBBLE;
             }
+        #endif
     }
 }
 K_WORK_DELAYABLE_DEFINE(check_ble_conn_work, check_ble_conn_handler);
@@ -267,37 +273,50 @@ static int led_init(const struct device *dev)
 }
 
 SYS_INIT(led_init, APPLICATION, 32);
-
-// Show leds on profile changing
-int ble_profile_listener(const zmk_event_t *eh)
-{
-    #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-    const struct zmk_ble_active_profile_changed *profile_ev = NULL;
-    if ((profile_ev = as_zmk_ble_active_profile_changed(eh)) == NULL)
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+    // Show leds on profile changing
+    int ble_profile_listener(const zmk_event_t *eh)
     {
+        const struct zmk_ble_active_profile_changed *profile_ev = NULL;
+        if ((profile_ev = as_zmk_ble_active_profile_changed(eh)) == NULL)
+        {
+            return ZMK_EV_EVENT_BUBBLE;
+        }
+        // For profiles 1-3 led_fade_blink appropriate leds.
+        if (profile_ev->index <= 2)
+        {
+            k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
+            indicator_busy = true;
+            led_fade_blink(&pwm_leds[profile_ev->index], LED_BLINK_PROFILE_DELAY, 1);
+            indicator_busy = false;
+        }
+        if (!check_conn_working)
+        {
+            k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
+            check_conn_working = true;
+            k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
+        }
         return ZMK_EV_EVENT_BUBBLE;
     }
-    // For profiles 1-3 led_fade_blink appropriate leds.
-    if (profile_ev->index <= 2)
-    {
-        k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
-        indicator_busy = true;
-        led_fade_blink(&pwm_leds[profile_ev->index], LED_BLINK_PROFILE_DELAY, 1);
-        indicator_busy = false;
-    }
-    #endif
-    if (!check_conn_working)
-    {
-        k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
-        check_conn_working = true;
-        k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
-    }
-    return ZMK_EV_EVENT_BUBBLE;
-}
 
-ZMK_LISTENER(ble_profile_status, ble_profile_listener)
-ZMK_SUBSCRIPTION(ble_profile_status, zmk_ble_active_profile_changed);
+    ZMK_LISTENER(ble_profile_status, ble_profile_listener)
+    ZMK_SUBSCRIPTION(ble_profile_status, zmk_ble_active_profile_changed);
+#else
+    int led_profile_listener(const zmk_event_t *eh)
+    {
+        const struct zmk_split_peripheral_status_changed *status = as_zmk_split_peripheral_status_changed(eh);
+        
+        peripheral_ble_connected = status->connected;
+        if (!peripheral_ble_connected) {
+             k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
+        }
 
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    ZMK_LISTENER(led_profile_status, led_profile_listener)
+    ZMK_SUBSCRIPTION(led_profile_status, zmk_split_peripheral_status_changed);
+#endif
 // Restore activity after return to active state
 int led_state_listener(const zmk_event_t *eh)
 {
