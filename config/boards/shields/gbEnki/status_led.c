@@ -136,6 +136,7 @@ void usb_animation_work_handler(struct k_work *work)
 {
     k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
     indicator_busy = true;
+    #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     #ifdef disable_led_sleep_pc
         if (usb_conn_state == USB_DC_SUSPEND)
         {
@@ -143,6 +144,7 @@ void usb_animation_work_handler(struct k_work *work)
             indicator_busy = false;
             return;
         }
+    #endif
     #endif
     for (int i = 0; i < BACKLIGHT_NUM_LEDS; i++)
     {
