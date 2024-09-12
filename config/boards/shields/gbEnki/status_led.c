@@ -168,49 +168,49 @@ struct k_work_delayable check_ble_conn_work;
 
 void check_ble_conn_handler(struct k_work *work)
 {
+    #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     if (!check_conn_working)
     {
         return;
     } 
     else
-    {
-        #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
-            if (zmk_ble_active_profile_is_connected() || usb_conn_state != ZMK_USB_CONN_NONE )
+    {   
+    if (zmk_ble_active_profile_is_connected() || usb_conn_state != ZMK_USB_CONN_NONE )
+        {
+            check_conn_working = false;
+            return;
+        }
+        else
+        {
+            k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
+            indicator_busy = true;
+            for (int i = 0; i < (BACKLIGHT_NUM_LEDS); i++)
             {
-                check_conn_working = false;
-                return;
-            }
-            else
-            {
-                k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
-                indicator_busy = true;
-                for (int i = 0; i < (BACKLIGHT_NUM_LEDS); i++)
+                led_fade_blink(&pwm_leds[i], LED_BLINK_CONN_DELAY, 1);
+            }   
+            led_all_OFF();            
+            k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4)); // Restart work for next status check
+            indicator_busy = false;
+        }
+    }
+    #else
+        if (peripheral_ble_connected)
+        {
+            return;
+        }
+        else
+        {
+            k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
+            indicator_busy = true;
+            for (int i = 0; i < (BACKLIGHT_NUM_LEDS); i++)
                 {
                     led_fade_blink(&pwm_leds[i], LED_BLINK_CONN_DELAY, 1);
                 }   
-                led_all_OFF();            
-                k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4)); // Restart work for next status check
-                indicator_busy = false;
-            }
-        #else
-            if (peripheral_ble_connected)
-            {
-                return;
-            }
-            else
-            {
-                k_work_submit_to_queue(zmk_workqueue_lowprio_work_q(), &wait_for_indicator_work);
-                indicator_busy = true;
-                for (int i = 0; i < (BACKLIGHT_NUM_LEDS); i++)
-                    {
-                        led_fade_blink(&pwm_leds[i], LED_BLINK_CONN_DELAY, 1);
-                    }   
-                led_all_OFF();
-                indicator_busy = false;
-                return ZMK_EV_EVENT_BUBBLE;
-            }
-        #endif
-    }
+            led_all_OFF();
+            indicator_busy = false;
+            return ZMK_EV_EVENT_BUBBLE;
+        }
+    #endif
 }
 K_WORK_DELAYABLE_DEFINE(check_ble_conn_work, check_ble_conn_handler);
 
