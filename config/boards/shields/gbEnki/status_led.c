@@ -325,13 +325,18 @@ int led_state_listener(const zmk_event_t *eh)
     enum zmk_activity_state state = zmk_activity_get_state();
     #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
         if (state == ZMK_ACTIVITY_ACTIVE && !check_conn_working)
-    #else
-        if (state == ZMK_ACTIVITY_ACTIVE)
-    #endif
-    {
+           {
         check_conn_working = true;
         k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
     }
+    #else
+        if (state == ZMK_ACTIVITY_ACTIVE)
+           {
+        peripheral_ble_connected = true;
+        k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
+    }
+    #endif
+ 
     // CONFIG_ZMK_IDLE_TIMEOUT Default 30sec
 #ifdef show_led_idle
     if (state != ZMK_ACTIVITY_ACTIVE)
