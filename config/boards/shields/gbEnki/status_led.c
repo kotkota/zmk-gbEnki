@@ -323,7 +323,11 @@ SYS_INIT(led_init, APPLICATION, 32);
 int led_state_listener(const zmk_event_t *eh)
 {
     enum zmk_activity_state state = zmk_activity_get_state();
-    if (state == ZMK_ACTIVITY_ACTIVE && !check_conn_working)
+    #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+        if (state == ZMK_ACTIVITY_ACTIVE && !check_conn_working)
+    #else
+        if (state == ZMK_ACTIVITY_ACTIVE)
+    #endif
     {
         check_conn_working = true;
         k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
