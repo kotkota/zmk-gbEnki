@@ -52,10 +52,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     bool check_conn_working = false;
-    static enum zmk_usb_conn_state usb_conn_state = ZMK_USB_CONN_NONE;
 #else
     bool peripheral_ble_connected = false;
 #endif
+
+static enum zmk_usb_conn_state usb_conn_state = ZMK_USB_CONN_NONE;
 static bool indicator_busy = false;
 
 struct led {
