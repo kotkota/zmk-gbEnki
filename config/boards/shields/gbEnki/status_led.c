@@ -155,7 +155,7 @@ void usb_animation_work_handler(struct k_work *work)
 
     k_msleep(LED_BATTERY_BLINK_DELAY);
 
-    for (int i = BACKLIGHT_NUM_LEDS; i >= 0; i--)
+    for (int i = BACKLIGHT_NUM_LEDS - 1; i >= 0; i--)
     {
         led_fade_OFF(&pwm_leds[i]);
         k_msleep(LED_BATTERY_BLINK_DELAY / 2);
@@ -209,7 +209,8 @@ void check_ble_conn_handler(struct k_work *work)
                 }   
             led_all_OFF();
             indicator_busy = false;
-            return ZMK_EV_EVENT_BUBBLE;
+            k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4)); // Restart work for next status check
+            // return ZMK_EV_EVENT_BUBBLE;
         }
     #endif
 }
@@ -304,6 +305,7 @@ SYS_INIT(led_init, APPLICATION, 32);
 
     ZMK_LISTENER(ble_profile_status, ble_profile_listener)
     ZMK_SUBSCRIPTION(ble_profile_status, zmk_ble_active_profile_changed);
+
 #else
     int led_profile_listener(const zmk_event_t *eh)
     {
@@ -319,7 +321,9 @@ SYS_INIT(led_init, APPLICATION, 32);
 
     ZMK_LISTENER(led_profile_status, led_profile_listener)
     ZMK_SUBSCRIPTION(led_profile_status, zmk_split_peripheral_status_changed);
+
 #endif
+
 // Restore activity after return to active state
 int led_state_listener(const zmk_event_t *eh)
 {
@@ -355,7 +359,8 @@ int led_state_listener(const zmk_event_t *eh)
 }
 
 ZMK_LISTENER(led_activity_state, led_state_listener)
-ZMK_SUBSCRIPTION(led_activity_state, zmk_activity_state_changed);
+ZMK_SUBSCRIPTION(led_activity_state, zmk_activity_state_changed); 
+
 int usb_conn_listener(const zmk_event_t *eh)
 {
     const struct zmk_usb_conn_state_changed *usb_ev = NULL;
