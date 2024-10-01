@@ -372,7 +372,11 @@ int usb_conn_listener(const zmk_event_t *eh)
     }
     else
     {
-        check_conn_working = true;
+        #if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+            check_conn_working = true;
+        #else
+            usb_conn_state = true;
+        #endif
         k_work_schedule_for_queue(zmk_workqueue_lowprio_work_q(), &check_ble_conn_work, K_SECONDS(4));
     }
     return ZMK_EV_EVENT_BUBBLE;
