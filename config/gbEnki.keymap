@@ -19,6 +19,9 @@
 &mt { quick_tap_ms = <220>; };
 
 / {
+
+    chosen { zmk,physical-layout = &default_layout; };
+
     macros {
         numdot: numdot {
             label = "ZM_numdot";
