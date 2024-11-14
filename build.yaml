@@ -13,11 +13,11 @@
 #
 ---
 include:
-  - board:  [ "nice_nano_v2" ]
-    shield: [ "gbEnki_left", "gbEnki_right", "settings_reset" ]
+  - board:  nice_nano_v2
+    shield: gbEnki_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board:  nice_nano_v2
-  #   shield: gbEnki_right
-  # - board: nice_nano_v2
-  #   shield: settings_reset
+  - board:  nice_nano_v2
+    shield: gbEnki_right
+  - board: nice_nano_v2
+    shield: settings_reset
