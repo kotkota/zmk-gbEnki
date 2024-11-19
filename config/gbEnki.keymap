@@ -48,7 +48,7 @@
             layers = <0 1>;
         };
 
-        ch_lang {
+        toggle_ru {
             bindings = <&kp LG(LC(LA(LS(J))))>;
             key-positions = <16 19>;
             layers = <0>;
@@ -77,7 +77,7 @@
 
         harden_sign {
             bindings = <&kp LA(M)>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
             layers = <0>;
         };
 
@@ -188,6 +188,19 @@
             bindings = <&kp BSPC>;
             key-positions = <8 7>;
             layers = <2>;
+        };
+
+        toggle_en {
+            bindings = <&kp LG(LC(LA(LS(K))))>;
+            key-positions = <15 20>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <80>;
+            layers = <0>;
+        };
+
+        quo {
+            bindings = <&kp GRAVE>;
+            key-positions = <32 31>;
         };
     };
 
