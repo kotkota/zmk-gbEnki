@@ -16,12 +16,7 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&mt {
-    flavor = "balanced";
-    hold-trigger-on-release;
-    quick-tap-ms = <250>;
-    require-prior-idle-ms = <125>;
-};
+&mt { hold-trigger-on-release; };
 
 &soft_off { hold-time-ms = <2000>; };
 
