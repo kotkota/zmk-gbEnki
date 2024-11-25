@@ -16,7 +16,11 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&mt { hold-trigger-on-release; };
+&mt {
+    hold-trigger-on-release;
+    flavor = "balanced";
+    quick-tap-ms = <250>;
+};
 
 &soft_off { hold-time-ms = <2000>; };
 
@@ -262,6 +266,15 @@
             tapping-term-ms = <300>;
             bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
         };
+
+        mt_hp: mod-tap_hold-preffered {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -269,10 +282,10 @@
 
         default_layer {
             bindings = <
-&mt LS(LCMD) ESC          &kp Q         &kp W        &kp E            &kp R          &kp T             &kp Y             &kp U        &kp I            &kp O        &kp P            &kp BACKSLASH
-&mt LA(LS(LC(LGUI))) TAB  &mt LSHIFT A  &mt LCTRL S  &mt LALT D       &cmd_to_shift  &kp G             &kp H             &mt RCMD J   &mt RALT K       &mt RCTRL L  &mt RSHIFT SEMI  &mt LS(LA(LC(LCMD))) LBKT
-&lt 4 GRAVE               &kp Z         &kp X        &kp C            &kp V          &kp B             &kp N             &kp M        &kp COMMA        &kp PERIOD   &kp SLASH        &lt 4 RBKT
-                                                     &lt 3 BACKSPACE  &lt 2 SPACE    &mt LCMD ENTER    &mt RSHIFT ENTER  &lt 2 SPACE  &lt 3 BACKSPACE
+&mt LS(LCMD) ESC          &kp Q            &kp W        &kp E            &kp R          &kp T             &kp Y             &kp U        &kp I            &kp O        &kp P               &kp BACKSLASH
+&mt LA(LS(LC(LGUI))) TAB  &mt_hp LSHIFT A  &mt LCTRL S  &mt LALT D       &cmd_to_shift  &kp G             &kp H             &mt RCMD J   &mt RALT K       &mt RCTRL L  &mt_hp RSHIFT SEMI  &mt LS(LA(LC(LCMD))) LBKT
+&lt 4 GRAVE               &kp Z            &kp X        &kp C            &kp V          &kp B             &kp N             &kp M        &kp COMMA        &kp PERIOD   &kp SLASH           &lt 4 RBKT
+                                                        &lt 3 BACKSPACE  &lt 2 SPACE    &mt LCMD ENTER    &mt RSHIFT ENTER  &lt 2 SPACE  &lt 3 BACKSPACE
             >;
 
             display-name = "Default";
