@@ -183,7 +183,7 @@
             bindings = <&kp GRAVE>;
             key-positions = <32 31>;
         };
-s
+
         dquo {
             bindings = <&kp LS(GRAVE)>;
             key-positions = <32 33>;
