@@ -314,7 +314,18 @@
             compatible = "zmk,behavior-tri-state";// requires tri-state module (https://github.com/urob/zmk-tri-state)
             #binding-cells = <0>;
             bindings = <&kt RGUI>, <&kp TAB>, <&kt RGUI>;
+
             ignored-key-positions = <7 9 16 17 18 19 29>;// Arrows and BSPC, ENTER and DEL
+        };
+
+        swapper_q: swapper_q {
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp LG(KP_MULTIPLY)>, <&kp LG(Q)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+            label = "SWAPPER_Q";
         };
     };
 
@@ -345,8 +356,8 @@
 
         num {
             bindings = <
-&trans         &kp KP_MULTIPLY       &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
-&trans         &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
+&kp SQT        &kp KP_MULTIPLY       &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
+&swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
 &mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0    &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
                                                       &trans          &trans          &trans       &trans    &trans           &trans
             >;
@@ -370,7 +381,7 @@
 &kp LS(LG(N6))          &kp LS(LG(N1))     &kp LS(LG(N2))     &kp LG(LS(N3))     &kp LS(LG(N4))     &kp LS(LG(N5))       &bt BT_PRV     &bt BT_NXT     &none          &playnp  &kp C_VOLUME_DOWN  &kp C_VOL_UP
 &mt LC(RIGHT) LC(LEFT)  &mt LC(N6) LC(N1)  &mt LC(N7) LC(N2)  &mt LC(N8) LC(N3)  &mt LC(N9) LC(N4)  &mt LC(N0) LC(N5)    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none    &none              &ext_power EP_OFF
 &soft_off               &kp LG(Z)          &kp LG(LS(Z))      &none              &none              &none                &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 3  &none    &none              &studio_unlock
-                                                              &upd_fw_l          &bootloader        &none                &none     &bootloader    &upd_fw_r
+                                                              &upd_fw_l          &bootloader        &none                &none          &bootloader    &upd_fw_r
             >;
 
             display-name = "Buttons/Media";
@@ -378,10 +389,10 @@
 
         sticky {
             bindings = <
-&none       &none       &none      &none      &none      &swapper                    &none                  &none     &none     &none      &none       &none
-&caps_word  &sk LSHIFT  &sk LCTRL  &sk LALT   &sk LGUI   &sk LS(LG(LA(LCTRL)))    &sk LS(LG(LA(LCTRL)))  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &none
-&none       &none       &kp LG(X)  &kp LG(C)  &kp LG(V)  &none                    &none                  &none     &none     &none      &none       &none
-                                   &none      &sl 2      &none                    &none                  &none     &none
+&none       &trans      &none      &none      &kp LS(TAB)  &swapper                 &none                  &none     &none     &none      &none       &none
+&caps_word  &sk LSHIFT  &sk LCTRL  &sk LALT   &sk LGUI     &sk LS(LG(LA(LCTRL)))    &sk LS(LG(LA(LCTRL)))  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &none
+&none       &none       &kp LG(X)  &kp LG(C)  &kp LG(V)    &none                    &none                  &none     &none     &none      &none       &none
+                                   &none      &none        &none                    &none                  &none     &none
             >;
         };
     };
