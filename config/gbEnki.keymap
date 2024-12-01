@@ -315,17 +315,17 @@
             #binding-cells = <0>;
             bindings = <&kt RGUI>, <&kp TAB>, <&kt RGUI>;
 
-            ignored-key-positions = <0 1 5 8 13 14 15>;// Arrows and BSPC, ENTER and DEL
+            ignored-key-positions = <0 1 4 8 19 20 21>;// Arrows and BSPC, ENTER and DEL
         };
 
-        swapper_q: swapper_q {
+        sw_multiply_q: sw_multiply_q {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp LG(KP_MULTIPLY)>, <&kp LG(Q)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
-            label = "SWAPPER_Q";
+            label = "SW_MULTIPLY_Q";
         };
     };
 
@@ -356,7 +356,7 @@
 
         num {
             bindings = <
-&kp SQT        &kp KP_MULTIPLY       &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
+&kp GRAVE      &sw_multiply_q        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
 &swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
 &mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0    &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
                                                       &trans          &trans          &trans       &trans    &trans           &trans
