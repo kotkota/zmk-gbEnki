@@ -320,7 +320,7 @@
 
         sw_multiply_q: sw_multiply_q {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LG(KP_MULTIPLY)>, <&kp LG(Q)>;
+            bindings = <&kp KP_MULTIPLY>, <&kp Q>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
