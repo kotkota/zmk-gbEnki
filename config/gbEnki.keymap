@@ -313,7 +313,7 @@
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";// requires tri-state module (https://github.com/urob/zmk-tri-state)
             #binding-cells = <0>;
-            bindings = <&kt RGUI>, <&kp TAB>, <&kt RGUI>;
+            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
 
             ignored-key-positions = <0 1 4 8 19 20 21>;// Arrows and BSPC, ENTER and DEL
         };
