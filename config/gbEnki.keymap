@@ -315,7 +315,7 @@
             #binding-cells = <0>;
             bindings = <&kt RGUI>, <&kp TAB>, <&kt RGUI>;
 
-            ignored-key-positions = <7 9 16 17 18 19 29>;// Arrows and BSPC, ENTER and DEL
+            ignored-key-positions = <0 1 5 8 13 14 15>;// Arrows and BSPC, ENTER and DEL
         };
 
         swapper_q: swapper_q {
