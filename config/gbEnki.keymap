@@ -236,7 +236,7 @@
         };
 
         paste {
-            bindings = <&mt LS(LC(SPACE)) LG(V)>;
+            bindings = <&mt LA(LC(V)) LG(V)>;
             key-positions = <15 16>;
         };
     };
