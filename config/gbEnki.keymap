@@ -340,6 +340,16 @@
             keep-mods = <(MOD_LGUI)>;
             label = "SW_MULTIPLY_Q";
         };
+
+        lt_sk: lt_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SK";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+        };
     };
 
     keymap {
@@ -350,7 +360,7 @@
 &mt LS(LCMD) ESC       &kp Q          &kp W         &kp E               &kp R           &kp T                      &kp Y                    &kp U           &kp I               &kp O         &kp P             &kp BACKSLASH
 &mt LA(LS(LCTRL)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &mtl RC(RA(RS(LCMD))) G    &mtr RC(RA(RS(RCMD))) H  &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RS(RA(RCTRL)) LBKT
 &lt MEDIA GRAVE        &kp Z          &kp X         &kp C               &kp V           &kp B                      &kp N                    &kp M           &kp COMMA           &kp PERIOD    &kp SLASH         &lt MEDIA RBKT
-                                                    &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER            &lt STCKY ENTER          &lt NUMB SPACE  &lt SYMB BACKSPACE
+                                                    &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER            &lt STCKY ENTER          &lt NUMB SPACE  &lt_sk SYMB RSHIFT
             >;
 
             display-name = "Default";
