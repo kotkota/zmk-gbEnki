@@ -232,12 +232,12 @@
 
         copy_cut {
             bindings = <&mt LG(X) LG(C)>;
-            key-positions = <14 15>;
+            key-positions = <13 14>;
         };
 
         paste {
             bindings = <&mt LA(LC(V)) LG(V)>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
         };
     };
 
@@ -423,11 +423,12 @@
 
         sticky {
             bindings = <
-&none       &trans      &none      &none      &kp LS(TAB)  &swapper                 &none                  &none     &none     &none      &none       &none
+&none       &trans      &none      &none      &kp LG(R)    &kp LG(T)                &none                  &none     &none     &none      &none       &none
 &caps_word  &sk LSHIFT  &sk LCTRL  &sk LALT   &sk LGUI     &sk LS(LG(LA(LCTRL)))    &sk LS(LG(LA(LCTRL)))  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &none
 &none       &none       &kp LG(X)  &kp LG(C)  &kp LG(V)    &none                    &none                  &none     &none     &none      &none       &none
                                    &none      &none        &none                    &none                  &none     &none
             >;
+            display-name = "Sticky mods";
         };
     };
 };
