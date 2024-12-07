@@ -235,13 +235,13 @@
 
         sk_lshift {
             bindings = <&sk LSHFT>;
-            key-positions = <13 14>;
+            key-positions = <14 27>;
             layers = <0>;
         };
 
         sk_rshift {
             bindings = <&sk RSHFT>;
-            key-positions = <22 21>;
+            key-positions = <32 21>;
             layers = <0>;
         };
     };
