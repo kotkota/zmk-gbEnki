@@ -85,7 +85,7 @@
 
         sch {
             bindings = <&kp LA(I)>;
-            key-positions = <20 21>;
+            key-positions = <8 9>;
             layers = <0>;
         };
 
@@ -294,7 +294,7 @@
         html_tag: html_tag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(O) &kp SLASH &kp LA(P) &kp LEFT>;
+            bindings = <&kp LA(O) &kp BACKSLASH &kp LA(P) &kp LEFT>;
             label = "HTML_TAG";
         };
     };
