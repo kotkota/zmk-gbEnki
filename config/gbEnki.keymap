@@ -4,12 +4,15 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DFLT   0
 #define GAME   1
@@ -167,7 +170,7 @@
 
         under_ellipsis {
             bindings = <&mt LA(LS(COMMA)) LS(MINUS)>;
-            key-positions = <18 19>;
+            key-positions = <8 7>;
             layers = <0>;
         };
 
@@ -194,42 +197,44 @@
         del {
             bindings = <&kp DEL>;
             key-positions = <8 9>;
+            layers = <2>;
         };
 
         bsp {
             bindings = <&kp BSPC>;
-            key-positions = <8 7>;
+            key-positions = <7 8>;
+            layers = <2>;
         };
 
         mute {
             bindings = <&kp K_MUTE>;
             key-positions = <11 10>;
-            layers = <4>;
+            layers = <5>;
         };
 
         parentheses {
             bindings = <&mt N0 N9>;
-            key-positions = <9 10>;
+            key-positions = <21 22>;
         };
 
         lt_gt {
             bindings = <&mt LA(P) LA(O)>;
-            key-positions = <22 21>;
+            key-positions = <9 10>;
         };
 
         equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <2 3>;
+            bindings = <&mt PLUS EQUAL>;
+            key-positions = <18 19>;
         };
 
         copy_cut {
             bindings = <&mt LG(X) LG(C)>;
-            key-positions = <13 14>;
+            key-positions = <4 3>;
         };
 
         paste {
             bindings = <&mt LA(LC(V)) LG(V)>;
-            key-positions = <16 17>;
+            key-positions = <15 2>;
         };
 
         sk_lshift {
@@ -241,6 +246,12 @@
         sk_rshift {
             bindings = <&sk RSHFT>;
             key-positions = <32 21>;
+            layers = <0>;
+        };
+
+        html_tag {
+            bindings = <&html_tag>;
+            key-positions = <16 17>;
             layers = <0>;
         };
     };
@@ -281,6 +292,13 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(GRAVE) &kp LS(GRAVE) &kp LEFT>;
         };
+
+        html_tag: html_tag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(O) &kp SLASH &kp LA(P) &kp LEFT>;
+            label = "HTML_TAG";
+        };
     };
 
     behaviors {
@@ -308,7 +326,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             flavor = "balanced";
             hold-trigger-on-release;
@@ -320,7 +338,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <180>;
             flavor = "balanced";
             hold-trigger-on-release;
