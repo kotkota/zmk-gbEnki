@@ -227,12 +227,12 @@
 
         copy_cut {
             bindings = <&mt LG(X) LG(C)>;
-            key-positions = <4 3>;
+            key-positions = <2 3>;
         };
 
         paste {
             bindings = <&mt LA(LC(V)) LG(V)>;
-            key-positions = <15 2>;
+            key-positions = <3 4>;
         };
 
         sk_lshift {
