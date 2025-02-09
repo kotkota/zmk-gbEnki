@@ -394,7 +394,7 @@
             default_layer {
                 bindings = <
     &mt LS(LC(LA(LG(SEMI)))) ESCAPE           &kp Q          &kp W         &kp E               &kp R           &kp T              &kp Y            &kp U           &kp I               &kp O         &kp P             &kp LBKT
-    &mt &meh TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt &meh SQT
+    &mt LC(LA(LGUI)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RC(RA(RGUI)) SQT
     &lt MEDIA GRAVE            &mt GLOBE Z    &kp X         &kp C               &kp V           &kp B              &kp N            &mt RBKT M      &kp COMMA           &kp PERIOD    &mt CAPS SLASH         &lt MEDIA LS(LC(LA(LG(SEMICOLON))))
                                                             &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER    &lt STCKY ENTER  &lt NUMB SPACE  &lt SYMB BACKSPACE
                 >;
