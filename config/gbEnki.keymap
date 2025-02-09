@@ -44,13 +44,13 @@
         compatible = "zmk,combos";
 
         comma {
-            bindings = <&comma_space>;
+            bindings = <&mt LC(LA(LS(COMMA))) LC(LA(COMMA))>;
             key-positions = <26 27>;
             layers = <0>;
         };
 
         period {
-            bindings = <&period_space>;
+            bindings = <&mt LC(LA(LS(PERIOD))) LC(LA(PERIOD))>;
             key-positions = <27 28>;
             layers = <0>;
         };
@@ -62,7 +62,7 @@
         };
 
         switch_ru {
-            bindings = <&kp LG(LC(LA(LS(J))))>;
+            bindings = <&kp LG(LC(LA(LS(N))))>;
             key-positions = <16 19>;
             layers = <0>;
             timeout-ms = <80>;
@@ -70,7 +70,7 @@
         };
 
         switch_en {
-            bindings = <&kp LG(LC(LA(LS(K))))>;
+            bindings = <&kp LG(LC(LA(LS(M))))>;
             key-positions = <15 20>;
             timeout-ms = <80>;
             require-prior-idle-ms = <80>;
@@ -78,92 +78,99 @@
         };
 
         eq_quo {
-            bindings = <&equals_qoute>;
+            bindings = <&mt LA(LS(LC(J))) LA(LS(J))>;
             key-positions = <28 29>;
             layers = <0>;
         };
 
-        sch {
-            bindings = <&kp LA(I)>;
+        ha {
+            bindings = <&kp LBKT>;
             key-positions = <8 9>;
             layers = <0>;
         };
 
         harden_sign {
-            bindings = <&kp LA(M)>;
+            bindings = <&kp RBKT>;
             key-positions = <31 30>;
             layers = <0>;
         };
 
         yo {
-            bindings = <&kp LA(T)>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <4 5>;
             layers = <0>;
         };
 
         excl {
-            bindings = <&kp N1>;
+            bindings = <&mt LA(N1) LS(N1)>;
             key-positions = <1 13>;
             layers = <0>;
         };
 
         at {
-            bindings = <&kp N2>;
+            bindings = <&mt LA(N2) LS(N2)>;
             key-positions = <2 14>;
             layers = <0>;
         };
 
         hash {
-            bindings = <&kp N3>;
+            bindings = <&mt LA(N3) LS(N3)>;
             key-positions = <3 15>;
             layers = <0>;
         };
 
         doll {
-            bindings = <&kp N4>;
+            bindings = <&mt LA(N4) LS(N4)>;
             key-positions = <4 16>;
             layers = <0>;
         };
 
         percnt {
-            bindings = <&kp N5>;
+            bindings = <&mt LA(N5) LS(N5)>;
             key-positions = <17 5>;
             layers = <0>;
         };
 
         caret {
-            bindings = <&kp N6>;
+            bindings = <&mt LA(N6) LS(N6)>;
             key-positions = <6 18>;
+            layers = <0>;
         };
 
         question {
-            bindings = <&kp N7>;
+            bindings = <&mt LA(N7) LS(N7)>;
             key-positions = <7 19>;
+            layers = <0>;
         };
 
         asterisk {
-            bindings = <&kp N8>;
+            bindings = <&mt LA(N8) LS(N8)>;
             key-positions = <8 20>;
+            layers = <0>;
         };
 
         lpar {
-            bindings = <&kp N9>;
+            bindings = <&mt LA(N9) LS(N9)>;
             key-positions = <9 21>;
+            layers = <0>;
         };
 
         rpar {
-            bindings = <&kp N0>;
+            bindings = <&mt LA(N0) LS(N0)>;
             key-positions = <10 22>;
+            layers = <0>;
         };
 
         dash {
             bindings = <&mt LA(LS(MINUS)) MINUS>;
             key-positions = <20 19>;
+            layers = <0>;
         };
 
         soft_off {
             bindings = <&soft_off>;
             key-positions = <25 17>;
+            layers = <0>;
         };
 
         under_ellipsis {
@@ -175,21 +182,25 @@
         bullet {
             bindings = <&kp LA(LS(GRAVE))>;
             key-positions = <11 23>;
+            layers = <0>;
         };
 
         quo {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <32 31>;
+            layers = <0>;
         };
 
         dquo {
-            bindings = <&kp LS(GRAVE)>;
+            bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <32 33>;
+            layers = <0>;
         };
 
         grave {
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp GRAVE>;
             key-positions = <33 34>;
+            layers = <0>;
         };
 
         del {
@@ -213,26 +224,31 @@
         parentheses {
             bindings = <&mt N0 N9>;
             key-positions = <21 22>;
+            layers = <0>;
         };
 
         lt_gt {
             bindings = <&mt LA(P) LA(O)>;
             key-positions = <9 10>;
+            layers = <0>;
         };
 
         equal {
             bindings = <&mt PLUS EQUAL>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         copy_cut {
             bindings = <&mt LG(X) LG(C)>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         paste {
             bindings = <&mt LA(LC(V)) LG(V)>;
             key-positions = <3 4>;
+            layers = <0>;
         };
 
         sk_lshift {
@@ -248,7 +264,7 @@
         };
 
         html_tag {
-            bindings = <&html_tag>;
+            bindings = <&mt LA(LS(LC(H))) LA(LS(H))>;
             key-positions = <16 17>;
             layers = <0>;
         };
@@ -270,7 +286,7 @@
         meh: meh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(LEFT_SHIFT))>;
+            bindings = <&kp LA(LC(LGUI))>;
         };
 
         upd_fw_l: upd_fw {
@@ -288,13 +304,13 @@
         equals_qoute: equals_qoute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(GRAVE) &kp LS(GRAVE) &kp LEFT>;
+            bindings = <&kp EQUAL &kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
         };
 
         html_tag: html_tag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(O) &kp BACKSLASH &kp LA(P) &kp LEFT>;
+            bindings = <&kp LESS_THAN &kp SLASH &kp GREATER_THAN &kp LEFT>;
             label = "HTML_TAG";
         };
     };
@@ -377,9 +393,9 @@
 
             default_layer {
                 bindings = <
-    &mt LS(LCMD) ESC           &kp Q          &kp W         &kp E               &kp R           &kp T              &kp Y            &kp U           &kp I               &kp O         &kp P             &kp BACKSLASH
-    &mt LA(LS(LG(LCTRL))) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RS(RA(RG(RCTRL))) LBKT
-    &lt MEDIA GRAVE            &mt GLOBE Z    &kp X         &kp C               &kp V           &kp B              &kp N            &kp M           &kp COMMA           &kp PERIOD    &kp SLASH         &lt MEDIA RBKT
+    &mt LS(LC(LA(LG(SEMI)))) ESCAPE           &kp Q          &kp W         &kp E               &kp R           &kp T              &kp Y            &kp U           &kp I               &kp O         &kp P             &kp LBKT
+    &mt meh TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt meh SQT
+    &lt MEDIA GRAVE            &mt GLOBE Z    &kp X         &kp C               &kp V           &kp B              &kp N            &mt RBKT M      &kp COMMA           &kp PERIOD    &mt CAPS SLASH         &lt MEDIA LS(LC(LA(LG(SEMICOLON))))
                                                             &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER    &lt STCKY ENTER  &lt NUMB SPACE  &lt SYMB BACKSPACE
                 >;
 
@@ -399,10 +415,10 @@
 
             num {
                 bindings = <
-    &kp GRAVE      &sw_multiply_q        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS      &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
-    &swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS     &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
-    &mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0     &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
-                                                          &trans          &trans          &tog MOUSE    &trans    &trans           &trans
+    &kp GRAVE      &sw_multiply_q    &kp N7        &kp N8       &kp N9       &mt ASTRK PLUS      &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
+    &swapper       &mt LSHIFT COLON  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt SLASH MINUS     &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
+    &mt RBKT LBKT  &kp KP_EQUAL      &kp N1        &kp N2       &kp N3       &kp N0     &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
+                                                          &kp KP_DOT         &trans     &tog MOUSE    &trans    &trans           &trans
                 >;
 
                 display-name = "Numbers/Nav";
@@ -432,10 +448,10 @@
 
             media {
                 bindings = <
-    &kp LS(LG(N6))          &kp LS(LG(N1))     &kp LS(LG(N2))     &kp LG(LS(N3))     &kp LS(LG(N4))     &kp LS(LG(N5))       &bt BT_PRV     &bt BT_NXT     &none          &playnp         &kp C_VOLUME_DOWN  &kp C_VOL_UP
-    &mt LC(RIGHT) LC(LEFT)  &mt LC(N6) LC(N1)  &mt LC(N7) LC(N2)  &mt LC(N8) LC(N3)  &mt LC(N9) LC(N4)  &mt LC(N0) LC(N5)    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none           &none              &ext_power EP_OFF
-    &soft_off               &kp LG(Z)          &kp LG(LS(Z))      &none              &none              &none                &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_CLR_ALL  &none              &studio_unlock
-                                                                  &upd_fw_l          &bootloader        &none                &none          &bootloader    &upd_fw_r
+    &none          &kp LS(LG(N1))     &kp LS(LG(N2))     &kp LG(LS(N3))     &kp LS(LG(N4))     &kp LS(LG(N5))       &bt BT_PRV     &bt BT_NXT     &none          &playnp         &kp C_VOLUME_DOWN  &kp C_VOL_UP
+    &none          &kp LC(LEFT)       &kp LC(RIGHT)      &none              &none              &none                &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none           &none              &ext_power EP_OFF
+    &soft_off      &kp LG(Z)          &kp LG(LS(Z))      &none              &none              &none                &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_CLR_ALL  &none              &studio_unlock
+                                                         &upd_fw_l          &bootloader        &none                &none          &bootloader    &upd_fw_r
                 >;
 
                 display-name = "Buttons/Media";
@@ -443,8 +459,8 @@
 
             sticky {
                 bindings = <
-    &none                  &kp LG(Q)   &kp LG(W)  &none      &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
-    &sk LG(LS(LA(LCTRL)))  &sk LSHIFT  &sk LCTRL  &sk LALT   &sk LGUI   &kp LG(G)    &none  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk LS(LG(LA(LCTRL)))
+    &none                  &none   &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
+    &sk LG(LS(LC(LALT)))  &sk LSHIFT  &sk LCTRL  &sk LALT   &sk LGUI   &kp LG(G)    &none  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk RS(RG(RC(RALT)))
     &none                  &none       &kp LG(X)  &kp LG(C)  &kp LG(V)  &none        &none  &none     &none     &none      &none       &none
                                                   &none      &none      &none        &none  &none     &none
                 >;
