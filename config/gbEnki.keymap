@@ -4,13 +4,16 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
 #include <behaviors/num_word.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DFLT   0
 #define GAME   1
@@ -429,7 +432,7 @@
             bindings = <
 &mt LS(LC(LA(LG(SEMI)))) ESCAPE  &kp Q          &kp W         &kp E               &kp R           &kp T              &kp Y            &kp U           &kp I               &kp O         &kp P             &kp LBKT
 &mt LC(LA(LGUI)) TAB             &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RC(RA(RGUI)) SQT
-&lt MEDIA GRAVE                  &mt GLOBE Z    &kp X         &kp C               &kp V           &kp B              &kp N            &mt RBKT M      &kp COMMA           &kp PERIOD    &mt CAPS SLASH    &lt MEDIA LS(LC(LA(LG(SEMICOLON))))
+&lt MEDIA GRAVE                  &mt CAPS Z     &kp X         &kp C               &kp V           &kp B              &kp N            &mt RBKT M      &kp COMMA           &kp PERIOD    &mt CAPS SLASH    &lt MEDIA LS(LC(LA(LG(SEMICOLON))))
                                                               &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER    &lt STCKY ENTER  &lt NUMB SPACE  &lt SYMB BACKSPACE
             >;
 
