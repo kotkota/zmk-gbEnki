@@ -462,7 +462,7 @@
             tapping-term-ms = <180>;
         };
 
-        : smart_dot {
+        smart_dot: smart_dot {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&dot_space>, <&kp>;
 
