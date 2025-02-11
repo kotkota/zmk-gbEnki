@@ -509,8 +509,8 @@
 
         mouse {
             bindings = <
-&kp GRAVE      &sw_multiply_q        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &msc SCRL_DOWN  &msc SCRL_RIGHT  &mmv MOVE_UP    &msc SCRL_LEFT   &kp PG_UP     &none
-&swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &msc SCRL_UP    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_DN     &none
+&kp GRAVE      &none        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &msc SCRL_DOWN  &msc SCRL_RIGHT  &mmv MOVE_UP    &msc SCRL_LEFT   &kp PG_UP     &none
+&trans       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &msc SCRL_UP    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_DN     &none
 &mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0    &none           &kp RS(RC(TAB))  &kp RC(TAB)     &kp LG(LBKT)     &kp LG(RBKT)  &trans
                                                       &trans          &trans          &tog 4       &mkp MB3        &mkp MB1         &mkp MB2
             >;
