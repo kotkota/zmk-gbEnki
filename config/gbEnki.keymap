@@ -282,13 +282,13 @@
         };
 
         dot_ru {
-            bindings = <&kp LS(N7)>;
+            bindings = <&smart_dot 0 LS(N7)>;
             key-positions = <27 28>;
             layers = <1>;
             timeout-ms = <0>;
         };
 
-        fslash_question {
+        fwslash_question {
             bindings = <&kp SLASH>;
             key-positions = <33 34>;
             layers = <1>;
