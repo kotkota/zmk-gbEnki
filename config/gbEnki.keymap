@@ -386,13 +386,13 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog RU &kp LS(LA(LC(LG(N))))>;
+            bindings = <&tog_on RU &kp LS(LA(LC(LG(N))))>;
         };
 
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog RU &kp LS(LA(LC(LG(M))))>;
+            bindings = <&tog_off RU &kp LS(LA(LC(LG(M))))>;
         };
     };
 
@@ -460,6 +460,18 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
@@ -537,7 +549,7 @@
 &none      &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LG(LS(N3))  &kp LS(LG(N4))  &kp LS(LG(N5))    &bt BT_PRV     &bt BT_NXT     &none          &playnp         &kp C_VOLUME_DOWN  &kp C_VOL_UP
 &none      &kp LC(LEFT)    &kp LC(RIGHT)   &none           &none           &none             &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none           &none              &ext_power EP_OFF
 &soft_off  &kp LG(Z)       &kp LG(LS(Z))   &none           &none           &none             &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_CLR_ALL  &none              &studio_unlock
-                                           &upd_fw_l       &bootloader     &sys_reset        &sys_reset     &bootloader    &upd_fw_r
+                                           &upd_fw_l       &bootloader     &check_bat        &check_bat     &bootloader    &upd_fw_r
             >;
 
             display-name = "Buttons/Media";
