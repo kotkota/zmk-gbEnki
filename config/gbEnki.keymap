@@ -13,7 +13,7 @@
 #include "mouse.dtsi"
 
 #define DFLT   0
-#define DFLT   1
+#define RU     1
 #define GAME   2
 #define NUMB   3
 #define MOUSE  4
@@ -401,14 +401,14 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp LS(LA(LC(LG(N))))>;
+            bindings = <&tog_on RU &kp LS(LA(LC(LG(N))))>;
             label = "TO_RU";
         };
 
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 0 &kp LS(LA(LC(LG(M))))>;
+            bindings = <&tog_off RU &kp LS(LA(LC(LG(M))))>;
             label = "TO_EN";
         };
     };
@@ -510,6 +510,20 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
