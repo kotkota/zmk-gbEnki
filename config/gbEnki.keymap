@@ -13,12 +13,13 @@
 #include "mouse.dtsi"
 
 #define DFLT   0
-#define GAME   1
-#define NUMB   2
-#define MOUSE  3
-#define SYMB   4
-#define MEDIA  5
-#define STCKY  6
+#define DFLT   1
+#define GAME   2
+#define NUMB   3
+#define MOUSE  4
+#define SYMB   5
+#define MEDIA  6
+#define STCKY  7
 
 &lt { quick_tap_ms = <200>; };
 
@@ -43,62 +44,44 @@
     combos {
         compatible = "zmk,combos";
 
-        comma {
-            bindings = <&mt LC(LA(LS(COMMA))) LC(LA(COMMA))>;
-            key-positions = <26 27>;
-            layers = <0>;
-        };
-
-        period {
-            bindings = <&mt LC(LA(LS(PERIOD))) LC(LA(PERIOD))>;
-            key-positions = <27 28>;
-            layers = <0>;
-        };
-
         toggle_game {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <35 24>;
-            layers = <0 1>;
+            layers = <0 2 1>;
         };
 
         switch_ru {
-            bindings = <&kp LG(LC(LA(LS(N))))>;
+            bindings = <&to_ru>;
             key-positions = <16 19>;
-            layers = <0>;
+            layers = <0 1>;
             timeout-ms = <80>;
             require-prior-idle-ms = <80>;
         };
 
         switch_en {
-            bindings = <&kp LG(LC(LA(LS(M))))>;
+            bindings = <&to_en>;
             key-positions = <15 20>;
             timeout-ms = <80>;
             require-prior-idle-ms = <80>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
-        eq_quo {
-            bindings = <&mt LA(LS(LC(J))) LA(LS(J))>;
-            key-positions = <28 29>;
-            layers = <0>;
-        };
-
-        ha {
+        ha-sch {
             bindings = <&kp LBKT>;
             key-positions = <8 9>;
-            layers = <0>;
+            layers = <1>;
         };
 
         harden_sign {
             bindings = <&kp RBKT>;
-            key-positions = <31 30>;
-            layers = <0>;
+            key-positions = <31 32>;
+            layers = <1>;
         };
 
         yo {
             bindings = <&kp BACKSLASH>;
             key-positions = <4 5>;
-            layers = <0>;
+            layers = <1>;
         };
 
         excl {
@@ -110,73 +93,73 @@
         at {
             bindings = <&mt LA(N2) LS(N2)>;
             key-positions = <2 14>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         hash {
             bindings = <&mt LA(N3) LS(N3)>;
             key-positions = <3 15>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         doll {
             bindings = <&mt LA(N4) LS(N4)>;
             key-positions = <4 16>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         percnt {
             bindings = <&mt LA(N5) LS(N5)>;
             key-positions = <17 5>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         caret {
             bindings = <&mt LA(N6) LS(N6)>;
             key-positions = <6 18>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
-        question {
+        ampersand {
             bindings = <&mt LA(N7) LS(N7)>;
             key-positions = <7 19>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         asterisk {
             bindings = <&mt LA(N8) LS(N8)>;
             key-positions = <8 20>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         lpar {
             bindings = <&mt LA(N9) LS(N9)>;
             key-positions = <9 21>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         rpar {
             bindings = <&mt LA(N0) LS(N0)>;
             key-positions = <10 22>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         dash {
             bindings = <&mt LA(LS(MINUS)) MINUS>;
             key-positions = <20 19>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         soft_off {
             bindings = <&soft_off>;
             key-positions = <25 17>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         under_ellipsis {
             bindings = <&mt LA(SEMI) LS(MINUS)>;
             key-positions = <8 7>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         quo {
@@ -191,6 +174,12 @@
             layers = <0>;
         };
 
+        dquo_ru {
+            bindings = <&kp LS(N2)>;
+            key-positions = <32 33>;
+            layers = <1>;
+        };
+
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <33 34>;
@@ -200,107 +189,119 @@
         del {
             bindings = <&kp DEL>;
             key-positions = <8 9>;
-            layers = <2>;
+            layers = <3>;
         };
 
         bsp {
             bindings = <&kp BSPC>;
             key-positions = <7 8>;
-            layers = <2>;
+            layers = <3>;
         };
 
         mute {
             bindings = <&kp K_MUTE>;
             key-positions = <11 10>;
-            layers = <5>;
-        };
-
-        parentheses {
-            bindings = <&mt N0 N9>;
-            key-positions = <21 22>;
-            layers = <0>;
-        };
-
-        lt_gt {
-            bindings = <&mt LA(P) LA(O)>;
-            key-positions = <9 10>;
-            layers = <0>;
+            layers = <6>;
         };
 
         equal {
             bindings = <&mt PLUS EQUAL>;
             key-positions = <18 19>;
-            layers = <0>;
+            layers = <0 1>;
+        };
+
+        eq_quo {
+            bindings = <&mt LA(LS(LC(J))) LA(LS(J))>;
+            key-positions = <28 29>;
+            layers = <0 1>;
         };
 
         copy_cut {
             bindings = <&mt LG(X) LG(C)>;
             key-positions = <2 3>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         paste {
             bindings = <&mt LA(LC(V)) LG(V)>;
             key-positions = <3 4>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         sk_lshift {
             bindings = <&sk LSHFT>;
             key-positions = <13 26>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         sk_rshift {
             bindings = <&sk RSHFT>;
             key-positions = <33 22>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         html_tag {
             bindings = <&mt LA(LS(LC(H))) LA(LS(H))>;
             key-positions = <16 17>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         px {
             bindings = <&px>;
             key-positions = <26 27>;
-            layers = <2>;
+            layers = <3>;
         };
 
         em {
             bindings = <&em>;
             key-positions = <27 28>;
-            layers = <2>;
+            layers = <3>;
         };
 
         par {
             bindings = <&par>;
             key-positions = <25 26>;
-            layers = <2>;
+            layers = <3>;
         };
 
         brc {
             bindings = <&brc>;
             key-positions = <29 28>;
-            layers = <2 0>;
+            layers = <3 0>;
+        };
+
+        comma {
+            bindings = <&smart_comma 0 COMMA>;
+            key-positions = <26 27>;
+            layers = <0>;
+        };
+
+        comma_ru {
+            bindings = <&smart_comma_ru 0 0>;
+            key-positions = <26 27>;
+            layers = <1>;
+        };
+
+        dot {
+            bindings = <&smart_dot 0 DOT>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        dot_ru {
+            bindings = <&smart_dot_ru 0 0>;
+            key-positions = <27 28>;
+            layers = <1>;
+        };
+
+        fslash_question {
+            bindings = <&kp SLASH>;
+            key-positions = <33 34>;
+            layers = <1>;
         };
     };
 
     macros {
-        comma_space: comma_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(COMMA)) &kp SPACE>;
-        };
-
-        period_space: period_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(PERIOD)) &kp SPACE>;
-        };
-
         upd_fw_l: upd_fw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -355,6 +356,60 @@
             #binding-cells = <0>;
             bindings = <&kp LBRC &kp RBRC &kp LEFT>;
             label = "BRC";
+        };
+
+        comma_space: comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+        };
+
+        dot_space: period_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE>;
+        };
+
+        comma_space_ru: comma_space_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&comma_ru &kp SPACE>;
+            label = "COMMA_SPACE_RU";
+        };
+
+        comma_ru: comma_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N6)>;
+            label = "COMMA_RU";
+        };
+
+        dot_space_ru: dot_space_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&dot_ru &kp SPACE>;
+            label = "DOT_SPACE_RU";
+        };
+
+        dot_ru: dot_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>;
+            label = "DOT_RU";
+        };
+
+        to_ru: to_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 1 &kp LS(LA(LC(LG(N))))>;
+            label = "TO_RU";
+        };
+
+        to_en: to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 0 &kp LS(LA(LC(LG(M))))>;
+            label = "TO_EN";
         };
     };
 
@@ -420,6 +475,42 @@
             flavor = "balanced";
             tapping-term-ms = <180>;
         };
+
+        smart_dot: smart_dot {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_DOT";
+            bindings = <&dot_space>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        smart_dot_ru: smart_dot_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_DOT_RU";
+            bindings = <&dot_space_ru>, <&dot_ru>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        smart_comma: smart_comma {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_COMMA";
+            bindings = <&comma_space>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        smart_comma_ru: smart_comma_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SMART_COMMA_RU";
+            bindings = <&comma_space_ru>, <&comma_ru>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -427,21 +518,30 @@
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LG(SEMI)))) ESCAPE  &kp Q          &kp W         &kp E               &kp R           &kp T              &kp Y            &kp U           &kp I               &kp O         &kp P             &kp LBKT
-&mt LC(LA(LGUI)) TAB             &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D         &mtl LCMD F     &kp G              &kp H            &mtr RCMD J     &mtr RALT K         &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RC(RA(RGUI)) SQT
-&lt MEDIA GRAVE                  &mt CAPS Z     &kp X         &kp C               &kp V           &kp B              &kp N            &mt RBKT M      &kp COMMA           &kp PERIOD    &mt CAPS SLASH    &lt MEDIA LS(LC(LA(LG(SEMICOLON))))
-                                                              &lt SYMB BACKSPACE  &lt NUMB SPACE  &lt STCKY ENTER    &lt STCKY ENTER  &lt NUMB SPACE  &lt SYMB BACKSPACE
+&mt LS(LC(LA(LG(SEMI)))) ESCAPE  &kp Q          &kp W         &kp E            &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O         &kp P             &kp LBKT
+&mt LC(LA(LGUI)) TAB             &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D      &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K      &mtr RCTRL L  &mtr RSHIFT SEMI  &mt RC(RA(RGUI)) SQT
+&lt 6 GRAVE                      &mt CAPS Z     &kp X         &kp C            &kp V        &kp B          &kp N        &kp M        &kp COMMA        &kp PERIOD    &mt CAPS SLASH    &lt 6 LS(LC(LA(LG(SEMICOLON))))
+                                                              &lt 5 BACKSPACE  &lt 3 SPACE  &lt 7 ENTER    &lt 7 ENTER  &lt 3 SPACE  &lt 5 BACKSPACE
             >;
 
             display-name = "Default";
         };
 
+        ru {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt CAPS SQT  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
         game {
             bindings = <
-&kp ESCAPE      &kp TAB    &kp Q  &kp W    &kp E      &kp R    &kp Y          &kp U         &kp I         &kp O    &kp P     &kp LBKT
-&kp B           &kp LSHFT  &kp A  &kp S    &kp D      &kp F    &kp H          &kp J         &kp K         &kp L    &kp SEMI  &kp SQT
-&lt NUMB ENTER  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V    &kp N          &kp M         &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
-                                  &mt H T  &kp SPACE  &kp G    &kp BACKSPACE  &kp LEFT_ALT  &kp LEFT_GUI
+&kp ESCAPE   &kp TAB    &kp Q  &kp W    &kp E      &kp R    &kp Y          &kp U         &kp I         &kp O    &kp P     &kp LBKT
+&kp B        &kp LSHFT  &kp A  &kp S    &kp D      &kp F    &kp H          &kp J         &kp K         &kp L    &kp SEMI  &kp SQT
+&lt 3 ENTER  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V    &kp N          &kp M         &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
+                               &mt H T  &kp SPACE  &kp G    &kp BACKSPACE  &kp LEFT_ALT  &kp LEFT_GUI
             >;
 
             label = "Game";
@@ -449,10 +549,10 @@
 
         num {
             bindings = <
-&kp GRAVE      &sw_multiply_q   &kp N7        &kp N8       &kp N9       &mt RC(KP_ASTERISK) PLUS    &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
-&swapper       &mt LSHIFT SEMI  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt KP_DIVIDE MINUS         &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
-&mt RPAR LPAR  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                      &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
-                                              &kp PRCNT    &trans       &tog MOUSE                  &trans    &trans           &trans
+&kp GRAVE      &sw_multiply_q   &kp N7        &kp N8       &kp N9       &mt KP_ASTERISK PLUS    &kp HOME  &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp PG_UP     &none
+&swapper       &mt LSHIFT SEMI  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt KP_DIVIDE MINUS     &kp END   &kp LEFT         &kp DOWN     &kp RIGHT      &kp PG_DN     &none
+&mt RPAR LPAR  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &none     &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
+                                              &kp PRCNT    &trans       &tog 4                  &trans    &trans           &trans
             >;
 
             display-name = "Numbers/Nav";
@@ -460,10 +560,10 @@
 
         mouse {
             bindings = <
-&kp GRAVE      &sw_multiply_q        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS      &msc SCRL_DOWN  &msc SCRL_RIGHT  &mmv MOVE_UP    &msc SCRL_LEFT   &kp PG_UP     &none
-&swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS     &msc SCRL_UP    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_DN     &none
-&mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0     &none           &kp RS(RC(TAB))  &kp RC(TAB)     &kp LG(LBKT)     &kp LG(RBKT)  &trans
-                                                      &trans          &trans          &tog MOUSE    &mkp MB3        &mkp MB1         &mkp MB2
+&kp GRAVE      &sw_multiply_q        &kp KP_N7        &kp KP_N8       &kp KP_N9       &kp PLUS     &msc SCRL_DOWN  &msc SCRL_RIGHT  &mmv MOVE_UP    &msc SCRL_LEFT   &kp PG_UP     &none
+&swapper       &mt LSHIFT KP_DIVIDE  &mt LCTRL KP_N4  &mt LALT KP_N5  &mt LCMD KP_N6  &kp MINUS    &msc SCRL_UP    &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_DN     &none
+&mt RBKT LBKT  &kp KP_EQUAL          &kp KP_N1        &kp KP_N2       &kp KP_N3       &kp KP_N0    &none           &kp RS(RC(TAB))  &kp RC(TAB)     &kp LG(LBKT)     &kp LG(RBKT)  &trans
+                                                      &trans          &trans          &tog 4       &mkp MB3        &mkp MB1         &mkp MB2
             >;
 
             display-name = "Numbers/Mouse";
