@@ -317,10 +317,26 @@
             tap-ms = <50>;
         };
 
+        bkt: bkt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 200>,
+                <&ru_off>,
+                <&macro_wait_time 20>,
+                <&kp LBKT &kp RBKT &kp LEFT>;
+
+            label = "BKT";
+        };
+
         brc: brc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&ru_off &kp LBRC &kp RBRC &kp LEFT>;
+            bindings =
+                <&macro_wait_time 200>,
+                <&ru_off>,
+                <&macro_wait_time 20>,
+                <&kp LBRC &kp RBRC &kp LEFT>;
         };
 
         comma_space: comma_space {
@@ -359,12 +375,6 @@
             bindings = <&tog_off 1 &kp LS(LA(LC(LG(M))))>;
         };
 
-        bkt: bkt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&ru_off &kp LBKT &kp RBKT &kp LEFT>;
-            label = "BKT";
-        };
     };
 
     behaviors {
