@@ -242,9 +242,15 @@
             layers = <3>;
         };
 
+        combo_bkt {
+            bindings = <&bkt>;
+            key-positions = <26 27>;
+            layers = <3>;
+        };
+
         combo_brc {
             bindings = <&brc>;
-            key-positions = <28 27>;
+            key-positions = <27 28>;
             layers = <3>;
         };
 
@@ -276,12 +282,6 @@
             bindings = <&kp SLASH>;
             key-positions = <33 34>;
             layers = <1>;
-        };
-
-        combo_bkt {
-            bindings = <&bkt>;
-            key-positions = <27 26>;
-            layers = <3>;
         };
     };
 
@@ -465,7 +465,7 @@
         ru {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &mt LS(N8) LS(N5)
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt QMARK SQT  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
