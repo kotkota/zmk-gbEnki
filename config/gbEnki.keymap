@@ -40,20 +40,12 @@
             layers = <0 2 1>;
         };
 
-        combo_switch_ru {
-            bindings = <&ru_on>;
+        combo_leader_key {
+            bindings = <&kp LA(LC(LG(RS(SEMI))))>;
             key-positions = <16 19>;
             layers = <0 1>;
             timeout-ms = <80>;
             require-prior-idle-ms = <80>;
-        };
-
-        combo_switch_en {
-            bindings = <&ru_off>;
-            key-positions = <15 20>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <80>;
-            layers = <0 1>;
         };
 
         combo_ha_sch {
@@ -143,12 +135,14 @@
         combo_equal {
             bindings = <&mt PLUS EQUAL>;
             key-positions = <18 19>;
+            require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
         combo_dash {
             bindings = <&mt LA(LS(MINUS)) MINUS>;
             key-positions = <20 19>;
+            require-prior-idle-ms = <100>;
             layers = <0 1>;
         };
 
@@ -374,7 +368,6 @@
             #binding-cells = <0>;
             bindings = <&tog_off 1 &kp LS(LA(LC(LG(M))))>;
         };
-
     };
 
     behaviors {
@@ -463,10 +456,10 @@
 
         default_layer {
             bindings = <
-&mt LS(LC(LA(LG(SEMI)))) ESCAPE  &kp Q          &kp W         &kp E            &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O         &kp P             &kp LBKT
-&mt LC(LA(LGUI)) TAB             &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D      &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K      &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LGUI)) SQT
-&lt 5 GRAVE                      &mt CAPS Z     &kp X         &kp C            &kp V        &kp B          &kp N        &kp M        &kp COMMA        &kp PERIOD    &mt QMARK SLASH   &lt 5 LS(LC(LA(LG(SEMICOLON))))
-                                                              &lt 4 BACKSPACE  &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BACKSPACE
+&kp ESC               &kp Q          &kp W         &kp E            &kp R        &kp T          &kp Y        &kp U        &kp I            &kp O         &kp P             &kp LBKT
+&mt LC(LA(LGUI)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D      &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K      &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LGUI)) SQT
+&lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C            &kp V        &kp B          &kp N        &kp M        &kp COMMA        &kp PERIOD    &mt QMARK SLASH   &lt 5 BACKSLASH
+                                                   &lt 4 BACKSPACE  &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BACKSPACE
             >;
 
             display-name = "Default";
@@ -498,7 +491,7 @@
             bindings = <
 &trans  &none            &kp N7        &kp N8       &kp N9       &mt KP_ASTERISK PLUS    &kp HOME   &kp LA(LEFT)     &kp UP       &kp LA(RIGHT)  &kp END       &none
 &trans  &mt LSHIFT SEMI  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt KP_DIVIDE MINUS     &kp PG_UP  &kp LEFT         &kp DOWN     &kp RIGHT      &none         &none
-&trans  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &kp PG_DN  &kp RS(RC(TAB))  &kp RC(TAB)  &kp LG(LBKT)   &kp LG(RBKT)  &trans
+&trans  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &kp PG_DN  &kp LG(LBKT)   &kp LG(RBKT)  &kp RS(RC(TAB))  &kp RC(TAB)  &trans
                                        &kp PRCNT    &trans       &none                   &trans     &trans           &trans
             >;
 
@@ -507,10 +500,10 @@
 
         symb {
             bindings = <
-&kp F1           &kp F2       &kp F3       &kp F4         &kp F5         &kp F6           &kp KP_MULTIPLY  &kp KP_N7       &kp KP_N8       &kp KP_NUMBER_9  &kp KP_PLUS          &trans
-&kp F7           &kp F8       &kp F9       &kp F10        &kp F11        &kp F12          &kp KP_DIVIDE    &mt RCMD KP_N4  &mt RALT KP_N5  &mt RCTRL KP_N6  &mt RSHIFT KP_MINUS  &trans
-&mt SLASH QMARK  &mt LT LPAR  &mt GT RPAR  &mt LBRC LBKT  &mt RBRC RBKT  &mt PIPE BSLH    &kp KP_N0        &kp KP_N1       &kp KP_N2       &kp KP_N3        &kp KP_EQUAL         &trans
-                                           &trans         &trans         &trans           &trans           &trans          &trans
+&kp F1           &kp F2       &kp F3       &kp F4         &kp F5         &kp F6           &kp EXCL   &kp AT     &kp POUND  &kp DLLR  &kp PERCENT  &trans
+&kp F7           &kp F8       &kp F9       &kp F10        &kp F11        &kp F12          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR     &trans
+&mt QMARK SLASH  &mt LT LPAR  &mt GT RPAR  &mt LBRC LBKT  &mt RBRC RBKT  &mt PIPE BSLH    &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS  &kp QMARK    &kp PIPE
+                                           &trans         &trans         &trans           &trans     &trans     &trans
             >;
 
             display-name = "FN + Symbols / Numbers";
@@ -532,7 +525,7 @@
 &none             &none       &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
 &sk LG(LC(LALT))  &sk LSHIFT  &sk LCTRL     &sk LALT       &sk LGUI   &kp LG(G)    &none  &sk RGUI  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk RG(RC(RALT))
 &none             &none       &none         &none          &none      &none        &none  &none     &none     &none      &none       &none
-                                            &none          &none      &none        &none  &none     &none
+                                            &ru_off        &ru_on     &none        &none  &ru_on    &ru_off
             >;
 
             display-name = "Shortcuts + Sticky mods";
