@@ -207,7 +207,7 @@
         };
 
         combo_html_tag {
-            bindings = <&mt LA(LS(LC(H))) LA(LS(H))>;
+            bindings = <&html_tag 0 0>;
             key-positions = <16 17>;
             layers = <0 1>;
         };
@@ -298,12 +298,6 @@
             bindings = <&kp EQUAL &kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
         };
 
-        html_tag: html_tag {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LESS_THAN &kp GREATER_THAN &kp LEFT &kp SLASH>;
-        };
-
         par: par {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -367,6 +361,28 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&tog_off 1 &kp LS(LA(LC(LG(M))))>;
+        };
+
+        html_tag_open: html_tag_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 200>,
+                <&ru_off>,
+                <&macro_wait_time 20>,
+                <&kp LESS_THAN &kp GREATER_THAN &kp LEFT>;
+
+            label = "HTML_TAG_OPEN";
+        };
+
+        html_tag_close: html_tag {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 200>,
+                <&ru_off>,
+                <&macro_wait_time 20>,
+                <&kp LESS_THAN &kp GREATER_THAN &kp LEFT &kp SLASH>;
         };
     };
 
@@ -448,6 +464,15 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
+        };
+
+        html_tag: html_tag {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTML_TAG";
+            bindings = <&html_tag_close>, <&html_tag_open>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
