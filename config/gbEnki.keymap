@@ -277,6 +277,18 @@
             key-positions = <33 34>;
             layers = <1>;
         };
+
+        combo_ru_on {
+            bindings = <&ru_on>;
+            key-positions = <16 37>;
+            layers = <1 0>;
+        };
+
+        combo_ru_off {
+            bindings = <&ru_off>;
+            key-positions = <16 13>;
+            layers = <1 0>;
+        };
     };
 
     macros {
