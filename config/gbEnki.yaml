@@ -1,0 +1,466 @@
+layers:
+  Default:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - {t: '$$phosphor:bold/arrow-line-right$$', h: '$$phosphor:bold/diamond$$'}
+  - {t: A, h: '$$phosphor:bold/arrow-fat-up$$'}
+  - {t: S, h: '$$phosphor:bold/control$$'}
+  - {t: D, h: '$$phosphor:bold/option$$'}
+  - {t: F, h: '$$phosphor:bold/command$$'}
+  - G
+  - H
+  - {t: J, h: '$$phosphor:bold/command$$'}
+  - {t: K, h: '$$phosphor:bold/option$$'}
+  - {t: L, h: '$$phosphor:bold/control$$'}
+  - {t: ;, h: '$$phosphor:bold/arrow-fat-up$$'}
+  - {t: '''', h: '$$phosphor:bold/diamond$$'}
+  - {t: '`', h: Shortcuts / Media}
+  - {t: Z, h: CAPS}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: '?'}
+  - {t: \, h: Shortcuts / Media}
+  - {t: '$$phosphor:bold/backspace$$', h: FN + Symbols / Numbers}
+  - {t: '$$tabler:space$$', h: Numbers / Nav}
+  - {t: '$$tabler:corner-down-left$$', h: Shortcuts + Sticky mods}
+  - {t: '$$tabler:corner-down-left$$', h: Shortcuts + Sticky mods}
+  - {t: '$$tabler:space$$', h: Numbers / Nav}
+  - {t: '$$phosphor:bold/backspace$$', h: FN + Symbols / Numbers}
+  Russian:
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: '%', h: '*'}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: '''', h: '?'}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  Game:
+  - ESCAPE
+  - $$phosphor:bold/arrow-line-right$$
+  - Q
+  - W
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - B
+  - $$phosphor:bold/arrow-fat-up$$
+  - A
+  - S
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - {t: '$$tabler:corner-down-left$$', h: Numbers / Nav}
+  - $$phosphor:bold/control$$
+  - Z
+  - X
+  - C
+  - V
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - {t: T, h: H}
+  - $$tabler:space$$
+  - G
+  - $$phosphor:bold/backspace$$
+  - LEFT ALT
+  - LEFT GUI
+  Numbers / Nav:
+  - {t: ◌, type: trans}
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - {t: +, h: '*'}
+  - HOME
+  - $$phosphor:bold/caret-double-left$$
+  - $$phosphor:bold/arrow-up$$
+  - $$phosphor:bold/caret-double-right$$
+  - END
+  - ''
+  - {t: ◌, type: trans}
+  - {t: ;, h: '$$phosphor:bold/arrow-fat-up$$'}
+  - {t: '4', h: '$$phosphor:bold/control$$'}
+  - {t: '5', h: '$$phosphor:bold/option$$'}
+  - {t: '6', h: '$$phosphor:bold/command$$'}
+  - {t: '-', h: /}
+  - PG UP
+  - $$phosphor:bold/arrow-left$$
+  - $$phosphor:bold/arrow-down$$
+  - $$phosphor:bold/arrow-right$$
+  - ''
+  - ''
+  - {type: held alternate}
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - PG DN
+  - ⌘[
+  - ⌘]
+  - $$tabler:arrow-autofit-left$$
+  - $$tabler:arrow-autofit-right$$
+  - {t: ◌, type: trans}
+  - $$tabler:flag-off$$
+  - {type: held}
+  - ''
+  - {t: ◌, type: trans}
+  - {type: held alternate}
+  - $$tabler:flag-off$$
+  FN + Symbols / Numbers:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - {t: ◌, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: ◌, type: trans}
+  - {t: /, h: '?'}
+  - {t: (, h: <}
+  - {t: ), h: '>'}
+  - {t: '[', h: '{'}
+  - {t: ']', h: '}'}
+  - {t: \, h: '|'}
+  - '-'
+  - _
+  - '='
+  - +
+  - '?'
+  - '|'
+  - {type: held}
+  - $$tabler:flag$$
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - $$tabler:flag$$
+  - {type: held alternate}
+  Shortcuts / Media:
+  - ''
+  - ⇧⌘1
+  - ⇧⌘2
+  - ⌘⇧3
+  - ⇧⌘4
+  - ⇧⌘5
+  - ''
+  - ''
+  - ''
+  - $$phosphor:bold/play-pause$$
+  - $$phosphor:bold/speaker-simple-low$$
+  - $$phosphor:bold/speaker-simple-high$$
+  - ''
+  - ⌃$$phosphor:bold/arrow-left$$
+  - ⌃$$phosphor:bold/arrow-right$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ⌘Z
+  - ⌘⇧Z
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held alternate}
+  - $$phosphor:bold/x-square$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$phosphor:bold/x-square$$
+  Shortcuts + Sticky mods:
+  - ''
+  - ''
+  - ⌘$$phosphor:bold/arrow-left$$
+  - ⌘$$phosphor:bold/arrow-right$$
+  - ⌘R
+  - ⌘T
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$phosphor:bold/diamond$$', h: sticky}
+  - {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  - {t: '$$phosphor:bold/control$$', h: sticky}
+  - {t: '$$phosphor:bold/option$$', h: sticky}
+  - {t: '$$phosphor:bold/command$$', h: sticky}
+  - ⌘G
+  - ''
+  - {t: '$$phosphor:bold/command$$', h: sticky}
+  - {t: '$$phosphor:bold/option$$', h: sticky}
+  - {t: '$$phosphor:bold/control$$', h: sticky}
+  - {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  - {t: '$$phosphor:bold/diamond$$', h: sticky}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$tabler:flag-off$$
+  - $$tabler:flag$$
+  - {type: held}
+  - {type: held alternate}
+  - $$tabler:flag$$
+  - $$tabler:flag-off$$
+  System:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT PRV
+  - BT NXT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - ''
+  - ''
+  - EP OFF
+  - {t: '$$tabler:power$$', type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - BT CLR ALL
+  - ''
+  - $$tabler:lock-open$$
+  - {t: '&upd_fw_l', type: held}
+  - {t: '$$tabler:terminal-2$$', type: held}
+  - '&check_bat'
+  - '&check_bat'
+  - {t: '$$tabler:terminal-2$$', type: held}
+  - {t: '&upd_fw_r', type: held}
+combos:
+- p: [35, 24]
+  k: {t: Game, h: toggle}
+  l: [Default, Game, Russian]
+- p: [16, 19]
+  k: ⌥⌃⌘⇧;
+  l: [Default, Russian]
+- p: [8, 9]
+  k: '['
+  l: [Russian]
+- p: [31, 32]
+  k: ']'
+  l: [Russian]
+- p: [4, 5]
+  k: \
+  l: [Russian]
+- p: [1, 13]
+  k: {t: '!', h: ⌥1}
+  l: [Default, Russian]
+- p: [2, 14]
+  k: {t: '@', h: ⌥2}
+  l: [Default, Russian]
+- p: [3, 15]
+  k: {t: '#', h: ⌥3}
+  l: [Default, Russian]
+- p: [4, 16]
+  k: {t: $, h: ⌥4}
+  l: [Default, Russian]
+- p: [17, 5]
+  k: {t: '%', h: ⌥5}
+  l: [Default, Russian]
+- p: [6, 18]
+  k: {t: ^, h: ⌥6}
+  l: [Default, Russian]
+- p: [7, 19]
+  k: {t: '&', h: ⌥7}
+  l: [Default, Russian]
+- p: [8, 20]
+  k: {t: '*', h: ⌥8}
+  l: [Default, Russian]
+- p: [9, 21]
+  k: {t: (, h: ⌥9}
+  l: [Default, Russian]
+- p: [10, 22]
+  k: {t: ), h: ⌥0}
+  l: [Default, Russian]
+- p: [8, 7]
+  k: {t: _, h: '...'}
+  l: [Default, Russian]
+- p: [18, 19]
+  k: {t: '=', h: +}
+  l: [Default, Russian]
+- p: [20, 19]
+  k: {t: '-', h: —}
+  l: [Default, Russian]
+- p: [25, 17]
+  k: $$tabler:power$$
+  l: [Default, Russian]
+- p: [32, 31]
+  k: ''''
+  l: [Default]
+- p: [32, 33]
+  k: '"'
+  l: [Default]
+- p: [32, 33]
+  k: '@'
+  l: [Russian]
+- p: [33, 34]
+  k: '`'
+  l: [Default]
+- p: [8, 9]
+  k: $$phosphor:bold/x-square$$
+  l: [Numbers / Nav]
+- p: [7, 8]
+  k: BSPC
+  l: [Numbers / Nav]
+- p: [11, 10]
+  k: $$phosphor:bold/speaker-slash$$
+  l: [Shortcuts / Media]
+- p: [2, 3]
+  k: {t: '$$phosphor:bold/copy$$', h: '$$phosphor:bold/scissors$$'}
+  l: [Default, Russian]
+- p: [3, 4]
+  k: {t: '$$phosphor:bold/clipboard-text$$', h: '$$phosphor:bold/newspaper-clipping$$'}
+  l: [Default, Russian]
+- p: [16, 17]
+  k: {t: '$$phosphor:bold/code-simple$$', h: '$$phosphor:bold/code$$'}
+  l: [Default, Russian]
+- p: [28, 29]
+  k: {t: ⌥⇧J, h: MehJ}
+  l: [Default, Russian]
+- p: [13, 26]
+  k: {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  l: [Default, Russian]
+- p: [33, 22]
+  k: {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  l: [Default, Russian]
+- p: [25, 26]
+  k: $$phosphor:bold/brackets-round$$
+  l: [Numbers / Nav]
+- p: [26, 27]
+  k: $$phosphor:bold/brackets-square$$
+  l: [Numbers / Nav]
+- p: [27, 28]
+  k: $$phosphor:bold/brackets-curly$$
+  l: [Numbers / Nav]
+- p: [26, 27]
+  k: {t: ',', h: '&comma_space'}
+  l: [Default]
+- p: [26, 27]
+  k: {t: ^, h: '&comma_space_ru'}
+  l: [Russian]
+- p: [27, 28]
+  k: {t: ., h: '&dot_space'}
+  l: [Default]
+- p: [28, 27]
+  k: {t: ⇧7, h: '&dot_space_ru'}
+  l: [Russian]
+- p: [33, 34]
+  k: /
+  l: [Russian]
