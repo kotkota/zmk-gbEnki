@@ -4,8 +4,8 @@ draw_config:
   split_gap: 30.0
   combo_w: 28.0
   combo_h: 26.0
-  key_rx: 6.0
-  key_ry: 6.0
+  key_rx: 4.0
+  key_ry: 4.0
   dark_mode: false
   n_columns: 1
   separate_combo_diagrams: false
@@ -17,9 +17,9 @@ draw_config:
   line_spacing: 1.2
   arc_radius: 6.0
   append_colon_to_layer_header: false
-  small_pad: 10.0
+  small_pad: 2.0
   legend_rel_x: 0.0
-  legend_rel_y: 0.0
+  legend_rel_y: -3.0
   draw_key_sides: false
   key_side_pars:
     rel_x: 0
@@ -50,7 +50,10 @@ parse_config:
     "&playnp": $$phosphor:bold/play-pause$$,
     "&soft_off": $$tabler:power$$,
     "&bootloader": $$tabler:terminal-2$$,
-    "&studio_unlock": $$tabler:lock-open$$
+    "&studio_unlock": $$tabler:lock-open$$,
+    "&upd_fw_l": $$tabler:refresh-alert$$,
+    "&upd_fw_r": $$tabler:refresh-alert$$,
+    "&check_bat": $$tabler:battery-3$$
   }
   sticky_label: sticky
   toggle_label: toggle
@@ -73,7 +76,7 @@ parse_config:
     mod_combiner: '{mod_1}{mod_2}'
     special_combinations:
       left_ctrl+left_alt+left_gui+left_shift: Hyper
-      left_ctrl+left_alt+left_shift: Meh
+      left_ctrl+left_alt+left_gui: Meh
   qmk_remove_keycode_prefix:
   - KC_
   qmk_keycode_map:
@@ -225,8 +228,10 @@ parse_config:
     LGUI: $$phosphor:bold/command$$
     RGUI: $$phosphor:bold/command$$
     LCMD: $$phosphor:bold/command$$
+    LEFT_GUI: $$phosphor:bold/command$$
     RCMD: $$phosphor:bold/command$$
     LALT: $$phosphor:bold/option$$
+    LEFT_ALT: $$phosphor:bold/option$$
     RALT: $$phosphor:bold/option$$
     LCTRL: $$phosphor:bold/control$$
     RCTRL: $$phosphor:bold/control$$
@@ -241,13 +246,16 @@ parse_config:
     LA(LEFT): $$phosphor:bold/caret-double-left$$
     LA(RIGHT): $$phosphor:bold/caret-double-right$$
     TAB: $$phosphor:bold/arrow-line-right$$
-    C_VOLUME_DOWN: $$phosphor:bold/speaker-simple-low$$
+    C_VOL_DN: $$phosphor:bold/speaker-simple-low$$
     C_VOL_UP: $$phosphor:bold/speaker-simple-high$$
     K_MUTE: $$phosphor:bold/speaker-slash$$
     BACKSPACE: $$phosphor:bold/backspace$$
+    BSPC: $$phosphor:bold/backspace$$
     DEL: $$phosphor:bold/x-square$$
     SPACE: $$tabler:space$$
     ENTER: $$tabler:corner-down-left$$
+    ESCAPE: $$phosphor:bold/arrow-circle-up-left$$
+    ESC: $$phosphor:bold/arrow-circle-up-left$$
     LA(SEMI): '...'
     LS(MINUS): '_'
     LA(LS(MINUS)): '—'
@@ -257,9 +265,15 @@ parse_config:
     LA(LC(V)): $$phosphor:bold/newspaper-clipping$$
     RS(RC(TAB)): $$tabler:arrow-autofit-left$$
     RC(TAB): $$tabler:arrow-autofit-right$$
+    LG(LEFT): $$tabler:square-chevron-left$$
+    LG(RIGHT): $$tabler:square-chevron-right$$
+    LC(LEFT): $$tabler:square-rounded-arrow-left$$
+    LC(RIGHT): $$tabler:square-rounded-arrow-right$$
     LC(LA(LGUI)): $$phosphor:bold/diamond$$
     LG(LC(LALT)): $$phosphor:bold/diamond$$
     RG(RC(RALT)): $$phosphor:bold/diamond$$
+    LG(Z): $$phosphor:bold/arrow-arc-left$$
+    LG(LS(Z)): $$phosphor:bold/arrow-arc-right$$
   zmk_combos: {}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

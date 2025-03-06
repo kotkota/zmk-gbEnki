@@ -1,6 +1,6 @@
 layers:
   Default:
-  - ESC
+  - $$phosphor:bold/arrow-circle-up-left$$
   - Q
   - W
   - E
@@ -86,7 +86,7 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   Game:
-  - ESCAPE
+  - $$phosphor:bold/arrow-circle-up-left$$
   - $$phosphor:bold/arrow-line-right$$
   - Q
   - W
@@ -126,8 +126,8 @@ layers:
   - $$tabler:space$$
   - G
   - $$phosphor:bold/backspace$$
-  - LEFT ALT
-  - LEFT GUI
+  - $$phosphor:bold/option$$
+  - $$phosphor:bold/command$$
   Numbers / Nav:
   - {t: ◌, type: trans}
   - ''
@@ -228,8 +228,8 @@ layers:
   - $$phosphor:bold/speaker-simple-low$$
   - $$phosphor:bold/speaker-simple-high$$
   - ''
-  - ⌃$$phosphor:bold/arrow-left$$
-  - ⌃$$phosphor:bold/arrow-right$$
+  - $$tabler:square-rounded-arrow-left$$
+  - $$tabler:square-rounded-arrow-right$$
   - ''
   - ''
   - ''
@@ -240,8 +240,8 @@ layers:
   - ''
   - ''
   - {type: held}
-  - ⌘Z
-  - ⌘⇧Z
+  - $$phosphor:bold/arrow-arc-left$$
+  - $$phosphor:bold/arrow-arc-right$$
   - ''
   - ''
   - ''
@@ -260,8 +260,8 @@ layers:
   Shortcuts + Sticky mods:
   - ''
   - ''
-  - ⌘$$phosphor:bold/arrow-left$$
-  - ⌘$$phosphor:bold/arrow-right$$
+  - $$tabler:square-chevron-left$$
+  - $$tabler:square-chevron-right$$
   - ⌘R
   - ⌘T
   - ''
@@ -337,12 +337,12 @@ layers:
   - BT CLR ALL
   - ''
   - $$tabler:lock-open$$
-  - {t: '&upd_fw_l', type: held}
+  - {t: '$$tabler:refresh-alert$$', type: held}
   - {t: '$$tabler:terminal-2$$', type: held}
-  - '&check_bat'
-  - '&check_bat'
+  - $$tabler:battery-3$$
+  - $$tabler:battery-3$$
   - {t: '$$tabler:terminal-2$$', type: held}
-  - {t: '&upd_fw_r', type: held}
+  - {t: '$$tabler:refresh-alert$$', type: held}
 combos:
 - p: [35, 24]
   k: {t: Game, h: toggle}
@@ -417,7 +417,7 @@ combos:
   k: $$phosphor:bold/x-square$$
   l: [Numbers / Nav]
 - p: [7, 8]
-  k: BSPC
+  k: $$phosphor:bold/backspace$$
   l: [Numbers / Nav]
 - p: [11, 10]
   k: $$phosphor:bold/speaker-slash$$
@@ -464,3 +464,9 @@ combos:
 - p: [33, 34]
   k: /
   l: [Russian]
+- p: [16, 37]
+  k: $$tabler:flag$$
+  l: [Russian, Default]
+- p: [16, 13]
+  k: $$tabler:flag-off$$
+  l: [Russian, Default]
