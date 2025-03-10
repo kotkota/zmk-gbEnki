@@ -1,6 +1,6 @@
 layers:
   Default:
-  - $$phosphor:bold/arrow-circle-up-left$$
+  - {t: '$$mdi:keyboard-esc$$', h: System}
   - Q
   - W
   - E
@@ -11,37 +11,37 @@ layers:
   - I
   - O
   - P
-  - '['
-  - {t: '$$phosphor:bold/arrow-line-right$$', h: '$$phosphor:bold/diamond$$'}
-  - {t: A, h: '$$phosphor:bold/arrow-fat-up$$'}
-  - {t: S, h: '$$phosphor:bold/control$$'}
-  - {t: D, h: '$$phosphor:bold/option$$'}
-  - {t: F, h: '$$phosphor:bold/command$$'}
+  - {t: '[', s: '{'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$phosphor:regular/diamond$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - H
-  - {t: J, h: '$$phosphor:bold/command$$'}
-  - {t: K, h: '$$phosphor:bold/option$$'}
-  - {t: L, h: '$$phosphor:bold/control$$'}
-  - {t: ;, h: '$$phosphor:bold/arrow-fat-up$$'}
-  - {t: '''', h: '$$phosphor:bold/diamond$$'}
-  - {t: '`', h: Shortcuts / Media}
-  - {t: Z, h: CAPS}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: '''', h: '$$phosphor:regular/diamond$$', s: '"'}
+  - {t: '`', h: Shortcuts / Media, s: '~'}
+  - {t: Z, h: '$$mdi:apple-keyboard-caps$$'}
   - X
   - C
   - V
   - B
   - N
   - M
-  - ','
-  - .
-  - {t: /, h: '?'}
-  - {t: \, h: Shortcuts / Media}
-  - {t: '$$phosphor:bold/backspace$$', h: FN + Symbols / Numbers}
-  - {t: '$$tabler:space$$', h: Numbers / Nav}
-  - {t: '$$tabler:corner-down-left$$', h: Shortcuts + Sticky mods}
-  - {t: '$$tabler:corner-down-left$$', h: Shortcuts + Sticky mods}
-  - {t: '$$tabler:space$$', h: Numbers / Nav}
-  - {t: '$$phosphor:bold/backspace$$', h: FN + Symbols / Numbers}
+  - {t: ',', s: <}
+  - PERIOD
+  - {t: /, h: '?', s: '?'}
+  - {t: \, h: Shortcuts / Media, s: '|'}
+  - {t: '$$mdi:backspace$$', h: FN + Symbols / Numbers}
+  - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods + Shortcuts}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods + Shortcuts}
+  - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
+  - {t: '$$mdi:backspace$$', h: FN + Symbols / Numbers}
   Russian:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -66,7 +66,7 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - {t: '%', h: '*'}
+  - {t: ':', h: ;}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -77,7 +77,7 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - {t: '''', h: '?'}
+  - {t: '''', h: '?', s: '"'}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -86,8 +86,8 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   Game:
-  - $$phosphor:bold/arrow-circle-up-left$$
-  - $$phosphor:bold/arrow-line-right$$
+  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -97,9 +97,9 @@ layers:
   - I
   - O
   - P
-  - '['
+  - {t: '[', s: '{'}
   - B
-  - $$phosphor:bold/arrow-fat-up$$
+  - $$mdi:apple-keyboard-shift$$
   - A
   - S
   - D
@@ -108,69 +108,69 @@ layers:
   - J
   - K
   - L
-  - ;
-  - ''''
-  - {t: '$$tabler:corner-down-left$$', h: Numbers / Nav}
-  - $$phosphor:bold/control$$
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:keyboard-return$$', h: Num / Nav}
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
   - V
   - N
   - M
-  - ','
-  - .
-  - /
-  - \
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: /, s: '?'}
+  - {t: \, s: '|'}
   - {t: T, h: H}
-  - $$tabler:space$$
+  - $$mdi:keyboard-space$$
   - G
-  - $$phosphor:bold/backspace$$
-  - $$phosphor:bold/option$$
-  - $$phosphor:bold/command$$
-  Numbers / Nav:
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  Num / Nav:
   - {t: ◌, type: trans}
   - ''
-  - '7'
-  - '8'
-  - '9'
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
   - {t: +, h: '*'}
-  - HOME
-  - $$phosphor:bold/caret-double-left$$
-  - $$phosphor:bold/arrow-up$$
-  - $$phosphor:bold/caret-double-right$$
-  - END
+  - $$mdi:arrow-top-left$$
+  - $$mdi:arrow-collapse-left$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-collapse-right$$
+  - $$mdi:arrow-bottom-right$$
   - ''
   - {t: ◌, type: trans}
-  - {t: ;, h: '$$phosphor:bold/arrow-fat-up$$'}
-  - {t: '4', h: '$$phosphor:bold/control$$'}
-  - {t: '5', h: '$$phosphor:bold/option$$'}
-  - {t: '6', h: '$$phosphor:bold/command$$'}
-  - {t: '-', h: /}
-  - PG UP
-  - $$phosphor:bold/arrow-left$$
-  - $$phosphor:bold/arrow-down$$
-  - $$phosphor:bold/arrow-right$$
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: '4', h: '$$mdi:apple-keyboard-control$$', s: $}
+  - {t: '5', h: '$$mdi:apple-keyboard-option$$', s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-command$$', s: ^}
+  - {t: '-', h: /, s: _}
+  - $$mdi:transfer-up$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
   - ''
   - ''
-  - {type: held alternate}
+  - {t: ◌, type: trans}
   - '='
-  - '1'
-  - '2'
-  - '3'
-  - '0'
-  - PG DN
-  - ⌘[
-  - ⌘]
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '0', s: )}
+  - $$mdi:transfer-down$$
+  - {t: '⌘[', s: '⌘{'}
+  - {t: '⌘]', s: '⌘}'}
   - $$tabler:arrow-autofit-left$$
   - $$tabler:arrow-autofit-right$$
   - {t: ◌, type: trans}
-  - $$tabler:flag-off$$
+  - {t: ◌, type: trans}
   - {type: held}
   - ''
   - {t: ◌, type: trans}
-  - {type: held alternate}
-  - $$tabler:flag-off$$
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
   FN + Symbols / Numbers:
   - F1
   - F2
@@ -196,40 +196,40 @@ layers:
   - (
   - )
   - {t: ◌, type: trans}
-  - {t: /, h: '?'}
+  - {t: /, h: '?', s: '?'}
   - {t: (, h: <}
   - {t: ), h: '>'}
-  - {t: '[', h: '{'}
-  - {t: ']', h: '}'}
-  - {t: \, h: '|'}
-  - '-'
+  - {t: '[', h: '{', s: '{'}
+  - {t: ']', h: '}', s: '}'}
+  - {t: \, h: '|', s: '|'}
+  - {t: '-', s: _}
   - _
-  - '='
+  - {t: '=', s: +}
   - +
   - '?'
   - '|'
   - {type: held}
-  - $$tabler:flag$$
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - $$tabler:flag$$
-  - {type: held alternate}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
   Shortcuts / Media:
   - ''
-  - ⇧⌘1
-  - ⇧⌘2
-  - ⌘⇧3
-  - ⇧⌘4
-  - ⇧⌘5
+  - {t: ⇧⌘1, s: ⇧⌘!}
+  - {t: ⇧⌘2, s: ⇧⌘@}
+  - {t: ⌘⇧3, s: ⌘⇧#}
+  - {t: ⇧⌘4, s: ⇧⌘$}
+  - {t: ⇧⌘5, s: ⇧⌘%}
   - ''
   - ''
   - ''
-  - $$phosphor:bold/play-pause$$
-  - $$phosphor:bold/speaker-simple-low$$
-  - $$phosphor:bold/speaker-simple-high$$
+  - $$mdi:play-pause$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - ''
-  - $$tabler:square-rounded-arrow-left$$
-  - $$tabler:square-rounded-arrow-right$$
+  - $$mdi:pan-left$$
+  - $$mdi:pan-right$$
   - ''
   - ''
   - ''
@@ -240,8 +240,8 @@ layers:
   - ''
   - ''
   - {type: held}
-  - $$phosphor:bold/arrow-arc-left$$
-  - $$phosphor:bold/arrow-arc-right$$
+  - $$mdi:undo-variant$$
+  - $$mdi:redo-variant$$
   - ''
   - ''
   - ''
@@ -250,14 +250,14 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held alternate}
-  - $$phosphor:bold/x-square$$
+  - ''
+  - $$mdi:backspace-reverse-outline$$
   - ''
   - ''
   - ''
   - ''
-  - $$phosphor:bold/x-square$$
-  Shortcuts + Sticky mods:
+  - $$mdi:backspace-reverse-outline$$
+  Sticky mods + Shortcuts:
   - ''
   - ''
   - $$tabler:square-chevron-left$$
@@ -270,18 +270,18 @@ layers:
   - ''
   - ''
   - ''
-  - {t: '$$phosphor:bold/diamond$$', h: sticky}
-  - {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
-  - {t: '$$phosphor:bold/control$$', h: sticky}
-  - {t: '$$phosphor:bold/option$$', h: sticky}
-  - {t: '$$phosphor:bold/command$$', h: sticky}
+  - {t: '$$phosphor:regular/diamond$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
   - ⌘G
   - ''
-  - {t: '$$phosphor:bold/command$$', h: sticky}
-  - {t: '$$phosphor:bold/option$$', h: sticky}
-  - {t: '$$phosphor:bold/control$$', h: sticky}
-  - {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
-  - {t: '$$phosphor:bold/diamond$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: '⌘⌃$$mdi:apple-keyboard-option$$', h: sticky}
   - ''
   - ''
   - ''
@@ -294,14 +294,14 @@ layers:
   - ''
   - ''
   - ''
-  - $$tabler:flag-off$$
-  - $$tabler:flag$$
+  - $$mdi:flag-outline$$
+  - $$mdi:flag$$
   - {type: held}
-  - {type: held alternate}
-  - $$tabler:flag$$
-  - $$tabler:flag-off$$
-  System:
   - ''
+  - $$mdi:flag$$
+  - $$mdi:flag-outline$$
+  System:
+  - {type: held}
   - ''
   - ''
   - ''
@@ -319,45 +319,45 @@ layers:
   - ''
   - ''
   - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '0'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - ''
   - ''
   - EP OFF
-  - {t: '$$tabler:power$$', type: held}
+  - $$mdi:power-standby$$
   - ''
   - ''
   - ''
   - ''
   - ''
-  - {t: BT DISC, h: '0'}
-  - {t: BT DISC, h: '1'}
-  - {t: BT DISC, h: '2'}
+  - {t: '$$mdi:bluetooth-off$$', h: '0'}
+  - {t: '$$mdi:bluetooth-off$$', h: '1'}
+  - {t: '$$mdi:bluetooth-off$$', h: '2'}
   - BT CLR ALL
   - ''
-  - $$tabler:lock-open$$
-  - {t: '$$tabler:refresh-alert$$', type: held}
-  - {t: '$$tabler:terminal-2$$', type: held}
-  - $$tabler:battery-3$$
-  - $$tabler:battery-3$$
-  - {t: '$$tabler:terminal-2$$', type: held}
-  - {t: '$$tabler:refresh-alert$$', type: held}
+  - $$mdi:lock-open-variant-outline$$
+  - $$mdi:reload-alert$$
+  - $$mdi:console$$
+  - $$mdi:battery-medium$$
+  - $$mdi:battery-medium$$
+  - $$mdi:console$$
+  - $$mdi:reload-alert$$
 combos:
 - p: [35, 24]
   k: {t: Game, h: toggle}
   l: [Default, Game, Russian]
 - p: [16, 19]
-  k: ⌥⌃⌘⇧;
+  k: ✱
   l: [Default, Russian]
 - p: [8, 9]
-  k: '['
+  k: {t: '[', s: '{'}
   l: [Russian]
 - p: [31, 32]
-  k: ']'
+  k: {t: ']', s: '}'}
   l: [Russian]
 - p: [4, 5]
-  k: \
+  k: {t: \, s: '|'}
   l: [Russian]
 - p: [1, 13]
   k: {t: '!', h: ⌥1}
@@ -393,16 +393,16 @@ combos:
   k: {t: _, h: '...'}
   l: [Default, Russian]
 - p: [18, 19]
-  k: {t: '=', h: +}
+  k: {t: '=', h: +, s: +}
   l: [Default, Russian]
 - p: [20, 19]
-  k: {t: '-', h: —}
+  k: {t: '-', h: —, s: _}
   l: [Default, Russian]
 - p: [25, 17]
-  k: $$tabler:power$$
+  k: $$mdi:power-standby$$
   l: [Default, Russian]
 - p: [32, 31]
-  k: ''''
+  k: {t: '''', s: '"'}
   l: [Default]
 - p: [32, 33]
   k: '"'
@@ -411,62 +411,64 @@ combos:
   k: '@'
   l: [Russian]
 - p: [33, 34]
-  k: '`'
+  k: {t: '`', s: '~'}
   l: [Default]
 - p: [8, 9]
-  k: $$phosphor:bold/x-square$$
-  l: [Numbers / Nav]
+  k: $$mdi:backspace-reverse-outline$$
+  l: [Num / Nav]
 - p: [7, 8]
-  k: $$phosphor:bold/backspace$$
-  l: [Numbers / Nav]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [Num / Nav]
 - p: [11, 10]
-  k: $$phosphor:bold/speaker-slash$$
+  k: $$mdi:volume-off$$
   l: [Shortcuts / Media]
 - p: [2, 3]
-  k: {t: '$$phosphor:bold/copy$$', h: '$$phosphor:bold/scissors$$'}
+  k: {t: '$$mdi:content-copy$$', h: '$$mdi:content-cut$$'}
   l: [Default, Russian]
 - p: [3, 4]
-  k: {t: '$$phosphor:bold/clipboard-text$$', h: '$$phosphor:bold/newspaper-clipping$$'}
+  k: {t: '$$mdi:content-paste$$', h: '$$mdi:clipboard-text-multiple$$'}
   l: [Default, Russian]
 - p: [16, 17]
-  k: {t: '$$phosphor:bold/code-simple$$', h: '$$phosphor:bold/code$$'}
+  k: {t: '$$mdi:code-tags$$', h: '$$mdi:xml$$'}
   l: [Default, Russian]
 - p: [28, 29]
-  k: {t: ⌥⇧J, h: MehJ}
+  k: {t: ⌥⇧J, h: ⌥⇧⌃J}
   l: [Default, Russian]
 - p: [13, 26]
-  k: {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
   l: [Default, Russian]
 - p: [33, 22]
-  k: {t: '$$phosphor:bold/arrow-fat-up$$', h: sticky}
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
   l: [Default, Russian]
 - p: [25, 26]
-  k: $$phosphor:bold/brackets-round$$
-  l: [Numbers / Nav]
+  k: $$mdi:code-parentheses$$
+  l: [Num / Nav]
 - p: [26, 27]
-  k: $$phosphor:bold/brackets-square$$
-  l: [Numbers / Nav]
+  k: $$mdi:code-brackets$$
+  l: [Num / Nav]
 - p: [27, 28]
-  k: $$phosphor:bold/brackets-curly$$
-  l: [Numbers / Nav]
+  k: $$mdi:code-braces$$
+  l: [Num / Nav]
 - p: [26, 27]
-  k: {t: ',', h: '&comma_space'}
+  k: {t: ',', h: ',␣', s: <}
   l: [Default]
 - p: [26, 27]
-  k: {t: ^, h: '&comma_space_ru'}
+  k: {t: ',', h: ',␣'}
   l: [Russian]
 - p: [27, 28]
-  k: {t: ., h: '&dot_space'}
+  k: {t: ., h: .␣, s: '>'}
   l: [Default]
 - p: [28, 27]
-  k: {t: ⇧7, h: '&dot_space_ru'}
+  k: {t: ., h: .␣}
   l: [Russian]
 - p: [33, 34]
-  k: /
+  k: {t: /, s: '?'}
   l: [Russian]
-- p: [16, 37]
-  k: $$tabler:flag$$
+- p: [15, 28]
+  k: $$mdi:flag$$
   l: [Russian, Default]
-- p: [16, 13]
-  k: $$tabler:flag-off$$
+  a: right
+- p: [27, 16]
+  k: $$mdi:flag-outline$$
   l: [Russian, Default]
+  a: bottom

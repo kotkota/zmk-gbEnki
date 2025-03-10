@@ -3,3 +3,5 @@ This branch for keyboard with LEDs. For keyboard without LEDs use [another branc
 
 -----
 
+# Keymap
+![…](config/gbEnki.svg)

@@ -146,12 +146,6 @@
             layers = <0 1>;
         };
 
-        combo_soft_off {
-            bindings = <&soft_off>;
-            key-positions = <25 17>;
-            layers = <0 1>;
-        };
-
         combo_quo {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <32 31>;
@@ -189,7 +183,7 @@
         };
 
         combo_mute {
-            bindings = <&kp K_MUTE>;
+            bindings = <&kp C_MUTE>;
             key-positions = <11 10>;
             layers = <5>;
         };
@@ -255,7 +249,7 @@
         };
 
         combo_comma_ru {
-            bindings = <&smart_comma_ru 0 LS(N6)>;
+            bindings = <&smart_comma_ru 0 RS(NUMBER_6)>;
             key-positions = <26 27>;
             layers = <1>;
         };
@@ -280,13 +274,13 @@
 
         combo_ru_on {
             bindings = <&ru_on>;
-            key-positions = <16 37>;
+            key-positions = <15 28>;
             layers = <1 0>;
         };
 
         combo_ru_off {
             bindings = <&ru_off>;
-            key-positions = <16 13>;
+            key-positions = <27 16>;
             layers = <1 0>;
         };
     };
@@ -506,7 +500,7 @@
         ru {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &mt LS(N8) LS(N5)
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans         &mt RS(NUMBER_8) RS(NUMBER_5)
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt QMARK SQT  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
@@ -529,7 +523,7 @@
             bindings = <
 &trans  &none            &kp N7        &kp N8       &kp N9       &mt KP_ASTERISK PLUS    &kp HOME   &kp LA(LEFT)  &kp UP        &kp LA(RIGHT)    &kp END      &none
 &trans  &mt LSHIFT SEMI  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt KP_DIVIDE MINUS     &kp PG_UP  &kp LEFT      &kp DOWN      &kp RIGHT        &none        &none
-&none   &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &kp PG_DN  &kp LG(LBKT)  &kp LG(RBKT)  &kp RS(RC(TAB))  &kp RC(TAB)  &trans
+&trans  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &kp PG_DN  &kp LG(LBKT)  &kp LG(RBKT)  &kp RS(RC(TAB))  &kp RC(TAB)  &trans
                                        &trans       &trans       &none                   &trans     &trans        &trans
             >;
 
