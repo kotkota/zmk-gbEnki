@@ -32,8 +32,8 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: <}
-  - PERIOD
+  - ','
+  - .
   - {t: /, h: '?', s: '?'}
   - {t: \, h: Shortcuts / Media, s: '|'}
   - {t: '$$mdi:backspace$$', h: FN + Symbols / Numbers}
@@ -118,8 +118,8 @@ layers:
   - V
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - ','
+  - .
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: T, h: H}
@@ -146,7 +146,7 @@ layers:
   - {t: '4', h: '$$mdi:apple-keyboard-control$$', s: $}
   - {t: '5', h: '$$mdi:apple-keyboard-option$$', s: '%'}
   - {t: '6', h: '$$mdi:apple-keyboard-command$$', s: ^}
-  - {t: '-', h: /, s: _}
+  - {t: '-', h: /}
   - $$mdi:transfer-up$$
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
@@ -202,9 +202,9 @@ layers:
   - {t: '[', h: '{', s: '{'}
   - {t: ']', h: '}', s: '}'}
   - {t: \, h: '|', s: '|'}
-  - {t: '-', s: _}
+  - '-'
   - _
-  - {t: '=', s: +}
+  - '='
   - +
   - '?'
   - '|'
@@ -347,7 +347,8 @@ combos:
 - p: [35, 24]
   k: {t: Game, h: toggle}
   l: [Default, Game, Russian]
-- p: [16, 19]
+  a: bottom
+- p: [14, 21]
   k: ✱
   l: [Default, Russian]
 - p: [8, 9]
@@ -393,13 +394,10 @@ combos:
   k: {t: _, h: '...'}
   l: [Default, Russian]
 - p: [18, 19]
-  k: {t: '=', h: +, s: +}
+  k: {t: '=', h: +}
   l: [Default, Russian]
 - p: [20, 19]
-  k: {t: '-', h: —, s: _}
-  l: [Default, Russian]
-- p: [25, 17]
-  k: $$mdi:power-standby$$
+  k: {t: '-', h: —}
   l: [Default, Russian]
 - p: [32, 31]
   k: {t: '''', s: '"'}
@@ -426,13 +424,13 @@ combos:
   k: {t: '$$mdi:content-copy$$', h: '$$mdi:content-cut$$'}
   l: [Default, Russian]
 - p: [3, 4]
-  k: {t: '$$mdi:content-paste$$', h: '$$mdi:clipboard-text-multiple$$'}
+  k: {t: '$$mdi:content-paste$$', h: '$$mdi:invoice-text-multiple$$'}
   l: [Default, Russian]
 - p: [16, 17]
   k: {t: '$$mdi:code-tags$$', h: '$$mdi:xml$$'}
   l: [Default, Russian]
 - p: [28, 29]
-  k: {t: ⌥⇧J, h: ⌥⇧⌃J}
+  k: {t: ="", h: «»}
   l: [Default, Russian]
 - p: [13, 26]
   k: {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
@@ -450,13 +448,13 @@ combos:
   k: $$mdi:code-braces$$
   l: [Num / Nav]
 - p: [26, 27]
-  k: {t: ',', h: ',␣', s: <}
+  k: {t: ',', h: ',␣'}
   l: [Default]
 - p: [26, 27]
   k: {t: ',', h: ',␣'}
   l: [Russian]
 - p: [27, 28]
-  k: {t: ., h: .␣, s: '>'}
+  k: {t: ., h: .␣}
   l: [Default]
 - p: [28, 27]
   k: {t: ., h: .␣}

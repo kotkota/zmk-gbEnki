@@ -41,11 +41,11 @@
         };
 
         combo_leader_key {
-            bindings = <&kp LA(LC(LG(LS(SEMI))))>;
-            key-positions = <16 19>;
+            bindings = <&kp F13>;
+            key-positions = <14 21>;
             layers = <0 1>;
             timeout-ms = <80>;
-            require-prior-idle-ms = <80>;
+            require-prior-idle-ms = <120>;
         };
 
         combo_ha_sch {
@@ -207,7 +207,7 @@
         };
 
         combo_eq_quo {
-            bindings = <&mt LA(LS(LC(J))) LA(LS(J))>;
+            bindings = <&mt LS(LA(LC(J))) LA(LC(J))>;
             key-positions = <28 29>;
             layers = <0 1>;
         };
@@ -490,7 +490,7 @@
             bindings = <
 &lt 7 ESC             &kp Q          &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
 &mt LC(LA(LCMD)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
-&lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp PERIOD    &mt QMARK SLASH   &lt 5 BSLH
+&lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT    &mt QMARK SLASH   &lt 5 BSLH
                                                    &lt 4 BSPC   &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BSPC
             >;
 

@@ -35,13 +35,15 @@ draw_config:
       --held-color: #04f8;
     }
     svg.keymap {font-family: SF Pro Display, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;}
+
     rect.key, rect.combo {
-      stroke-width: 0.25;
+      stroke-width: 0.5;
       stroke: #0004;
     }
     .tap.glyph:has(+.hold.glyph),
     .tap.combo:has(+.hold.combo) {translate: 0 -0.2%;}
-    .combo {letter-spacing: -0.1em;}
+    .combo {letter-spacing: -0.1em; dominant-baseline: central;}
+    .combo.shifted {dominant-baseline: unset;}
     .layer-activator {translate: 0 -0.1%;}
     .tap.glyph + .hold.glyph {translate: 0 0.05%;}
     text.layer-activator {
@@ -63,32 +65,33 @@ draw_config:
   shrink_wide_legends: 7
   style_layer_activators: true
   glyph_tap_size: 14
-  glyph_hold_size: 12
+  glyph_hold_size: 10
   glyph_shifted_size: 10
   glyphs: {}
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: {
-    "&ru_off": $$mdi:flag-outline$$,
-    "&ru_on": $$mdi:flag$$,
-    "&html_tag_open": $$mdi:code-tags$$,
-    "&html_tag_close": $$mdi:xml$$,
-    "&par": $$mdi:code-parentheses$$,
-    "&bkt": $$mdi:code-brackets$$,
-    "&brc": $$mdi:code-braces$$,
-    "&soft_off": $$mdi:power-standby$$,
-    "&bootloader": $$mdi:console$$,
-    "&studio_unlock": $$mdi:lock-open-variant-outline$$,
-    "&upd_fw_l": $$mdi:reload-alert$$,
-    "&upd_fw_r": $$mdi:reload-alert$$,
-    "&comma_space": ",␣",
-    "&comma_space_ru": ",␣",
-    "&dot_space": ".␣",
-    "&dot_space_ru": ".␣",
-    "&check_bat": $$mdi:battery-medium$$,
+  raw_binding_map:
+    "&ru_off": $$mdi:flag-outline$$
+    "&ru_on": $$mdi:flag$$
+    "&html_tag_open": $$mdi:code-tags$$
+    "&html_tag_close": $$mdi:xml$$
+    "&par": $$mdi:code-parentheses$$
+    "&bkt": $$mdi:code-brackets$$
+    "&brc": $$mdi:code-braces$$
+    "&soft_off": $$mdi:power-standby$$
+    "&bootloader": $$mdi:console$$
+    "&studio_unlock": $$mdi:lock-open-variant-outline$$
+    "&upd_fw_l": $$mdi:reload-alert$$
+    "&upd_fw_r": $$mdi:reload-alert$$
+    "&comma_space": ",␣"
+    "&comma_space_ru": ",␣"
+    "&dot_space": ".␣"
+    "&dot_space_ru": ".␣"
+    "&check_bat": $$mdi:battery-medium$$
     "&playnp": $$mdi:play-pause$$
-  }
+
+
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
@@ -198,7 +201,7 @@ parse_config:
     LG(X): $$mdi:content-cut$$
     LG(C): $$mdi:content-copy$$
     LG(V): $$mdi:content-paste$$
-    LA(LC(V)): $$mdi:clipboard-text-multiple$$
+    LA(LC(V)): $$mdi:invoice-text-multiple$$
 
     RS(RC(TAB)): $$tabler:arrow-autofit-left$$
     RC(TAB): $$tabler:arrow-autofit-right$$
@@ -212,7 +215,7 @@ parse_config:
 
     LG(Z): $$mdi:undo-variant$$
     LG(LS(Z)): $$mdi:redo-variant$$
-    LA(LC(LG(LS(SEMI)))): ✱
+    F13: ✱
 
     RS(NUMBER_5): ':'
     RS(NUMBER_6): ','
@@ -243,13 +246,9 @@ parse_config:
     RIGHT_PARENTHESIS: )
     RPAR: )
     KP_EQUAL: '='
-    EQUAL:
-      tap: "="
-      shifted: "+"
+    EQUAL: "="
     PLUS: +
-    MINUS:
-      tap: "-"
-      shifted: "_"
+    MINUS: "-"
     UNDERSCORE: _
     UNDER: _
     KP_DIVIDE: /
@@ -284,19 +283,15 @@ parse_config:
     SQT:
       tap: "'"
       shifted: '"'
-    APOSTROPHE: <
-    APOS: .
+
     DOUBLE_QUOTES: '"'
     DQT: '"'
-
+    LA(LC(J)): '=""'
+    LS(LA(LC(J))): '«»'
     LESS_THAN: <
     LT: <
-    DOT:
-      tap: "."
-      shifted: ">"
-    COMMA:
-      tap: ","
-      shifted: "<"
+    DOT: "."
+    COMMA: ","
     GREATER_THAN: ">"
     GT: ">"
     LEFT_BRACKET:
@@ -430,5 +425,8 @@ parse_config:
       align: right
     combo_ru_off:
       align: bottom
+    combo_toggle_game:
+      align: bottom
+
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
