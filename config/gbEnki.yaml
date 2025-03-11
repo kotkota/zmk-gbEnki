@@ -12,7 +12,7 @@ layers:
   - O
   - P
   - {t: '[', s: '{'}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$phosphor:regular/diamond$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:rhombus-outline$$'}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
@@ -23,8 +23,8 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
-  - {t: '''', h: '$$phosphor:regular/diamond$$', s: '"'}
-  - {t: '`', h: Shortcuts / Media, s: '~'}
+  - {t: '''', h: '$$mdi:rhombus-outline$$', s: '"'}
+  - {t: '`', h: Shortcuts, s: '~'}
   - {t: Z, h: '$$mdi:apple-keyboard-caps$$'}
   - X
   - C
@@ -35,13 +35,13 @@ layers:
   - ','
   - .
   - {t: /, h: '?', s: '?'}
-  - {t: \, h: Shortcuts / Media, s: '|'}
-  - {t: '$$mdi:backspace$$', h: FN + Symbols / Numbers}
+  - {t: \, h: Shortcuts, s: '|'}
+  - {t: '$$mdi:backspace$$', h: FN / Sym}
   - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
-  - {t: '$$mdi:keyboard-return$$', h: Sticky mods + Shortcuts}
-  - {t: '$$mdi:keyboard-return$$', h: Sticky mods + Shortcuts}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods}
   - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
-  - {t: '$$mdi:backspace$$', h: FN + Symbols / Numbers}
+  - {t: '$$mdi:backspace$$', h: FN / Sym}
   Russian:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -153,7 +153,7 @@ layers:
   - $$mdi:arrow-right$$
   - ''
   - ''
-  - {t: ◌, type: trans}
+  - {type: held alternate}
   - '='
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -169,9 +169,9 @@ layers:
   - {type: held}
   - ''
   - {t: ◌, type: trans}
+  - {type: held alternate}
   - {t: ◌, type: trans}
-  - {t: ◌, type: trans}
-  FN + Symbols / Numbers:
+  FN / Sym:
   - F1
   - F2
   - F3
@@ -213,8 +213,8 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - {t: ◌, type: trans}
-  Shortcuts / Media:
+  - {type: held alternate}
+  Shortcuts:
   - ''
   - {t: ⇧⌘1, s: ⇧⌘!}
   - {t: ⇧⌘2, s: ⇧⌘@}
@@ -250,14 +250,14 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held alternate}
   - $$mdi:backspace-reverse-outline$$
   - ''
   - ''
   - ''
   - ''
   - $$mdi:backspace-reverse-outline$$
-  Sticky mods + Shortcuts:
+  Sticky mods:
   - ''
   - ''
   - $$tabler:square-chevron-left$$
@@ -270,18 +270,18 @@ layers:
   - ''
   - ''
   - ''
-  - {t: '$$phosphor:regular/diamond$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:rhombus-outline$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
   - ⌘G
   - ''
-  - {t: '$$mdi:apple-keyboard-command$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
-  - {t: '⌘⌃$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '⌘⌃$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - ''
   - ''
   - ''
@@ -297,7 +297,7 @@ layers:
   - $$mdi:flag-outline$$
   - $$mdi:flag$$
   - {type: held}
-  - ''
+  - {type: held alternate}
   - $$mdi:flag$$
   - $$mdi:flag-outline$$
   System:
@@ -345,11 +345,11 @@ layers:
   - $$mdi:reload-alert$$
 combos:
 - p: [35, 24]
-  k: {t: Game, h: toggle}
+  k: {t: Game, h: '$$mdi:toggle-switch$$'}
   l: [Default, Game, Russian]
   a: bottom
 - p: [14, 21]
-  k: ✱
+  k: $$mdi:star-four-points-circle$$
   l: [Default, Russian]
 - p: [8, 9]
   k: {t: '[', s: '{'}
@@ -419,7 +419,7 @@ combos:
   l: [Num / Nav]
 - p: [11, 10]
   k: $$mdi:volume-off$$
-  l: [Shortcuts / Media]
+  l: [Shortcuts]
 - p: [2, 3]
   k: {t: '$$mdi:content-copy$$', h: '$$mdi:content-cut$$'}
   l: [Default, Russian]
@@ -433,10 +433,10 @@ combos:
   k: {t: ="", h: «»}
   l: [Default, Russian]
 - p: [13, 26]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   l: [Default, Russian]
 - p: [33, 22]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   l: [Default, Russian]
 - p: [25, 26]
   k: $$mdi:code-parentheses$$

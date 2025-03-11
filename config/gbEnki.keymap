@@ -538,7 +538,7 @@
                                            &trans         &trans         &trans           &trans     &trans     &trans
             >;
 
-            display-name = "FN + Symbols / Numbers";
+            display-name = "FN / Sym";
         };
 
         media {
@@ -549,7 +549,7 @@
                                        &kp DEL         &none           &none             &none  &none  &kp DEL
             >;
 
-            display-name = "Shortcuts / Media";
+            display-name = "Shortcuts";
         };
 
         sticky {
@@ -560,7 +560,7 @@
                                             &ru_off        &ru_on     &none        &none  &ru_on    &ru_off
             >;
 
-            display-name = "Sticky mods + Shortcuts";
+            display-name = "Sticky mods";
         };
 
         system {
