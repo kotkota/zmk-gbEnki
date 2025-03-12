@@ -462,11 +462,11 @@ combos:
 - p: [33, 34]
   k: {t: /, s: '?'}
   l: [Russian]
-- p: [15, 28]
+- p: [27, 16]
   k: $$mdi:flag$$
   l: [Russian, Default]
-  a: right
-- p: [27, 16]
+  a: bottom
+- p: [27, 14]
   k: $$mdi:flag-outline$$
   l: [Russian, Default]
   a: bottom

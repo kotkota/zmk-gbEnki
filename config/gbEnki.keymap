@@ -274,13 +274,13 @@
 
         combo_ru_on {
             bindings = <&ru_on>;
-            key-positions = <15 28>;
+            key-positions = <27 16>;
             layers = <1 0>;
         };
 
         combo_ru_off {
             bindings = <&ru_off>;
-            key-positions = <27 16>;
+            key-positions = <27 14>;
             layers = <1 0>;
         };
     };

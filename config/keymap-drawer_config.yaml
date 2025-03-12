@@ -287,7 +287,7 @@ parse_config:
 
   zmk_combos:
     combo_ru_on:
-      align: right
+      align: bottom
     combo_ru_off:
       align: bottom
     combo_toggle_game:
@@ -556,9 +556,10 @@ draw_config:
      	fill: var(--color--layer--text);
      	translate: 600px 70px;
     }
-    .layer-activator {
+    .layer-activator.hold {
       dominant-baseline: auto;
       fill: var(--color--key--text--shifted);
+      letter-spacing: -0.5px;
     }
     .layer-Fn text.label {
         translate: 581px 164px;
@@ -629,6 +630,8 @@ draw_config:
     }
     .combo.tap {
       font-size: 16px;
+    }
+    .combo.tap:has(+ .hold) {
       dominant-baseline: auto;
     }
     .combo.shifted {
@@ -708,6 +711,6 @@ draw_config:
     .keypos-41 {
       --color--key--bg: var(--color--material--red--300);
       --color--key--border: var(--color--material--red--200);
-      --color--key--text--shifted: var(--color--material--red--900);
+      --color--key--text--shifted: rgb(110, 60, 60);
       --color--key--text--hold: var(--color--key--text--tap);
     }
