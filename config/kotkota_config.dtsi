@@ -1,0 +1,18 @@
+#define DFLT   0
+#define RU     1
+#define GAME   2
+#define NUMB   3
+#define FUNC   4
+#define MEDIA  5
+#define STCKY  6
+#define SYS    7
+
+&lt { quick-tap-ms = <250>; };
+
+&mt {
+  hold-trigger-on-release;
+  flavor = "balanced";
+  quick-tap-ms = <250>;
+};
+
+&soft_off { hold-time-ms = <2000>; };
