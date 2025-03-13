@@ -403,6 +403,13 @@
             bindings = <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "MACRO_P";
         };
+
+        macro_wtf: macro_wtf {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            label = "MACRO_WTF";
+        };
     };
 
     behaviors {
@@ -514,6 +521,16 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        new_wtf: new_wtf {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_WTF";
+            bindings = <&macro_wtf>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -565,10 +582,10 @@
 
         symb {
             bindings = <
-&kp F1           &kp F2           &kp F3       &kp F4         &kp F5         &kp F6           &kp EXCL   &kp AT     &kp POUND  &kp DLLR  &kp PERCENT  &trans
-&kp F7           &kp F8           &kp F9       &kp F10        &kp F11        &kp F12          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR     &trans
-&mt QMARK SLASH  &bkts RPAR LPAR  &bkts GT LT  &mt LBRC LBKT  &mt RBRC RBKT  &mt PIPE BSLH    &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS  &kp QMARK    &kp PIPE
-                                               &trans         &trans         &trans           &trans     &trans     &trans
+&kp F1           &kp F2           &kp F3                &kp F4              &kp F5         &kp F6           &kp EXCL   &kp AT     &kp POUND  &kp DLLR  &kp PERCENT  &trans
+&kp F7           &kp F8           &kp F9                &kp F10             &kp F11        &kp F12          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR     &trans
+&mt QMARK SLASH  &bkts RPAR LPAR  &single_double GT LT  &new_wtf RBKT LBKT  &mt RBRC RBKT  &mt PIPE BSLH    &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS  &kp QMARK    &kp PIPE
+                                                        &trans              &trans         &trans           &trans     &trans     &trans
             >;
 
             display-name = "FN / Sym";
