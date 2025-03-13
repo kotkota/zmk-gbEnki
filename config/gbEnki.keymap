@@ -393,21 +393,21 @@
         macro_double: parametric_pair {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp PIPE &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "PARAMETRIC_PAIR";
         };
 
         macro_pair: macro_p {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            bindings = <&macro_param_2to1 &kp MACRO_PLACEHOLDER &kp PIPE &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "MACRO_P";
         };
 
         macro_wtf: macro_wtf {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp PIPE &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "MACRO_WTF";
         };
     };
@@ -517,7 +517,7 @@
             label = "BKTS";
             bindings = <&macro_pair>, <&kp>;
 
-            #binding-cells = <2>;
+            #binding-cells = <3>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
@@ -625,5 +625,4 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
