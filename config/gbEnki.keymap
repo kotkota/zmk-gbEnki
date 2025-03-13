@@ -390,14 +390,14 @@
                 <&kp LESS_THAN &kp GREATER_THAN &kp LEFT &kp SLASH>;
         };
 
-        macro_double: parametric_pair {
+        macro_double: macro_double {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "PARAMETRIC_PAIR";
         };
 
-        macro_pair: macro_p {
+        macro_pair: macro_pair {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
