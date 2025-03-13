@@ -407,7 +407,7 @@
         macro_wtf: macro_wtf {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp PIPE &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            bindings = <&macro_param_1to1 &macro_param_2to2 &mt MACRO_PLACEHOLDER MACRO_PLACEHOLDER &kp PIPE &macro_param_2to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "MACRO_WTF";
         };
     };
@@ -517,7 +517,7 @@
             label = "BKTS";
             bindings = <&macro_pair>, <&kp>;
 
-            #binding-cells = <3>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
