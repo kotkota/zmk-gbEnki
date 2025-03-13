@@ -153,31 +153,31 @@
         };
 
         combo_dquo {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&single_double DQT DQT>;
             key-positions = <32 33>;
             layers = <0>;
         };
 
         combo_dquo_ru {
-            bindings = <&macro_pair LS(N2)>;
+            bindings = <&single_double LS(N2) LS(N2)>;
             key-positions = <32 33>;
             layers = <1>;
         };
 
         combo_grave {
-            bindings = <&kp GRAVE>;
+            bindings = <&single_double GRAVE GRAVE>;
             key-positions = <33 34>;
             layers = <0>;
         };
 
         combo_del {
-            bindings = <&kp DEL>;
+            bindings = <&mt LA(DEL) DEL>;
             key-positions = <8 9>;
             layers = <3>;
         };
 
         combo_bsp {
-            bindings = <&kp BSPC>;
+            bindings = <&mt LA(BSPC) BSPC>;
             key-positions = <7 8>;
             layers = <3>;
         };
@@ -274,7 +274,7 @@
 
         combo_ru_on {
             bindings = <&ru_on>;
-            key-positions = <16 15 14>;
+            key-positions = <15 14 16>;
             layers = <1 0>;
         };
 
@@ -395,6 +395,13 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
             label = "PARAMETRIC_PAIR";
+        };
+
+        use_macro: use_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "USE_MACRO";
         };
     };
 
