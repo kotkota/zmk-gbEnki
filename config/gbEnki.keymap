@@ -147,7 +147,7 @@
         };
 
         combo_quo {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&single_double SQT SQT>;
             key-positions = <32 31>;
             layers = <0>;
         };
@@ -159,7 +159,7 @@
         };
 
         combo_dquo_ru {
-            bindings = <&kp LS(N2)>;
+            bindings = <&macro_pair LS(N2)>;
             key-positions = <32 33>;
             layers = <1>;
         };
@@ -274,13 +274,13 @@
 
         combo_ru_on {
             bindings = <&ru_on>;
-            key-positions = <27 16>;
+            key-positions = <16 15 14>;
             layers = <1 0>;
         };
 
         combo_ru_off {
             bindings = <&ru_off>;
-            key-positions = <27 14>;
+            key-positions = <27 26 28>;
             layers = <1 0>;
         };
     };
@@ -315,7 +315,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 200>,
+                <&macro_wait_time 50>,
                 <&ru_off>,
                 <&macro_wait_time 20>,
                 <&kp LBKT &kp RBKT &kp LEFT>;
@@ -327,7 +327,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 200>,
+                <&macro_wait_time 50>,
                 <&ru_off>,
                 <&macro_wait_time 20>,
                 <&kp LBRC &kp RBRC &kp LEFT>;
@@ -369,11 +369,11 @@
             bindings = <&tog_off 1 &kp LS(LA(LC(LG(M))))>;
         };
 
-        html_tag_open: html_tag_open {
+        tag_open: html_tag_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 200>,
+                <&macro_wait_time 50>,
                 <&ru_off>,
                 <&macro_wait_time 20>,
                 <&kp LESS_THAN &kp GREATER_THAN &kp LEFT>;
@@ -381,14 +381,20 @@
             label = "HTML_TAG_OPEN";
         };
 
-        html_tag_close: html_tag {
+        tag_close: html_tag {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 200>,
                 <&ru_off>,
                 <&macro_wait_time 20>,
                 <&kp LESS_THAN &kp GREATER_THAN &kp LEFT &kp SLASH>;
+        };
+
+        macro_pair: parametric_pair {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LEFT>;
+            label = "PARAMETRIC_PAIR";
         };
     };
 
@@ -475,11 +481,21 @@
         html_tag: html_tag {
             compatible = "zmk,behavior-hold-tap";
             label = "HTML_TAG";
-            bindings = <&html_tag_close>, <&html_tag_open>;
+            bindings = <&tag_close>, <&tag_open>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
+        };
+
+        single_double: single_double {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SINGLE_DOUBLE";
+            bindings = <&macro_pair>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
         };
     };
 
@@ -490,7 +506,7 @@
             bindings = <
 &lt 7 ESC             &kp Q          &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
 &mt LC(LA(LCMD)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
-&lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT    &mt QMARK SLASH   &lt 5 BSLH
+&lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT       &mt QMARK SLASH   &lt 5 BSLH
                                                    &lt 4 BSPC   &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BSPC
             >;
 
