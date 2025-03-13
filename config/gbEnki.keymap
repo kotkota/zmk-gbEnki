@@ -400,7 +400,10 @@
         macro_pair: macro_p {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &hold_sym_left MACRO_PLACEHOLDER 0>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &hold_sym_left MACRO_PLACEHOLDER 0>,
+                <&macro_pause_for_release>;
+
             label = "MACRO_P";
         };
 
@@ -506,16 +509,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SINGLE_DOUBLE";
             bindings = <&macro_double>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-        };
-
-        bkts: bkts {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BKTS";
-            bindings = <&macro_pair>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
