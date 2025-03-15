@@ -454,7 +454,7 @@
             #binding-cells = <0>;
             bindings = <&leader1>;
 
-            akt_eml { trigger-keys = <S>; max-prior-idle-ms = <300>; bindings = <&kp S &kp H &kp U &kp S &kp H &kp А &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
+            akt_s { trigger-keys = <S>; max-prior-idle-ms = <500>; bindings = <&kp S &kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
         };
 
         playnp: play_next_previous_media {
