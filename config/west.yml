@@ -8,8 +8,10 @@ manifest:
       url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: sqdbruh
-      revision: main
+      # remote: sqdbruh
+      # revision: main
+      remote: urob
+      revision: v0.2+fix-child-nodes
       import: app/west.yml
 
       # urob ZMK modules
