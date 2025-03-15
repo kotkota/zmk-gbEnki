@@ -243,25 +243,25 @@
         };
 
         combo_comma {
-            bindings = <&smart_comma 0 COMMA>;
+            bindings = <&mt SEMI COMMA>;
             key-positions = <26 27>;
             layers = <0>;
         };
 
         combo_comma_ru {
-            bindings = <&smart_comma_ru 0 RS(NUMBER_6)>;
+            bindings = <&mt RS(NUMBER_8) 0 RS(NUMBER_6)>;
             key-positions = <26 27>;
             layers = <1>;
         };
 
         combo_dot {
-            bindings = <&smart_dot 0 DOT>;
+            bindings = <&mt COLON DOT>;
             key-positions = <27 28>;
             layers = <0>;
         };
 
         combo_dot_ru {
-            bindings = <&smart_dot_ru 0 RS(NUMBER_7)>;
+            bindings = <&mt RS(NUMBER_5) RS(NUMBER_7)>;
             key-positions = <28 27>;
             layers = <1>;
         };
@@ -454,7 +454,7 @@
             #binding-cells = <0>;
             bindings = <&leader1>;
 
-            akt_s { trigger-keys = <S>; max-prior-idle-ms = <500>; bindings = <&kp S &kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
+            akt_s { trigger-keys = <S>; max-prior-idle-ms = <500>; bindings = <&kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
         };
 
         playnp: play_next_previous_media {
@@ -570,7 +570,7 @@
 
         default_layer {
             bindings = <
-&lt 7 ESC             &kp Q          &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
+&lt 7 ESC             &mt EXCL Q     &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
 &mt LC(LA(LCMD)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
 &lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT       &mt QMARK SLASH   &lt 5 BSLH
                                                    &lt 4 BSPC   &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BSPC
