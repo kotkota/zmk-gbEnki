@@ -457,7 +457,7 @@
         a_key: a_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&leader1>;
 
             // Binding two behaviors: JG->JPG
             akt_jg { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp P &kp G>; };
