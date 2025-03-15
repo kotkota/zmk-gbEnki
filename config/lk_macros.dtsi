@@ -2,108 +2,98 @@ ba: ba {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp B &kp A &kp C &kp K &kp G &kp R &kp O &kp U &kp N &kp D &kp COLON &kp SPACE>;
-
-    label = "BA";
 };
 
 bp: bp {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp B &kp A &kp C &kp K &kp G &kp R &kp O &kp U &kp N &kp D &kp MINUS &kp P &kp O &kp S &kp I &kp T &kp I &kp O &kp N &kp COLON &kp SPACE>;
-
-    label = "BP";
 };
 
 fs: fs {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp F &kp O &kp N &kp T &kp MINUS &kp S &kp I &kp Z &kp E &kp COLON &kp SPACE>;
-
-    label = "FS";
 };
 
 fw: fw {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp F &kp O &kp N &kp T &kp MINUS &kp W &kp E &kp I &kp G &kp H &kp T &kp COLON &kp SPACE>;
-
-    label = "FW";
 };
 
 va: va {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp V &kp A &kp R &kp LPAR &kp MINUS &kp MINUS &kp RPAR &kp LEFT>;
-
-    label = "VA";
 };
 
 ca: ca {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp C &kp A &kp L &kp C &kp LPAR &kp RPAR &kp LEFT>;
-
-    label = "CA";
 };
 
 fd: fd {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp F &kp L &kp E &kp X &kp MINUS &kp D &kp I &kp R &kp E &kp C &kp T &kp I &kp O &kp N &kp COLON &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp SEMI>;
-
-    label = "FD";
 };
 
 me: me {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
-        <&kp AT &kp M &kp E &kp D &kp I &kp A &kp SPACE &kp LPAR &kp W &kp I &kp D &kp T &kp H &kp RPAR &kp SPACE &kp RBKT &kp RBRC &kp LA(LEFT) &kp LA(LEFT) &kp LA(LEFT) &sk LALT>;
-
-    label = "ME";
+        <&ru_off>,
+        <&macro_wait_time 10>,
+        <&kp AT &kp M &kp E &kp D &kp I &kp A &kp SPACE &kp LPAR &kp W &kp I &kp D &kp T &kp H &kp RPAR &kp SPACE &kp LBRC &kp RBRC &kp LA(LEFT) &kp LA(LEFT) &sk LALT>;
 };
 
 mw: mw {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp M &kp A &kp X &kp MINUS &kp W &kp I &kp D &kp T &kp H &kp COLON &kp SPACE>;
-
-    label = "MW";
 };
 
 nw: nw {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-        <&ru_off>,
         <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
         <&kp M &kp I &kp N &kp MINUS &kp W &kp I &kp D &kp T &kp H &kp COLON &kp SPACE>;
-
-    label = "NW";
 };
