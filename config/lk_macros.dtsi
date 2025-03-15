@@ -97,3 +97,23 @@ nw: nw {
         <&macro_wait_time 10>,
         <&kp M &kp I &kp N &kp MINUS &kp W &kp I &kp D &kp T &kp H &kp COLON &kp SPACE>;
 };
+
+cs: cs {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings =
+        <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
+        <&kp C &kp L &kp A &kp S &kp S &kp EQUAL &kp DQT &kp DQT &kp LEFT>;
+};
+
+st: st {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings =
+        <&macro_wait_time 20>,
+        <&ru_off>,
+        <&macro_wait_time 10>,
+        <&kp S &kp T &kp Y &kp L &kp E &kp EQUAL &kp DQT &kp DQT &kp LEFT>;
+};

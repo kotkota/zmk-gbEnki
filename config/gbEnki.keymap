@@ -284,8 +284,8 @@
             layers = <1 0>;
         };
 
-        leader-key {
-            bindings = <&leader1>;
+        combo_leader-key {
+            bindings = <&ak_leader>;
             key-positions = <25 26>;
             layers = <1 0>;
         };
@@ -444,6 +444,16 @@
             me { sequence = <M E>; bindings = <&me>; };
             mw { sequence = <M W>; bindings = <&mw>; };
             nw { sequence = <N W>; bindings = <&nw>; };
+            cs { sequence = <C S>; bindings = <&cs>; };
+            st { sequence = <S T>; bindings = <&st>; };
+        };
+
+        ak_leader: ak_leader {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&leader1>;
+
+            akt_eml { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp S &kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
         };
 
         playnp: play_next_previous_media {
@@ -627,7 +637,7 @@
             bindings = <
 &none             &none        &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
 &sk LC(LA(LCMD))  &sk LSHIFT   &sk LCTRL     &sk LALT       &sk LCMD   &kp LG(G)    &none  &sk RCMD  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk RG(RC(RALT))
-&none             &leader1     &none         &none          &none      &none        &none  &none     &none     &none      &none       &none
+&none             &none        &none         &none          &none      &none        &none  &none     &none     &none   &none       &none
                                              &ru_off        &ru_on     &none        &none  &ru_on    &ru_off
             >;
 
