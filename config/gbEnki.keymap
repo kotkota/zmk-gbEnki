@@ -289,6 +289,12 @@
             key-positions = <25 26>;
             layers = <1 0>;
         };
+
+        adaptive-key {
+            bindings = <&a_key>;
+            key-positions = <1 2>;
+            layers = <1 0>;
+        };
     };
 
     macros {
@@ -448,10 +454,10 @@
             st { sequence = <S T>; bindings = <&st>; };
         };
 
-        ak_g: ak_g {
+        a_key: a_key {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&kp G>;
+            bindings = <&none>;
 
             // Binding two behaviors: JG->JPG
             akt_jg { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp P &kp G>; };
@@ -571,7 +577,7 @@
         default_layer {
             bindings = <
 &lt 7 ESC             &kp Q          &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
-&mt LC(LA(LCMD)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &ak_g          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
+&mt LC(LA(LCMD)) TAB  &mtl LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
 &lt 5 GRAVE           &mt CAPS Z     &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT       &mt QMARK SLASH   &lt 5 BSLH
                                                    &lt 4 BSPC   &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BSPC
             >;
