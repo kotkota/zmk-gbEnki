@@ -1,0 +1,472 @@
+layers:
+  Default:
+  - {t: '$$mdi:keyboard-esc$$', h: System}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '[', s: '{'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:rhombus-outline$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: '''', h: '$$mdi:rhombus-outline$$', s: '"'}
+  - {t: '`', h: Shortcuts, s: '~'}
+  - {t: Z, h: '$$mdi:apple-keyboard-caps$$'}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: '?', s: '?'}
+  - {t: \, h: Shortcuts, s: '|'}
+  - {t: '$$mdi:backspace$$', h: FN / Sym}
+  - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods}
+  - {t: '$$mdi:keyboard-return$$', h: Sticky mods}
+  - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
+  - {t: '$$mdi:backspace$$', h: FN / Sym}
+  Russian:
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ':', h: ;}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: '''', h: '?', s: '"'}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  Game:
+  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '[', s: '{'}
+  - B
+  - $$mdi:apple-keyboard-shift$$
+  - A
+  - S
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:keyboard-return$$', h: Num / Nav}
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, s: '?'}
+  - {t: \, s: '|'}
+  - {t: T, h: H}
+  - $$mdi:keyboard-space$$
+  - G
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
+  Num / Nav:
+  - {t: ◌, type: trans}
+  - ''
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: +, h: '*'}
+  - $$mdi:arrow-top-left$$
+  - $$mdi:arrow-collapse-left$$
+  - $$mdi:arrow-up$$
+  - $$mdi:arrow-collapse-right$$
+  - $$mdi:arrow-bottom-right$$
+  - ''
+  - {t: ◌, type: trans}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: '4', h: '$$mdi:apple-keyboard-control$$', s: $}
+  - {t: '5', h: '$$mdi:apple-keyboard-option$$', s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-command$$', s: ^}
+  - {t: '-', h: /}
+  - $$mdi:transfer-up$$
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
+  - ''
+  - ''
+  - {type: held alternate}
+  - '='
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '0', s: )}
+  - $$mdi:transfer-down$$
+  - {t: '⌘[', s: '⌘{'}
+  - {t: '⌘]', s: '⌘}'}
+  - $$tabler:arrow-autofit-left$$
+  - $$tabler:arrow-autofit-right$$
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {type: held}
+  - ''
+  - {t: ◌, type: trans}
+  - {type: held alternate}
+  - {t: ◌, type: trans}
+  FN / Sym:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - {t: ◌, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: ◌, type: trans}
+  - {t: /, h: '?', s: '?'}
+  - {t: (, h: <}
+  - {t: ), h: '>'}
+  - {t: '[', h: '{', s: '{'}
+  - {t: ']', h: '}', s: '}'}
+  - {t: \, h: '|', s: '|'}
+  - '-'
+  - _
+  - '='
+  - +
+  - '?'
+  - '|'
+  - {type: held}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {t: ◌, type: trans}
+  - {type: held alternate}
+  Shortcuts:
+  - ''
+  - {t: ⇧⌘1, s: ⇧⌘!}
+  - {t: ⇧⌘2, s: ⇧⌘@}
+  - {t: ⌘⇧3, s: ⌘⇧#}
+  - {t: ⇧⌘4, s: ⇧⌘$}
+  - {t: ⇧⌘5, s: ⇧⌘%}
+  - ''
+  - ''
+  - ''
+  - $$mdi:play-pause$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - ''
+  - $$mdi:pan-left$$
+  - $$mdi:pan-right$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - $$mdi:undo-variant$$
+  - $$mdi:redo-variant$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held alternate}
+  - $$mdi:backspace-reverse-outline$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:backspace-reverse-outline$$
+  Sticky mods:
+  - ''
+  - ''
+  - $$tabler:square-chevron-left$$
+  - $$tabler:square-chevron-right$$
+  - ⌘R
+  - ⌘T
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:rhombus-outline$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
+  - ⌘G
+  - ''
+  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '⌘⌃$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $$mdi:flag-outline$$
+  - $$mdi:flag$$
+  - {type: held}
+  - {type: held alternate}
+  - $$mdi:flag$$
+  - $$mdi:flag-outline$$
+  System:
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT PRV
+  - BT NXT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:bluetooth-connect$$', h: '0'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
+  - ''
+  - ''
+  - EP OFF
+  - $$mdi:power-standby$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:bluetooth-off$$', h: '0'}
+  - {t: '$$mdi:bluetooth-off$$', h: '1'}
+  - {t: '$$mdi:bluetooth-off$$', h: '2'}
+  - BT CLR ALL
+  - ''
+  - $$mdi:lock-open-variant-outline$$
+  - $$mdi:reload-alert$$
+  - $$mdi:console$$
+  - $$mdi:battery-medium$$
+  - $$mdi:battery-medium$$
+  - $$mdi:console$$
+  - $$mdi:reload-alert$$
+combos:
+- p: [35, 24]
+  k: {t: Game, h: '$$mdi:toggle-switch$$'}
+  l: [Default, Game, Russian]
+  a: bottom
+- p: [14, 21]
+  k: $$mdi:star-four-points-circle$$
+  l: [Default, Russian]
+- p: [8, 9]
+  k: {t: '[', s: '{'}
+  l: [Russian]
+- p: [31, 32]
+  k: {t: ']', s: '}'}
+  l: [Russian]
+- p: [4, 5]
+  k: {t: \, s: '|'}
+  l: [Russian]
+- p: [1, 13]
+  k: {t: '!', h: ⌥1}
+  l: [Default, Russian]
+- p: [2, 14]
+  k: {t: '@', h: ⌥2}
+  l: [Default, Russian]
+- p: [3, 15]
+  k: {t: '#', h: ⌥3}
+  l: [Default, Russian]
+- p: [4, 16]
+  k: {t: $, h: ⌥4}
+  l: [Default, Russian]
+- p: [17, 5]
+  k: {t: '%', h: ⌥5}
+  l: [Default, Russian]
+- p: [6, 18]
+  k: {t: ^, h: ⌥6}
+  l: [Default, Russian]
+- p: [7, 19]
+  k: {t: '&', h: ⌥7}
+  l: [Default, Russian]
+- p: [8, 20]
+  k: {t: '*', h: ⌥8}
+  l: [Default, Russian]
+- p: [9, 21]
+  k: {t: (, h: ⌥9}
+  l: [Default, Russian]
+- p: [10, 22]
+  k: {t: ), h: ⌥0}
+  l: [Default, Russian]
+- p: [8, 7]
+  k: {t: _, h: '...'}
+  l: [Default, Russian]
+- p: [18, 19]
+  k: {t: '=', h: +}
+  l: [Default, Russian]
+- p: [20, 19]
+  k: {t: '-', h: —}
+  l: [Default, Russian]
+- p: [32, 31]
+  k: {t: '''', s: '"'}
+  l: [Default]
+- p: [32, 33]
+  k: '"'
+  l: [Default]
+- p: [32, 33]
+  k: '@'
+  l: [Russian]
+- p: [33, 34]
+  k: {t: '`', s: '~'}
+  l: [Default]
+- p: [8, 9]
+  k: $$mdi:backspace-reverse-outline$$
+  l: [Num / Nav]
+- p: [7, 8]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [Num / Nav]
+- p: [11, 10]
+  k: $$mdi:volume-off$$
+  l: [Shortcuts]
+- p: [2, 3]
+  k: {t: '$$mdi:content-copy$$', h: '$$mdi:content-cut$$'}
+  l: [Default, Russian]
+- p: [3, 4]
+  k: {t: '$$mdi:content-paste$$', h: '$$mdi:invoice-text-multiple$$'}
+  l: [Default, Russian]
+- p: [16, 17]
+  k: {t: '$$mdi:code-tags$$', h: '$$mdi:xml$$'}
+  l: [Default, Russian]
+- p: [28, 29]
+  k: {t: ="", h: «»}
+  l: [Default, Russian]
+- p: [13, 26]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  l: [Default, Russian]
+- p: [33, 22]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  l: [Default, Russian]
+- p: [25, 26]
+  k: $$mdi:code-parentheses$$
+  l: [Num / Nav]
+- p: [26, 27]
+  k: $$mdi:code-brackets$$
+  l: [Num / Nav]
+- p: [27, 28]
+  k: $$mdi:code-braces$$
+  l: [Num / Nav]
+- p: [26, 27]
+  k: {t: ',', h: ',␣'}
+  l: [Default]
+- p: [26, 27]
+  k: {t: ',', h: ',␣'}
+  l: [Russian]
+- p: [27, 28]
+  k: {t: ., h: .␣}
+  l: [Default]
+- p: [28, 27]
+  k: {t: ., h: .␣}
+  l: [Russian]
+- p: [33, 34]
+  k: {t: /, s: '?'}
+  l: [Russian]
+- p: [27, 16]
+  k: $$mdi:flag$$
+  l: [Russian, Default]
+  a: bottom
+- p: [27, 14]
+  k: $$mdi:flag-outline$$
+  l: [Russian, Default]
+  a: bottom
