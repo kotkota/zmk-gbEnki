@@ -633,7 +633,7 @@
 &none      &none     &none  &none      &none        &none         &bt BT_PRV     &bt BT_NXT     &none          &none           &none  &none
 &none      &none     &none  &none      &none        &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none           &none  &ext_power EP_OFF
 &soft_off  &me  &none  &none      &none        &none         &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_CLR_ALL  &none  &studio_unlock
-                         &upd_fw_l  &bootloader  &check_bat    &check_bat     &bootloader    &upd_fw_r
+                         &upd_fw_l  &bootloader  &none    &none     &bootloader    &upd_fw_r
             >;
 
             display-name = "System";
