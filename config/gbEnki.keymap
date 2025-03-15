@@ -448,6 +448,15 @@
             st { sequence = <S T>; bindings = <&st>; };
         };
 
+        ak_g: ak_g {
+            compatible = "zmk,behavior-adaptive-key";
+            #binding-cells = <0>;
+            bindings = <&kp G>;
+
+            // Binding two behaviors: JG->JPG
+            akt_jg { trigger-keys = <J>; max-prior-idle-ms = <300>; bindings = <&kp P &kp G>; };
+        };
+
         playnp: play_next_previous_media {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
