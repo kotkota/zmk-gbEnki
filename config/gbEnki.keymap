@@ -285,7 +285,7 @@
         };
 
         combo_leader-key {
-            bindings = <&ak_leader>;
+            bindings = <&leader1>;
             key-positions = <25 26>;
             layers = <1 0>;
         };
@@ -448,10 +448,10 @@
             st { sequence = <S T>; bindings = <&st>; };
         };
 
-        ak_leader: ak_leader {
+        ak_leader: ak_grave {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
-            bindings = <&leader1>;
+            bindings = <&kp GRAVE>;
 
             akt_eml { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp S &kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>; };
         };
