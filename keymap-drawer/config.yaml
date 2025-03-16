@@ -1,3 +1,5 @@
+# icons https://pictogrammers.com/library/mdi/
+#
 parse_config:
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
@@ -33,7 +35,7 @@ parse_config:
     "&macro_pair LBRC RBRC":
       tap: "{"
       hold: "{}"
-    "&ak_leader": $$mdi:star-four-points-small$$
+    "&ak_leader": $$mdi:progress-star-four-points$$
 
   toggle_label: $$mdi:toggle-switch$$
   tap_toggle_label: tap-toggle
