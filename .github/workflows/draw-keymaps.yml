@@ -5,7 +5,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
-      - "keymap_drawer.config.yaml"
+      - "keymap-drawer.config.yaml"
       # - 'boards/*/*/*.keymap'
 
 jobs:
@@ -19,6 +19,6 @@ jobs:
       output_folder: "keymap-drawer"
       parse_args: ""
       draw_args: "-j gbEnki.json -s Default Russian 'Num / Nav' 'FN / Sym' Shortcuts 'Sticky mods' System"
+      
 # keymap -c keymap-drawer.config.yaml parse -z ~/Documents/keebs/zmk/zmk-gbEnki/config/gbEnki.keymap > gbEnki.yaml
-
 # keymap -c keymap-drawer.config.yaml draw gbEnki.yaml > gbEnki.svg -j gbEnki.json -s Default Russian "Num / Nav" "FN / Sym" Shortcuts "Sticky mods" System
