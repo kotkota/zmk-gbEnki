@@ -4,9 +4,10 @@ on:
   push: # automatically run on changes to following paths
     paths:
       - "config/*.keymap"
-      - "config/*.dtsi"
-      - "config/keymap-drawer.config.yaml"
+      # - "config/*.dtsi"
+      - "keymap-drawer/config.yaml"
       # - 'boards/*/*/*.keymap'
+      - .github/workflows/draw-keymaps.yml
 
 jobs:
   draw:
@@ -15,7 +16,7 @@ jobs:
       contents: write # allow workflow to commit to the repo
     with:
       keymap_patterns: "config/*.keymap"
-      config_path: "config/keymap-drawer.config.yaml"
+      config_path: "keymap-drawer/config.yaml"
       output_folder: "keymap-drawer"
       parse_args: ""
       draw_args: "-j gbEnki.json -s Default Russian 'Num / Nav' 'FN / Sym' Shortcuts 'Sticky mods' System"
