@@ -471,5 +471,5 @@ combos:
   l: [Russian, Default]
   a: bottom
 - p: [25, 26]
-  k: $$mdi:star-four-points-small$$
+  k: $$mdi:progress-star-four-points$$
   l: [Russian, Default]

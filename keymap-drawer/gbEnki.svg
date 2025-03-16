@@ -126,6 +126,9 @@
 <svg id="mdi:power-standby">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-power-standby" viewBox="0 0 24 24"><path d="M13,3H11V13H13V3M17.83,5.17L16.41,6.59C18.05,7.91 19,9.9 19,12A7,7 0 0,1 12,19C8.14,19 5,15.88 5,12C5,9.91 5.95,7.91 7.58,6.58L6.17,5.17C2.38,8.39 1.92,14.07 5.14,17.86C8.36,21.64 14.04,22.1 17.83,18.88C19.85,17.17 21,14.65 21,12C21,9.37 19.84,6.87 17.83,5.17Z" /></svg>
 </svg>
+<svg id="mdi:progress-star-four-points">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-progress-star-four-points" viewBox="0 0 24 24"><path d="M13 4V2C17.66 2.5 21.33 6.19 21.85 10.85C22.45 16.34 18.5 21.28 13 21.88V19.88C16.64 19.43 19.5 16.56 19.96 12.92C20.5 8.53 17.39 4.54 13 4M5.67 4.2C7.19 2.95 9.04 2.18 11 2V4.06C9.57 4.26 8.22 4.84 7.1 5.74L5.67 4.2M2.05 11C2.24 9.04 3 7.19 4.26 5.67L5.69 7.1C4.8 8.23 4.24 9.58 4.05 11H2.05M4.27 18.33C3.03 16.81 2.26 14.96 2.06 13H4.06C4.24 14.42 4.81 15.77 5.69 16.9L4.27 18.33M5.67 19.74L7.06 18.37H7.1C8.23 19.25 9.58 19.82 11 20V22C9.04 21.79 7.18 21 5.67 19.74M12 17L13.56 13.58L17 12L13.56 10.44L12 7L10.43 10.44L7 12L10.43 13.58L12 17Z" /></svg>
+</svg>
 <svg id="mdi:redo-variant">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-redo-variant" viewBox="0 0 24 24"><path d="M10.5,7A6.5,6.5 0 0,0 4,13.5A6.5,6.5 0 0,0 10.5,20H14V18H10.5C8,18 6,16 6,13.5C6,11 8,9 10.5,9H16.17L13.09,12.09L14.5,13.5L20,8L14.5,2.5L13.08,3.91L16.17,7H10.5M18,18H16V20H18V18Z" /></svg>
 </svg>
@@ -137,9 +140,6 @@
 </svg>
 <svg id="mdi:star-four-points-circle">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-star-four-points-circle" viewBox="0 0 24 24"><path d="M8.17 2.76C9.39 2.26 10.69 2 12 2C13.31 2 14.61 2.26 15.83 2.76C17.04 3.26 18.14 4 19.07 4.93C20 5.86 20.74 6.96 21.24 8.17C21.74 9.39 22 10.69 22 12C22 14.65 20.95 17.2 19.07 19.07C17.2 20.95 14.65 22 12 22C10.69 22 9.39 21.74 8.17 21.24C6.96 20.74 5.86 20 4.93 19.07C3.05 17.2 2 14.65 2 12C2 9.35 3.05 6.8 4.93 4.93C5.86 4 6.96 3.26 8.17 2.76M12 17L13.56 13.58L17 12L13.56 10.44L12 7L10.43 10.44L7 12L10.43 13.58L12 17Z" /></svg>
-</svg>
-<svg id="mdi:star-four-points-small">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-star-four-points-small" viewBox="0 0 24 24"><path d="M10.74 10.75L12 8L13.25 10.75L16 12L13.25 13.26L12 16L10.74 13.26L8 12L10.74 10.75Z" /></svg>
 </svg>
 <svg id="mdi:toggle-switch">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-toggle-switch" viewBox="0 0 24 24"><path d="M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M17,15A3,3 0 0,1 14,12A3,3 0 0,1 17,9A3,3 0 0,1 20,12A3,3 0 0,1 17,15Z" /></svg>
@@ -896,7 +896,7 @@ path.combo {
 </g>
 <g class="combo combopos-28">
 <rect rx="4" ry="4" x="142" y="202" width="36" height="36" class="combo"/>
-<use href="#mdi:star-four-points-small" xlink:href="#mdi:star-four-points-small" x="147" y="207" height="26" width="26.0" class="combo tap glyph mdi:star-four-points-small"/>
+<use href="#mdi:progress-star-four-points" xlink:href="#mdi:progress-star-four-points" x="147" y="207" height="26" width="26.0" class="combo tap glyph mdi:progress-star-four-points"/>
 </g>
 </g>
 </g>
@@ -1230,7 +1230,7 @@ path.combo {
 </g>
 <g class="combo combopos-30">
 <rect rx="4" ry="4" x="142" y="202" width="36" height="36" class="combo"/>
-<use href="#mdi:star-four-points-small" xlink:href="#mdi:star-four-points-small" x="147" y="207" height="26" width="26.0" class="combo tap glyph mdi:star-four-points-small"/>
+<use href="#mdi:progress-star-four-points" xlink:href="#mdi:progress-star-four-points" x="147" y="207" height="26" width="26.0" class="combo tap glyph mdi:progress-star-four-points"/>
 </g>
 </g>
 </g>
