@@ -70,10 +70,10 @@ parse_config:
     LG(LS(Z)): $$mdi:redo-variant$$
 
     # Navigation
-    RS(RC(TAB)): $$tabler:arrow-autofit-left$$
-    RC(TAB): $$tabler:arrow-autofit-right$$
-    LG(LEFT): $$tabler:square-chevron-left$$
-    LG(RIGHT): $$tabler:square-chevron-right$$
+    RS(RC(TAB)): $$mdi:arrow-expand-left$$
+    RC(TAB): $$mdi:arrow-expand-right$$
+    LG(LEFT): $$mdi:arrow-left-box$$
+    LG(RIGHT): $$mdi:arrow-right-box$$
     LC(LEFT): $$mdi:pan-left$$
     LC(RIGHT): $$mdi:pan-right$$
 
