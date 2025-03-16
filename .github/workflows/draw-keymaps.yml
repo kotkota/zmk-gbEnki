@@ -15,10 +15,11 @@ jobs:
       contents: write # allow workflow to commit to the repo
     with:
       keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
+      config_path: "config/keymap-drawer.config.yaml"
       output_folder: "keymap-drawer"
       parse_args: ""
       draw_args: "-j gbEnki.json -s Default Russian 'Num / Nav' 'FN / Sym' Shortcuts 'Sticky mods' System"
+#
 # keymap -c keymap-drawer.config.yaml parse -z ~/Documents/keebs/zmk/zmk-gbEnki/config/gbEnki.keymap > gbEnki.yaml
-
+#
 # keymap -c keymap-drawer.config.yaml draw gbEnki.yaml > gbEnki.svg -j gbEnki.json -s Default Russian "Num / Nav" "FN / Sym" Shortcuts "Sticky mods" System
