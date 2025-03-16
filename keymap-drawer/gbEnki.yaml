@@ -162,8 +162,8 @@ layers:
   - $$mdi:transfer-down$$
   - {t: '⌘[', s: '⌘{'}
   - {t: '⌘]', s: '⌘}'}
-  - $$tabler:arrow-autofit-left$$
-  - $$tabler:arrow-autofit-right$$
+  - $$mdi:arrow-expand-left$$
+  - $$mdi:arrow-expand-right$$
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {type: held}
@@ -260,8 +260,8 @@ layers:
   Sticky mods:
   - ''
   - ''
-  - $$tabler:square-chevron-left$$
-  - $$tabler:square-chevron-right$$
+  - $$mdi:arrow-left-box$$
+  - $$mdi:arrow-right-box$$
   - ⌘R
   - ⌘T
   - ''

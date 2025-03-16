@@ -27,11 +27,23 @@
 <svg id="mdi:arrow-down">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down" viewBox="0 0 24 24"><path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" /></svg>
 </svg>
+<svg id="mdi:arrow-expand-left">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-expand-left" viewBox="0 0 24 24"><path d="M20,22H22V2H20V11H5.83L11.33,5.5L9.92,4.08L2,12L9.92,19.92L11.33,18.5L5.83,13H20V22Z" /></svg>
+</svg>
+<svg id="mdi:arrow-expand-right">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-expand-right" viewBox="0 0 24 24"><path d="M4,2H2V22H4V13H18.17L12.67,18.5L14.08,19.92L22,12L14.08,4.08L12.67,5.5L18.17,11H4V2Z" /></svg>
+</svg>
 <svg id="mdi:arrow-left">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-left" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
 </svg>
+<svg id="mdi:arrow-left-box">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-left-box" viewBox="0 0 24 24"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M18,11H9.5L13,7.5L11.58,6.08L5.66,12L11.58,17.92L13,16.5L9.5,13H18V11Z" /></svg>
+</svg>
 <svg id="mdi:arrow-right">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+</svg>
+<svg id="mdi:arrow-right-box">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-box" viewBox="0 0 24 24"><path d="M5,21A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5M6,13H14.5L11,16.5L12.42,17.92L18.34,12L12.42,6.08L11,7.5L14.5,11H6V13Z" /></svg>
 </svg>
 <svg id="mdi:arrow-top-left">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-top-left" viewBox="0 0 24 24"><path d="M19,17.59L17.59,19L7,8.41V15H5V5H15V7H8.41L19,17.59Z" /></svg>
@@ -152,80 +164,6 @@
 </svg>
 <svg id="mdi:xml">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-xml" viewBox="0 0 24 24"><path d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" /></svg>
-</svg>
-<svg id="tabler:arrow-autofit-left">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
- 
- 
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-autofit-left"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M4 12v-6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v8" />
-  <path d="M20 18h-17" />
-  <path d="M6 15l-3 3l3 3" />
-</svg>
-</svg>
-<svg id="tabler:arrow-autofit-right">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
- 
- 
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-autofit-right"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M20 12v-6a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v8" />
-  <path d="M4 18h17" />
-  <path d="M18 15l3 3l-3 3" />
-</svg>
-</svg>
-<svg id="tabler:square-chevron-left">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
- 
- 
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-square-chevron-left"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M13 15l-3 -3l3 -3" />
-  <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-</svg>
-</svg>
-<svg id="tabler:square-chevron-right">
-<svg
-  xmlns="http://www.w3.org/2000/svg"
- 
- 
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="icon icon-tabler icons-tabler-outline icon-tabler-square-chevron-right"
->
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M11 9l3 3l-3 3" />
-  <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-</svg>
 </svg>
 </defs>/* end glyphs */
 <style>/* latin-ext */
@@ -1634,11 +1572,11 @@ path.combo {
 </g>
 <g transform="translate(1000, 210)" class="key keypos-33">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#tabler:arrow-autofit-left" xlink:href="#tabler:arrow-autofit-left" x="-13" y="-13" height="26" width="26.0" class="key tap glyph tabler:arrow-autofit-left"/>
+<use href="#mdi:arrow-expand-left" xlink:href="#mdi:arrow-expand-left" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:arrow-expand-left"/>
 </g>
 <g transform="translate(1080, 230)" class="key keypos-34">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#tabler:arrow-autofit-right" xlink:href="#tabler:arrow-autofit-right" x="-13" y="-13" height="26" width="26.0" class="key tap glyph tabler:arrow-autofit-right"/>
+<use href="#mdi:arrow-expand-right" xlink:href="#mdi:arrow-expand-right" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:arrow-expand-right"/>
 </g>
 <g transform="translate(1160, 238)" class="key trans keypos-35">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -2033,11 +1971,11 @@ path.combo {
 </g>
 <g transform="translate(200, 50)" class="key keypos-2">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#tabler:square-chevron-left" xlink:href="#tabler:square-chevron-left" x="-13" y="-13" height="26" width="26.0" class="key tap glyph tabler:square-chevron-left"/>
+<use href="#mdi:arrow-left-box" xlink:href="#mdi:arrow-left-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:arrow-left-box"/>
 </g>
 <g transform="translate(280, 40)" class="key keypos-3">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#tabler:square-chevron-right" xlink:href="#tabler:square-chevron-right" x="-13" y="-13" height="26" width="26.0" class="key tap glyph tabler:square-chevron-right"/>
+<use href="#mdi:arrow-right-box" xlink:href="#mdi:arrow-right-box" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:arrow-right-box"/>
 </g>
 <g transform="translate(360, 50)" class="key keypos-4">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
