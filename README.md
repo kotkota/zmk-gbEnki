@@ -4,4 +4,4 @@ This branch for keyboard without LEDs. For keyboard with LEDs use [another branc
 -----
 
 # Keymap
-![…](config/gbEnki.svg)
+![…](keymap-drawer/gbEnki.svg)
