@@ -1,7 +1,7 @@
 layers:
   Default:
   - {t: '$$mdi:keyboard-esc$$', h: System}
-  - Q
+  - {t: Q, h: '!'}
   - W
   - E
   - R
@@ -23,8 +23,8 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
-  - {t: '''', h: '$$mdi:rhombus-outline$$', s: '"'}
-  - {t: '`', h: Shortcuts, s: '~'}
+  - {t: '''', h: '$$mdi:rhombus-outline$$'}
+  - {t: '`', h: Shortcuts}
   - {t: Z, h: '$$mdi:apple-keyboard-caps$$'}
   - X
   - C
@@ -35,7 +35,7 @@ layers:
   - ','
   - .
   - {t: /, h: '?', s: '?'}
-  - {t: \, h: Shortcuts, s: '|'}
+  - {t: \, h: Shortcuts}
   - {t: '$$mdi:backspace$$', h: FN / Sym}
   - {t: '$$mdi:keyboard-space$$', h: Num / Nav}
   - {t: '$$mdi:keyboard-return$$', h: Sticky mods}
@@ -77,7 +77,7 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - {t: '''', h: '?', s: '"'}
+  - {t: Э, h: '?'}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -109,7 +109,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - ''''
   - {t: '$$mdi:keyboard-return$$', h: Num / Nav}
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -121,7 +121,7 @@ layers:
   - ','
   - .
   - {t: /, s: '?'}
-  - {t: \, s: '|'}
+  - \
   - {t: T, h: H}
   - $$mdi:keyboard-space$$
   - G
@@ -197,17 +197,17 @@ layers:
   - )
   - {t: ◌, type: trans}
   - {t: /, h: '?', s: '?'}
-  - {t: (, h: <}
-  - {t: ), h: '>'}
-  - {t: '[', h: '{', s: '{'}
-  - {t: ']', h: '}', s: '}'}
-  - {t: \, h: '|', s: '|'}
+  - {t: (, h: ()}
+  - {t: <, h: <>}
+  - {t: '[', h: '[]'}
+  - {t: '{', h: '{}'}
+  - {t: \, h: '|'}
+  - {t: '|', h: \}
   - '-'
   - _
   - '='
   - +
   - '?'
-  - '|'
   - {type: held}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -281,7 +281,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '⌘⌃$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:rhombus-outline$$', h: '$$mdi:gesture-tap-hold$$'}
   - ''
   - ''
   - ''
@@ -339,8 +339,8 @@ layers:
   - $$mdi:lock-open-variant-outline$$
   - $$mdi:reload-alert$$
   - $$mdi:console$$
-  - $$mdi:battery-medium$$
-  - $$mdi:battery-medium$$
+  - ''
+  - ''
   - $$mdi:console$$
   - $$mdi:reload-alert$$
 combos:
@@ -352,13 +352,13 @@ combos:
   k: $$mdi:star-four-points-circle$$
   l: [Default, Russian]
 - p: [8, 9]
-  k: {t: '[', s: '{'}
+  k: Щ
   l: [Russian]
 - p: [31, 32]
-  k: {t: ']', s: '}'}
+  k: Ъ
   l: [Russian]
 - p: [4, 5]
-  k: {t: \, s: '|'}
+  k: Ё
   l: [Russian]
 - p: [1, 13]
   k: {t: '!', h: ⌥1}
@@ -400,22 +400,22 @@ combos:
   k: {t: '-', h: —}
   l: [Default, Russian]
 - p: [32, 31]
-  k: {t: '''', s: '"'}
+  k: {t: '''', h: ''''''}
   l: [Default]
 - p: [32, 33]
-  k: '"'
+  k: {t: '"', h: '""'}
   l: [Default]
 - p: [32, 33]
-  k: '@'
+  k: {t: '"', h: '""'}
   l: [Russian]
 - p: [33, 34]
-  k: {t: '`', s: '~'}
+  k: {t: '`', h: '``'}
   l: [Default]
 - p: [8, 9]
-  k: $$mdi:backspace-reverse-outline$$
+  k: {t: '$$mdi:backspace-reverse-outline$$', h: '⌥$$mdi:backspace-reverse-outline$$'}
   l: [Num / Nav]
 - p: [7, 8]
-  k: {t: '$$mdi:backspace$$', type: backspace}
+  k: {t: '$$mdi:backspace$$', h: '⌥$$mdi:backspace$$'}
   l: [Num / Nav]
 - p: [11, 10]
   k: $$mdi:volume-off$$
@@ -448,25 +448,28 @@ combos:
   k: $$mdi:code-braces$$
   l: [Num / Nav]
 - p: [26, 27]
-  k: {t: ',', h: ',␣'}
+  k: {t: ',', h: ;}
   l: [Default]
 - p: [26, 27]
-  k: {t: ',', h: ',␣'}
+  k: {t: ',', h: ;}
   l: [Russian]
 - p: [27, 28]
-  k: {t: ., h: .␣}
+  k: {t: ., h: ':'}
   l: [Default]
 - p: [28, 27]
-  k: {t: ., h: .␣}
+  k: {t: ., h: ':'}
   l: [Russian]
 - p: [33, 34]
   k: {t: /, s: '?'}
   l: [Russian]
-- p: [27, 16]
+- p: [15, 14, 16]
   k: $$mdi:flag$$
   l: [Russian, Default]
   a: bottom
-- p: [27, 14]
+- p: [27, 26, 28]
   k: $$mdi:flag-outline$$
   l: [Russian, Default]
   a: bottom
+- p: [25, 26]
+  k: $$mdi:star-four-points-small$$
+  l: [Russian, Default]

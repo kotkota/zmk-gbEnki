@@ -5,8 +5,8 @@ parse_config:
   raw_binding_map:
     "&ru_off": $$mdi:flag-outline$$
     "&ru_on": $$mdi:flag$$
-    "&html_tag_open": $$mdi:code-tags$$
-    "&html_tag_close": $$mdi:xml$$
+    "&tag_open": $$mdi:code-tags$$
+    "&tag_close": $$mdi:xml$$
     "&par": $$mdi:code-parentheses$$
     "&bkt": $$mdi:code-brackets$$
     "&brc": $$mdi:code-braces$$
@@ -15,12 +15,25 @@ parse_config:
     "&studio_unlock": $$mdi:lock-open-variant-outline$$
     "&upd_fw_l": $$mdi:reload-alert$$
     "&upd_fw_r": $$mdi:reload-alert$$
-    "&comma_space": ",␣"
-    "&comma_space_ru": ",␣"
-    "&dot_space": ".␣"
-    "&dot_space_ru": ".␣"
     "&check_bat": $$mdi:battery-medium$$
     "&playnp": $$mdi:play-pause$$
+    "&macro_double SQT": "''"
+    "&macro_double DQT": '""'
+    "&macro_double LS(NUMBER_2)": '""'
+    "&macro_double GRAVE": "``"
+    "&macro_pair LPAR RPAR":
+      tap: "("
+      hold: "()"
+    "&macro_pair LT GT":
+      tap: "<"
+      hold: "<>"
+    "&macro_pair LBKT RBKT":
+      tap: "["
+      hold: "[]"
+    "&macro_pair LBRC RBRC":
+      tap: "{"
+      hold: "{}"
+    "&ak_leader": $$mdi:star-four-points-small$$
 
   toggle_label: $$mdi:toggle-switch$$
   tap_toggle_label: tap-toggle
@@ -76,6 +89,7 @@ parse_config:
     LS(N1): "!"
     AT_SIGN: "@"
     LS(N2): "@"
+    LS(NUMBER_2): '"'
     AT: "@"
     HASH: "#"
     POUND: "#"
@@ -119,14 +133,12 @@ parse_config:
       shifted: "?"
     QUESTION: "?"
     QMARK: "?"
-    BACKSLASH:
-      tap: '\'
-      shifted: "|"
-    BSLH:
-      tap: '\'
-      shifted: "|"
+    BACKSLASH: "Ё"
+    BSLH: '\'
     PIPE: "|"
-    NON_US_BACKSLASH: \
+    NON_US_BACKSLASH:
+      tap: '\'
+      shifted: "|"
     PIPE2: "|"
     NON_US_BSLH: "|"
     SEMICOLON:
@@ -142,9 +154,8 @@ parse_config:
     SINGLE_QUOTE:
       tap: "'"
       shifted: '"'
-    SQT:
-      tap: "'"
-      shifted: '"'
+    SQT: "'"
+    APOS: "Э"
 
     DOUBLE_QUOTES: '"'
     DQT: '"'
@@ -159,25 +170,19 @@ parse_config:
     RS(NUMBER_6): ","
     GREATER_THAN: ">"
     GT: ">"
-    LEFT_BRACKET:
-      tap: "["
-      shifted: "{"
+    LEFT_BRACKET: "Щ"
     LBKT:
       tap: "["
       shifted: "{"
     LEFT_BRACE: "{"
     LBRC: "{"
-    RIGHT_BRACKET:
-      tap: "]"
-      shifted: "}"
+    RIGHT_BRACKET: "Ъ"
     RBKT:
       tap: "]"
       shifted: "}"
     RIGHT_BRACE: "}"
     RBRC: "}"
-    GRAVE:
-      tap: "`"
-      shifted: "~"
+    GRAVE: "`"
     TILDE: "~"
     NON_US_HASH: "#"
     NUHS: "#"
@@ -321,7 +326,7 @@ draw_config:
 
   # padding between layers
   outer_pad_w: 0
-  outer_pad_h: 0
+  outer_pad_h: 100
 
   # gap between two halves for ortho layout generator
   # split_gap: 20 # This doesn't seem to have any effect either? 🤔
@@ -550,11 +555,11 @@ draw_config:
     /* Layer labels */
     text.label {
      	font-weight: bold;
-     	font-size: 36px;
+     	font-size: 32px;
      	text-anchor: middle;
      	paint-order: stroke;
      	fill: var(--color--layer--text);
-     	translate: 600px 70px;
+     	translate: 600px 108px;
     }
     .layer-activator.hold {
       dominant-baseline: auto;
