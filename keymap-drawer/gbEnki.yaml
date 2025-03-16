@@ -1,0 +1,472 @@
+layers:
+  Default:
+  - {t: ESC, h: System}
+  - {t: Q, h: '!'}
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - {t: TAB, h: Ctl+Alt+LCMD}
+  - {t: A, h: LSHIFT}
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: LCMD}
+  - G
+  - H
+  - {t: J, h: RCMD}
+  - {t: K, h: RALT}
+  - {t: L, h: RCTRL}
+  - {t: ;, h: RSHIFT}
+  - {t: '''', h: Ctl+Alt+LCMD}
+  - {t: '`', h: Shortcuts}
+  - {t: Z, h: CAPS}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: '?'}
+  - {t: \, h: Shortcuts}
+  - {t: BSPC, h: FN / Sym}
+  - {t: SPACE, h: Num / Nav}
+  - {t: ENTER, h: Sticky mods}
+  - {t: ENTER, h: Sticky mods}
+  - {t: SPACE, h: Num / Nav}
+  - {t: BSPC, h: FN / Sym}
+  Russian:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Sft+5, h: Sft+8}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '''', h: '?'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Game:
+  - ESC
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - B
+  - LSHFT
+  - A
+  - S
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - {t: ENTER, h: Num / Nav}
+  - LCTRL
+  - Z
+  - X
+  - C
+  - V
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - {t: T, h: H}
+  - SPACE
+  - G
+  - BSPC
+  - LALT
+  - LCMD
+  Num / Nav:
+  - {t: ▽, type: trans}
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - {t: +, h: KP ASTERISK}
+  - HOME
+  - Alt+LEFT
+  - UP
+  - Alt+RIGHT
+  - END
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ;, h: LSHIFT}
+  - {t: '4', h: LCTRL}
+  - {t: '5', h: LALT}
+  - {t: '6', h: LCMD}
+  - {t: '-', h: KP DIVIDE}
+  - PG UP
+  - LEFT
+  - DOWN
+  - RIGHT
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - KP EQUAL
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - PG DN
+  - Gui+[
+  - Gui+]
+  - Sft+Ctl+TAB
+  - Ctl+TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  FN / Sym:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - {t: ▽, type: trans}
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: /, h: '?'}
+  - '&macro_pair LPAR RPAR'
+  - '&macro_pair LT GT'
+  - '&macro_pair LBKT RBKT'
+  - '&macro_pair LBRC RBRC'
+  - {t: \, h: '|'}
+  - {t: '|', h: \}
+  - '-'
+  - _
+  - '='
+  - +
+  - '?'
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Shortcuts:
+  - ''
+  - Sft+Gui+1
+  - Sft+Gui+2
+  - Gui+Sft+3
+  - Sft+Gui+4
+  - Sft+Gui+5
+  - ''
+  - ''
+  - ''
+  - '&playnp'
+  - VOL DN
+  - VOL UP
+  - ''
+  - Ctl+LEFT
+  - Ctl+RIGHT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - Gui+Z
+  - Gui+Sft+Z
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  Sticky mods:
+  - ''
+  - ''
+  - Gui+LEFT
+  - Gui+RIGHT
+  - Gui+R
+  - Gui+T
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: Ctl+Alt+LCMD, h: sticky}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LCMD, h: sticky}
+  - Gui+G
+  - ''
+  - {t: RCMD, h: sticky}
+  - {t: RALT, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: RSHIFT, h: sticky}
+  - {t: Ctl+Alt+LCMD, h: sticky}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&ru_off'
+  - '&ru_on'
+  - {type: held}
+  - ''
+  - '&ru_on'
+  - '&ru_off'
+  System:
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT PRV
+  - BT NXT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - ''
+  - ''
+  - EP OFF
+  - '&soft_off'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - BT CLR ALL
+  - ''
+  - '&studio_unlock'
+  - '&upd_fw_l'
+  - '&bootloader'
+  - ''
+  - ''
+  - '&bootloader'
+  - '&upd_fw_r'
+combos:
+- p: [35, 24]
+  k: {t: Game, h: toggle}
+  l: [Default, Game, Russian]
+- p: [14, 21]
+  k: F13
+  l: [Default, Russian]
+- p: [8, 9]
+  k: '['
+  l: [Russian]
+- p: [31, 32]
+  k: ']'
+  l: [Russian]
+- p: [4, 5]
+  k: \
+  l: [Russian]
+- p: [1, 13]
+  k: {t: Sft+1, h: Alt+1}
+  l: [Default, Russian]
+- p: [2, 14]
+  k: {t: Sft+2, h: Alt+2}
+  l: [Default, Russian]
+- p: [3, 15]
+  k: {t: Sft+3, h: Alt+3}
+  l: [Default, Russian]
+- p: [4, 16]
+  k: {t: Sft+4, h: Alt+4}
+  l: [Default, Russian]
+- p: [17, 5]
+  k: {t: Sft+5, h: Alt+5}
+  l: [Default, Russian]
+- p: [6, 18]
+  k: {t: Sft+6, h: Alt+6}
+  l: [Default, Russian]
+- p: [7, 19]
+  k: {t: Sft+7, h: Alt+7}
+  l: [Default, Russian]
+- p: [8, 20]
+  k: {t: Sft+8, h: Alt+8}
+  l: [Default, Russian]
+- p: [9, 21]
+  k: {t: Sft+9, h: Alt+9}
+  l: [Default, Russian]
+- p: [10, 22]
+  k: {t: Sft+0, h: Alt+0}
+  l: [Default, Russian]
+- p: [8, 7]
+  k: {t: Sft+-, h: Alt+;}
+  l: [Default, Russian]
+- p: [18, 19]
+  k: {t: '=', h: +}
+  l: [Default, Russian]
+- p: [20, 19]
+  k: {t: '-', h: Alt+Sft+-}
+  l: [Default, Russian]
+- p: [32, 31]
+  k: {t: '''', h: '&macro_double SQT'}
+  l: [Default]
+- p: [32, 33]
+  k: {t: '"', h: '&macro_double DQT'}
+  l: [Default]
+- p: [32, 33]
+  k: {t: Sft+2, h: '&macro_double LS(NUMBER_2)'}
+  l: [Russian]
+- p: [33, 34]
+  k: {t: '`', h: '&macro_double GRAVE'}
+  l: [Default]
+- p: [8, 9]
+  k: {t: DEL, h: Alt+DEL}
+  l: [Num / Nav]
+- p: [7, 8]
+  k: {t: BSPC, h: Alt+BSPC}
+  l: [Num / Nav]
+- p: [11, 10]
+  k: MUTE
+  l: [Shortcuts]
+- p: [2, 3]
+  k: {t: Gui+C, h: Gui+X}
+  l: [Default, Russian]
+- p: [3, 4]
+  k: {t: Gui+V, h: Alt+Ctl+V}
+  l: [Default, Russian]
+- p: [16, 17]
+  k: {t: '&tag_open', h: '&tag_close'}
+  l: [Default, Russian]
+- p: [28, 29]
+  k: {t: Alt+Ctl+J, h: Meh+J}
+  l: [Default, Russian]
+- p: [13, 26]
+  k: {t: LSHFT, h: sticky}
+  l: [Default, Russian]
+- p: [33, 22]
+  k: {t: RSHFT, h: sticky}
+  l: [Default, Russian]
+- p: [25, 26]
+  k: '&par'
+  l: [Num / Nav]
+- p: [26, 27]
+  k: '&bkt'
+  l: [Num / Nav]
+- p: [27, 28]
+  k: '&brc'
+  l: [Num / Nav]
+- p: [26, 27]
+  k: {t: ',', h: ;}
+  l: [Default]
+- p: [26, 27]
+  k: {t: Sft+6, h: Sft+8}
+  l: [Russian]
+- p: [27, 28]
+  k: {t: ., h: ':'}
+  l: [Default]
+- p: [28, 27]
+  k: {t: Sft+7, h: Sft+5}
+  l: [Russian]
+- p: [33, 34]
+  k: /
+  l: [Russian]
+- p: [15, 14, 16]
+  k: '&ru_on'
+  l: [Russian, Default]
+- p: [27, 26, 28]
+  k: '&ru_off'
+  l: [Russian, Default]
+- p: [25, 26]
+  k: '&ak_leader'
+  l: [Russian, Default]
