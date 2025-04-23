@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: gbEnki, layout_name: default_layout}
 layers:
   Default:
   - {t: '$$mdi:keyboard-esc$$', h: System}
@@ -52,8 +53,8 @@ layers:
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
-  - {t: ◌, type: trans}
-  - {t: ◌, type: trans}
+  - {t: P, s: O}
+  - {t: Щ, s: P}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
   - {t: ◌, type: trans}
@@ -430,8 +431,11 @@ combos:
   k: {t: '$$mdi:code-tags$$', h: '$$mdi:xml$$'}
   l: [Default, Russian]
 - p: [28, 29]
-  k: {t: ="", h: «»}
-  l: [Default, Russian]
+  k: '&equals_qoute'
+  l: [Default]
+- p: [28, 29]
+  k: '&macro_pair LS(LA(EQUAL)) LA(EQUAL)'
+  l: [Russian]
 - p: [13, 26]
   k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   l: [Default, Russian]
