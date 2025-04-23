@@ -353,7 +353,7 @@ combos:
   k: $$mdi:star-four-points-circle$$
   l: [Default, Russian]
 - p: [8, 9]
-  k: Щ
+  k: O
   l: [Russian]
 - p: [31, 32]
   k: Ъ
