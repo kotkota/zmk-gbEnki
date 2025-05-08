@@ -2,7 +2,7 @@
     "id": "gbenki",
     "name": "gbEnki",
     "layouts": {
-      "default_transform": {
+      "default_layout": {
         "name": "default_transform",
         "layout": [
           { "row": 0, "col":  0, "x":  0, "y": 0.475 },
