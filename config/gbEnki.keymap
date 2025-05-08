@@ -636,10 +636,10 @@
 
         symb {
             bindings = <
-&kp F1           &kp F2                 &kp F3             &kp F4                 &kp F5                 &kp F6           &kp EXCL       &kp AT     &kp POUND  &kp DLLR   &kp PERCENT  &trans
-&kp F7           &kp F8                 &kp F9             &kp F10                &kp F11                &kp F12          &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR     &trans
-&mt QMARK SLASH  &macro_pair LPAR RPAR  &macro_pair LT GT  &macro_pair LBKT RBKT  &macro_pair LBRC RBRC  &mt PIPE BSLH    &mt BSLH PIPE  &kp MINUS  &kp UNDER  &kp EQUAL  &kp PLUS     &kp QMARK
-                                                           &trans                 &trans                 &trans           &trans         &trans     &trans
+&kp F1           &kp F2                 &kp F3             &kp F4                 &kp F5                 &kp F6           &kp EXCL       &kp AT    &kp POUND  &kp DLLR  &kp PERCENT  &trans
+&kp F7           &kp F8                 &kp F9             &kp F10                &kp F11                &kp F12          &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR     &trans
+&mt QMARK SLASH  &macro_pair LPAR RPAR  &macro_pair LT GT  &macro_pair LBKT RBKT  &macro_pair LBRC RBRC  &mt PIPE BSLH    &mt BSLH PIPE  &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT     &kp QMARK
+                                                           &trans                 &trans                 &trans           &trans         &trans    &trans
             >;
 
             display-name = "FN / Sym";
@@ -660,8 +660,8 @@
             bindings = <
 &none             &none       &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
 &sk LC(LA(LCMD))  &sk LSHIFT  &sk LCTRL     &sk LALT       &sk LCMD   &kp LG(G)    &none  &sk RCMD  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk LC(LA(LCMD))
-&none             &none       &none         &none          &none      &none        &none  &none     &none     &none      &none       &none
-                                            &ru_off        &ru_on     &none        &none  &ru_on    &ru_off
+&none             &none       &none         &none          &kp LBRC   &kp RBRC     &none  &none     &none     &none      &none       &none
+                                            &kp LBKT       &kp RBKT   &none        &none  &ru_on    &ru_off
             >;
 
             display-name = "Sticky mods";
