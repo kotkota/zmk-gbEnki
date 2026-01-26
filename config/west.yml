@@ -17,8 +17,8 @@ manifest:
     - name: zmk-adaptive-key
       remote: urob
       revision: v0.3 # set to same version as zmk above
-    - name: zmk-auto-layer
-      remote: urob
+    # - name: zmk-auto-layer
+    #   remote: urob
       revision: v0.3 # set to same version as zmk above
     - name: zmk-leader-key
       remote: urob
