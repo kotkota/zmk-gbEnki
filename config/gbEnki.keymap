@@ -592,10 +592,19 @@
 
         default_layer {
             bindings = <
-&lt 7 ESC             &mt EXCL Q    &kp W         &kp E        &kp R        &kp T          &kp Y        &kp U        &kp I        &kp O         &kp P             &kp LBKT
-&mt LC(LA(LCMD)) TAB  &mt LSHIFT A  &mtl LCTRL S  &mtl LALT D  &mtl LCMD F  &kp G          &kp H        &mtr RCMD J  &mtr RALT K  &mtr RCTRL L  &mtr RSHIFT SEMI  &mt LC(LA(LCMD)) SQT
-&lt 5 GRAVE           &mt CAPS Z    &kp X         &kp C        &kp V        &kp B          &kp N        &kp M        &kp COMMA    &kp DOT       &mt QMARK SLASH   &lt 5 BSLH
-                                                  &lt 4 BSPC   &lt 3 SPACE  &lt 6 ENTER    &lt 6 ENTER  &lt 3 SPACE  &lt 4 BSPC
+//    ┌─────────────────────────┬───────────┬────────────┬────────────┬──────────────┬─────────────┐                                 ┌─────────────┬──────────────┬────────────┬────────────┬────────────┬───────────────────────┐
+//    │       lt SYS esc        │  mt ! Q   │     W      │     E      │      R       │      T      │                                 │      Y      │      U       │     I      │     O      │     P      │           [           │
+//    ├─────────────────────────┼───────────┼────────────┼────────────┼──────────────┼─────────────┤                                 ├─────────────┼──────────────┼────────────┼────────────┼────────────┼───────────────────────┤
+//    │ mt lctl(lalt(lgui)) tab │ mt lsft A │ mtl lctl S │ mtl lalt D │  mtl lgui F  │      G      │                                 │      H      │  mtr rgui J  │ mtr ralt K │ mtr rctl L │ mtr rsft ; │ mt lctl(lalt(lgui)) ' │
+//    ├─────────────────────────┼───────────┼────────────┼────────────┼──────────────┼─────────────┤                                 ├─────────────┼──────────────┼────────────┼────────────┼────────────┼───────────────────────┤
+//    │       lt MEDIA `        │ mt caps Z │     X      │     C      │      V       │      B      │                                 │      N      │      M       │     ,      │     .      │   mt ? /   │        lt 5 \         │
+//    └─────────────────────────┴───────────┴────────────┴────────────┼──────────────┼─────────────┼──────────────┐   ┌──────────────┼─────────────┼──────────────┼────────────┴────────────┴────────────┴───────────────────────┘
+//                                                                    │ lt FUNC bspc │ lt NUMB spc │ lt STCKY ent │   │ lt STCKY ent │ lt NUMB spc │ lt FUNC bspc │
+//                                                                    └──────────────┴─────────────┴──────────────┘   └──────────────┴─────────────┴──────────────┘
+  &lt SYS ESC            &mt EXCL Q     &kp W          &kp E         &kp R           &kp T                                                    &kp Y            &kp U           &kp I         &kp O          &kp P              &kp LBKT
+  &mt LC(LA(LCMD)) TAB   &mt LSHIFT A   &mtl LCTRL S   &mtl LALT D   &mtl LCMD F     &kp G                                                    &kp H            &mtr RCMD J     &mtr RALT K   &mtr RCTRL L   &mtr RSHIFT SEMI   &mt LC(LA(LCMD)) SQT
+  &lt MEDIA GRAVE        &mt CAPS Z     &kp X          &kp C         &kp V           &kp B                                                    &kp N            &kp M           &kp COMMA     &kp DOT        &mt QMARK SLASH    &lt 5 BSLH
+                                                                     &lt FUNC BSPC   &lt NUMB SPACE   &lt STCKY ENTER       &lt STCKY ENTER   &lt NUMB SPACE   &lt FUNC BSPC
             >;
 
             display-name = "Default";
@@ -603,10 +612,19 @@
 
         ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &ru_z   &ru_ha          &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans          &mt RS(NUMBER_8) RS(NUMBER_5)
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mt QMARK APOS  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬───────┬────────┬────────────────────┐
+//    │     │     │     │     │     │     │               │     │     │     │ &ru_z │ &ru_ha │                    │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼───────┼────────┼────────────────────┤
+//    │     │     │     │     │     │     │               │     │     │     │       │        │ mt rsft(8) rsft(5) │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼───────┼────────┼────────────────────┤
+//    │     │     │     │     │     │     │               │     │     │     │       │ mt ? ' │                    │
+//    └─────┴─────┴─────┴─────┼─────┼─────┼─────┐   ┌─────┼─────┼─────┼─────┴───────┴────────┴────────────────────┘
+//                            │     │     │     │   │     │     │     │
+//                            └─────┴─────┴─────┘   └─────┴─────┴─────┘
+  &trans   &trans   &trans   &trans   &trans   &trans                         &trans   &trans   &trans   &ru_z    &ru_ha           &trans
+  &trans   &trans   &trans   &trans   &trans   &trans                         &trans   &trans   &trans   &trans   &trans           &mt RS(NUMBER_8) RS(NUMBER_5)
+  &trans   &trans   &trans   &trans   &trans   &trans                         &trans   &trans   &trans   &trans   &mt QMARK APOS   &trans
+                                      &trans   &trans   &trans       &trans   &trans   &trans
             >;
 
             display-name = "Russian";
@@ -614,10 +632,19 @@
 
         game {
             bindings = <
-&kp ESC      &kp TAB    &kp Q  &kp W    &kp E      &kp R    &kp Y     &kp U     &kp I      &kp O    &kp P     &kp LBKT
-&kp B        &kp LSHFT  &kp A  &kp S    &kp D      &kp F    &kp H     &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&lt 3 ENTER  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V    &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                               &mt H T  &kp SPACE  &kp G    &kp BSPC  &kp LALT  &kp LCMD
+//    ┌──────────┬──────┬───┬───┬────────┬─────┐              ┌──────┬──────┬───┬───┬───┬───┐
+//    │   esc    │ tab  │ Q │ W │   E    │  R  │              │  Y   │  U   │ I │ O │ P │ [ │
+//    ├──────────┼──────┼───┼───┼────────┼─────┤              ├──────┼──────┼───┼───┼───┼───┤
+//    │    B     │ lsft │ A │ S │   D    │  F  │              │  H   │  J   │ K │ L │ ; │ ' │
+//    ├──────────┼──────┼───┼───┼────────┼─────┤              ├──────┼──────┼───┼───┼───┼───┤
+//    │ lt 3 ent │ lctl │ Z │ X │   C    │  V  │              │  N   │  M   │ , │ . │ / │ \ │
+//    └──────────┴──────┴───┴───┼────────┼─────┼───┐   ┌──────┼──────┼──────┼───┴───┴───┴───┘
+//                              │ mt H T │ spc │ G │   │ bspc │ lalt │ lgui │
+//                              └────────┴─────┴───┘   └──────┴──────┴──────┘
+  &kp ESC       &kp TAB     &kp Q   &kp W   &kp E     &kp R                              &kp Y      &kp U      &kp I       &kp O     &kp P      &kp LBKT
+  &kp B         &kp LSHFT   &kp A   &kp S   &kp D     &kp F                              &kp H      &kp J      &kp K       &kp L     &kp SEMI   &kp SQT
+  &lt 3 ENTER   &kp LCTRL   &kp Z   &kp X   &kp C     &kp V                              &kp N      &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp BSLH
+                                            &mt H T   &kp SPACE   &kp G       &kp BSPC   &kp LALT   &kp LCMD
             >;
 
             display-name = "Game";
@@ -625,10 +652,19 @@
 
         num {
             bindings = <
-&trans  &none            &kp N7        &kp N8       &kp N9       &mt KP_ASTERISK PLUS    &kp HOME   &kp LA(LEFT)  &kp UP        &kp LA(RIGHT)    &kp END      &none
-&trans  &mt LSHIFT SEMI  &mt LCTRL N4  &mt LALT N5  &mt LCMD N6  &mt KP_DIVIDE MINUS     &kp PG_UP  &kp LEFT      &kp DOWN      &kp RIGHT        &none        &none
-&trans  &kp KP_EQUAL     &kp N1        &kp N2       &kp N3       &kp N0                  &kp PG_DN  &kp LG(LBKT)  &kp LG(RBKT)  &kp RS(RC(TAB))  &kp RC(TAB)  &trans
-                                       &trans       &trans       &none                   &trans     &trans        &trans
+//    ┌─────┬───────────┬───────────┬───────────┬───────────┬───────────┐               ┌──────┬────────────┬─────────┬─────────────────┬───────────┬─────┐
+//    │     │           │     7     │     8     │     9     │ mt kp_* + │               │ home │ lalt(left) │   up    │   lalt(rght)    │    end    │     │
+//    ├─────┼───────────┼───────────┼───────────┼───────────┼───────────┤               ├──────┼────────────┼─────────┼─────────────────┼───────────┼─────┤
+//    │     │ mt lsft ; │ mt lctl 4 │ mt lalt 5 │ mt lgui 6 │ mt kp_/ - │               │ pgup │    left    │  down   │      rght       │           │     │
+//    ├─────┼───────────┼───────────┼───────────┼───────────┼───────────┤               ├──────┼────────────┼─────────┼─────────────────┼───────────┼─────┤
+//    │     │   kp_=    │     1     │     2     │     3     │     0     │               │ pgdn │  lgui([)   │ lgui(]) │ rsft(rctl(tab)) │ rctl(tab) │     │
+//    └─────┴───────────┴───────────┴───────────┼───────────┼───────────┼─────┐   ┌─────┼──────┼────────────┼─────────┴─────────────────┴───────────┴─────┘
+//                                              │           │           │     │   │     │      │            │
+//                                              └───────────┴───────────┴─────┘   └─────┴──────┴────────────┘
+  &trans   &none             &kp N7         &kp N8        &kp N9        &mt KP_ASTERISK PLUS                        &kp HOME    &kp LA(LEFT)   &kp UP         &kp LA(RIGHT)     &kp END       &none
+  &trans   &mt LSHIFT SEMI   &mt LCTRL N4   &mt LALT N5   &mt LCMD N6   &mt KP_DIVIDE MINUS                         &kp PG_UP   &kp LEFT       &kp DOWN       &kp RIGHT         &none         &none
+  &trans   &kp KP_EQUAL      &kp N1         &kp N2        &kp N3        &kp N0                                      &kp PG_DN   &kp LG(LBKT)   &kp LG(RBKT)   &kp RS(RC(TAB))   &kp RC(TAB)   &trans
+                                                          &trans        &trans                 &none       &trans   &trans      &trans
             >;
 
             display-name = "Num / Nav";
@@ -636,10 +672,19 @@
 
         symb {
             bindings = <
-&kp F1           &kp F2                 &kp F3             &kp F4                 &kp F5                 &kp F6           &kp EXCL       &kp AT    &kp POUND  &kp DLLR  &kp PERCENT  &trans
-&kp F7           &kp F8                 &kp F9             &kp F10                &kp F11                &kp F12          &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR     &trans
-&mt QMARK SLASH  &macro_pair LPAR RPAR  &macro_pair LT GT  &macro_pair LBKT RBKT  &macro_pair LBRC RBRC  &mt PIPE BSLH    &mt BSLH PIPE  &kp LBRC  &kp RBRC   &kp LBKT  &kp RBKT     &kp QMARK
-                                                           &trans                 &trans                 &trans           &trans         &trans    &trans
+//    ┌────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┐               ┌────────┬─────┬───┬───┬───┬─────┐
+//    │   f1   │       f2        │       f3        │       f4        │       f5        │   f6   │               │   !    │  @  │ # │ $ │ % │     │
+//    ├────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┤               ├────────┼─────┼───┼───┼───┼─────┤
+//    │   f7   │       f8        │       f9        │       f10       │       f11       │  f12   │               │   ^    │  &  │ * │ ( │ ) │     │
+//    ├────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┤               ├────────┼─────┼───┼───┼───┼─────┤
+//    │ mt ? / │ &macro_pair ( ) │ &macro_pair < > │ &macro_pair [ ] │ &macro_pair { } │ mt | \ │               │ mt \ | │  {  │ } │ [ │ ] │  ?  │
+//    └────────┴─────────────────┴─────────────────┴─────────────────┼─────────────────┼────────┼─────┐   ┌─────┼────────┼─────┼───┴───┴───┴─────┘
+//                                                                   │                 │        │     │   │     │        │     │
+//                                                                   └─────────────────┴────────┴─────┘   └─────┴────────┴─────┘
+  &kp F1            &kp F2                  &kp F3              &kp F4                  &kp F5                  &kp F6                                &kp EXCL        &kp AT     &kp POUND   &kp DLLR   &kp PERCENT   &trans
+  &kp F7            &kp F8                  &kp F9              &kp F10                 &kp F11                 &kp F12                               &kp CARET       &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR      &trans
+  &mt QMARK SLASH   &macro_pair LPAR RPAR   &macro_pair LT GT   &macro_pair LBKT RBKT   &macro_pair LBRC RBRC   &mt PIPE BSLH                         &mt BSLH PIPE   &kp LBRC   &kp RBRC    &kp LBKT   &kp RBKT      &kp QMARK
+                                                                                        &trans                  &trans          &trans       &trans   &trans          &trans
             >;
 
             display-name = "FN / Sym";
@@ -647,10 +692,19 @@
 
         media {
             bindings = <
-&none  &kp LS(LG(N1))  &kp LS(LG(N2))  &kp LG(LS(N3))  &kp LS(LG(N4))  &kp LS(LG(N5))    &none  &none  &none    &playnp  &kp C_VOL_DN  &kp C_VOL_UP
-&none  &kp LC(LEFT)    &kp LC(RIGHT)   &none           &none           &none             &none  &none  &none    &none    &none         &none
-&none  &kp LG(Z)       &kp LG(LS(Z))   &none           &none           &none             &none  &none  &none    &none    &none         &none
-                                       &kp DEL         &none           &none             &none  &none  &kp DEL
+//    ┌─────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐               ┌─────┬─────┬─────┬─────────┬──────┬──────┐
+//    │     │ lsft(lgui(1)) │ lsft(lgui(2)) │ lgui(lsft(3)) │ lsft(lgui(4)) │ lsft(lgui(5)) │               │     │     │     │ &playnp │ vold │ volu │
+//    ├─────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤               ├─────┼─────┼─────┼─────────┼──────┼──────┤
+//    │     │  lctl(left)   │  lctl(rght)   │               │               │               │               │     │     │     │         │      │      │
+//    ├─────┼───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤               ├─────┼─────┼─────┼─────────┼──────┼──────┤
+//    │     │    lgui(Z)    │ lgui(lsft(Z)) │               │               │               │               │     │     │     │         │      │      │
+//    └─────┴───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼─────┐   ┌─────┼─────┼─────┼─────┴─────────┴──────┴──────┘
+//                                                          │      del      │               │     │   │     │     │ del │
+//                                                          └───────────────┴───────────────┴─────┘   └─────┴─────┴─────┘
+  &none   &kp LS(LG(N1))   &kp LS(LG(N2))   &kp LG(LS(N3))   &kp LS(LG(N4))   &kp LS(LG(N5))                       &none   &none     &none   &playnp   &kp C_VOL_DN   &kp C_VOL_UP
+  &none   &kp LC(LEFT)     &kp LC(RIGHT)    &none            &none            &none                                &none   &none     &none   &none     &none          &none
+  &none   &kp LG(Z)        &kp LG(LS(Z))    &none            &none            &none                                &none   &none     &none   &none     &none          &none
+                                                             &kp DEL          &none            &none       &none   &none   &kp DEL
             >;
 
             display-name = "Shortcuts";
@@ -658,10 +712,19 @@
 
         sticky {
             bindings = <
-&none             &none       &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(R)  &kp LG(T)    &none  &none     &none     &none      &none       &none
-&sk LC(LA(LCMD))  &sk LSHIFT  &sk LCTRL     &sk LALT       &sk LCMD   &kp LG(G)    &none  &sk RCMD  &sk RALT  &sk RCTRL  &sk RSHIFT  &sk LC(LA(LCMD))
-&none             &none       &none         &none          &kp LBRC   &kp RBRC     &none  &none     &none     &none      &none       &none
-                                            &kp LBKT       &kp RBKT   &none        &none  &ru_on    &ru_off
+//    ┌──────────────────────┬──────────┬────────────┬────────────┬──────────┬─────────┐               ┌────────┬──────────┬──────────┬──────────┬──────────┬──────────────────────┐
+//    │                      │          │ lgui(left) │ lgui(rght) │ lgui(R)  │ lgui(T) │               │        │          │          │          │          │                      │
+//    ├──────────────────────┼──────────┼────────────┼────────────┼──────────┼─────────┤               ├────────┼──────────┼──────────┼──────────┼──────────┼──────────────────────┤
+//    │ &sk lctl(lalt(lgui)) │ &sk lsft │  &sk lctl  │  &sk lalt  │ &sk lgui │ lgui(G) │               │        │ &sk rgui │ &sk ralt │ &sk rctl │ &sk rsft │ &sk lctl(lalt(lgui)) │
+//    ├──────────────────────┼──────────┼────────────┼────────────┼──────────┼─────────┤               ├────────┼──────────┼──────────┼──────────┼──────────┼──────────────────────┤
+//    │                      │          │            │            │    {     │    }    │               │        │          │          │          │          │                      │
+//    └──────────────────────┴──────────┴────────────┴────────────┼──────────┼─────────┼─────┐   ┌─────┼────────┼──────────┼──────────┴──────────┴──────────┴──────────────────────┘
+//                                                                │    [     │    ]    │     │   │     │ &ru_on │ &ru_off  │
+//                                                                └──────────┴─────────┴─────┘   └─────┴────────┴──────────┘
+  &none              &none        &kp LG(LEFT)   &kp LG(RIGHT)   &kp LG(R)   &kp LG(T)                       &none    &none      &none      &none       &none        &none
+  &sk LC(LA(LCMD))   &sk LSHIFT   &sk LCTRL      &sk LALT        &sk LCMD    &kp LG(G)                       &none    &sk RCMD   &sk RALT   &sk RCTRL   &sk RSHIFT   &sk LC(LA(LCMD))
+  &none              &none        &none          &none           &kp LBRC    &kp RBRC                        &none    &none      &none      &none       &none        &none
+                                                                 &kp LBKT    &kp RBKT    &none       &none   &ru_on   &ru_off
             >;
 
             display-name = "Sticky mods";
@@ -669,10 +732,19 @@
 
         system {
             bindings = <
-&none      &none  &none  &none      &none        &none    &bt BT_PRV     &bt BT_NXT     &none          &none           &none  &none
-&none      &none  &none  &none      &none        &none    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none           &none  &ext_power EP_OFF
-&soft_off  &none  &none  &none      &none        &none    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_CLR_ALL  &none  &studio_unlock
-                         &upd_fw_l  &bootloader  &none    &none          &bootloader    &upd_fw_r
+//    ┌───────────┬─────┬─────┬─────┬───────────┬──────┐               ┌──────────────┬──────────────┬──────────────┬────────────┬─────┬────────────────┐
+//    │           │     │     │     │           │      │               │    bt_prv    │    bt_nxt    │              │            │     │                │
+//    ├───────────┼─────┼─────┼─────┼───────────┼──────┤               ├──────────────┼──────────────┼──────────────┼────────────┼─────┼────────────────┤
+//    │           │     │     │     │           │      │               │   bt_sel 0   │   bt_sel 1   │   bt_sel 2   │            │     │    epwr_ on    │
+//    ├───────────┼─────┼─────┼─────┼───────────┼──────┤               ├──────────────┼──────────────┼──────────────┼────────────┼─────┼────────────────┤
+//    │ &soft_off │     │     │     │           │      │               │ bt_BT_DISC 0 │ bt_BT_DISC 1 │ bt_BT_DISC 2 │ bt_clr_ALL │     │ &studio_unlock │
+//    └───────────┴─────┴─────┴─────┼───────────┼──────┼─────┐   ┌─────┼──────────────┼──────────────┼──────────────┴────────────┴─────┴────────────────┘
+//                                  │ &upd_fw_l │ boot │     │   │     │     boot     │  &upd_fw_r   │
+//                                  └───────────┴──────┴─────┘   └─────┴──────────────┴──────────────┘
+  &none       &none   &none   &none   &none       &none                             &bt BT_PRV      &bt BT_NXT      &none           &none            &none   &none
+  &none       &none   &none   &none   &none       &none                             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none            &none   &ext_power EP_OFF
+  &soft_off   &none   &none   &none   &none       &none                             &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_CLR_ALL   &none   &studio_unlock
+                                      &upd_fw_l   &bootloader   &none       &none   &bootloader     &upd_fw_r
             >;
 
             display-name = "System";
