@@ -77,12 +77,12 @@
     &mouse_ps2 {
 
       // How sensitive the TP is (Default: 128)
-      // tp-sensitivity = <128>;
+      tp-sensitivity = <128>;
 
 
       // The maximum mouse movement speed the TP will accelarate to
       // (Default: 97)
-      // tp-val6-upper-speed = <97>;
+      tp-val6-upper-speed = <97>;
 
 
       // Negative Inertia (Default: 6)
@@ -119,6 +119,7 @@
       //
       // These values are allowed: 10,20,40,60,80,100,200
       // sampling-rate = <60>;
+      // sampling-rate = <200>;
 
 
       // Disables clicking.
@@ -142,6 +143,10 @@
     // block, which prevents compilation and potential build errors when we
     // undefine HAS_MOUSE_TP in corne_tp.keymap
     &mouse_ps2  {
+      status = "okay";
+    };
+
+    &trackpoint_listener {
       status = "okay";
     };
 
