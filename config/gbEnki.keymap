@@ -6,9 +6,10 @@
 
 // #include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DFLT   0
 #define RU     1
@@ -18,11 +19,11 @@
 #define MEDIA  5
 #define STCKY  6
 #define SYS    7
-#define MOUSE 8
+#define MOUSE_KEYS 8
 #define MOUSE_TP 9
 #define MOUSE_TP_SET 10
 
-// #define HAS_MOUSE_KEYS
+#define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
 // #define ADAPTIVE_KEYS
 // #define LEADER_KEY
@@ -44,9 +45,9 @@
 // This prevents build errors when we build the firmware
 // without the mouse keys PR or the TP module.
 #ifdef HAS_MOUSE_KEYS
-  #define U_MOUSE_KEYS &mo MOUSE
+  #define U_TOG_M_KEYS &tog MOUSE_KEYS
 #else
-  #define U_MOUSE_KEYS &none
+  #define U_TOG_M_KEYS &none
 #endif  // HAS_MOUSE_KEYS
 
 #ifdef HAS_MOUSE_TP
@@ -770,7 +771,7 @@
             display-name = "System";
             bindings = <
 //    ┌───────────┬─────┬─────┬─────┬───────────┬──────┐               ┌──────────────┬──────────────┬──────────────┬────────────┬─────┬────────────────┐
-//    │           │     │     │     │           │TP_SET│               │    bt_prv    │    bt_nxt    │              │            │     │                │
+//    │           │     │     │     │  M_KEYS   │TP_SET│               │    bt_prv    │    bt_nxt    │              │            │     │                │
 //    ├───────────┼─────┼─────┼─────┼───────────┼──────┤               ├──────────────┼──────────────┼──────────────┼────────────┼─────┼────────────────┤
 //    │           │     │     │     │           │      │               │   bt_sel 0   │   bt_sel 1   │   bt_sel 2   │            │     │    epwr_ on    │
 //    ├───────────┼─────┼─────┼─────┼───────────┼──────┤               ├──────────────┼──────────────┼──────────────┼────────────┼─────┼────────────────┤
@@ -778,10 +779,10 @@
 //    └───────────┴─────┴─────┴─────┼───────────┼──────┼─────┐   ┌─────┼──────────────┼──────────────┼──────────────┴────────────┴─────┴────────────────┘
 //                                  │ &upd_fw_l │ boot │     │   │     │     boot     │  &upd_fw_r   │
 //                                  └───────────┴──────┴─────┘   └─────┴──────────────┴──────────────┘
-  &none       &none   &none   &none   &none       U_TOG_TP_SET                      &bt BT_PRV      &bt BT_NXT      &none           &none            &none   &none
-  &none       &none   &none   &none   &none       &none                             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none            &none   &ext_power EP_OFF
-  &soft_off   &none   &none   &none   &none       &none                             &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_CLR_ALL   &none   &studio_unlock
-                                      &upd_fw_l   &bootloader   &none       &none   &bootloader     &upd_fw_r
+  &none       &none   &none   &none   U_TOG_M_KEYS  U_TOG_TP_SET                     &bt BT_PRV      &bt BT_NXT      &none           &none            &none   &none
+  &none       &none   &none   &none   &none        &none                             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &none            &none   &ext_power EP_OFF
+  &soft_off   &none   &none   &none   &none        &none                             &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_CLR_ALL   &none   &studio_unlock
+                                      &upd_fw_l    &bootloader   &none       &none   &bootloader     &upd_fw_r
             >;
         };
 
@@ -791,7 +792,7 @@
               display-name = "MouseKeys";
               bindings = <
         // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-             U_TOG_TP_SET             U_TOG_TP_SET             &none                    &mmv MOVE_UP             &msc SCRL_UP             &none                         &none                    &msc SCRL_UP             &mmv MOVE_UP             &none                    U_TOG_TP_SET              U_TOG_TP_SET
+             &trans                   U_TOG_TP_SET             &none                    &mmv MOVE_UP             &msc SCRL_UP             &none                         &none                    &msc SCRL_UP             &mmv MOVE_UP             &none                    U_TOG_TP_SET              U_TOG_TP_SET
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
              &trans                   &none                    &mmv MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_RIGHT          &none                         &none                    &mmv MOVE_LEFT           &mmv MOVE_DOWN           &mmv MOVE_RIGHT          &none                     &trans
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
@@ -812,7 +813,7 @@
               display-name = "TP";
               bindings = <
         // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-             U_TOG_TP_SET             U_TOG_TP_SET             &trans                   &trans                   &msc SCRL_UP             &trans                        &trans                   &trans                   &trans                   &trans                   U_TOG_TP_SET              U_TOG_TP_SET
+             &trans                   U_TOG_TP_SET             &trans                   &trans                   &msc SCRL_UP             &trans                        &trans                   &trans                   &trans                   &trans                   U_TOG_TP_SET              U_TOG_TP_SET
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
              &trans                   &trans                   &trans                   &trans                   &trans                   &trans                        &trans                   &trans                   &trans                   &trans                   &trans                    &trans
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
@@ -828,7 +829,7 @@
               display-name = "TP Set";
               bindings = <
         // ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮    ╭────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────┬────────────────────────╮
-             U_TOG_TP_SET             U_TOG_TP_SET             &none                    U_MSS_TP_S_D             U_MSS_TP_S_I             U_MSS_TP_PT_I                 U_MSS_TP_PT_I            U_MSS_TP_S_D             U_MSS_TP_S_I             &none                    U_TOG_TP_SET              U_TOG_TP_SET
+             &trans                   U_TOG_TP_SET             &none                    U_MSS_TP_S_D             U_MSS_TP_S_I             U_MSS_TP_PT_I                 U_MSS_TP_PT_I            U_MSS_TP_S_D             U_MSS_TP_S_I             &none                    U_TOG_TP_SET              U_TOG_TP_SET
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤
              U_MSS_RESET              U_MSS_RESET              &none                    U_MSS_TP_NI_D            U_MSS_TP_NI_I            U_MSS_TP_PT_D                 U_MSS_TP_PT_D            U_MSS_TP_NI_D            U_MSS_TP_NI_I            &none                    U_MSS_RESET               U_MSS_RESET
         // ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤    ├────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┼────────────────────────┤

@@ -2,13 +2,14 @@ file_format: "1"
 id: gbEnki
 name: gbEnki
 type: shield
-url: https://github.com/foostan/crkbd/
-requires: [pro_micro]
+url: https://github.com/aroun/fenki/
+requires: [nice_nano_v2]
 # exposes: [i2c_oled]
 features:
   - keys
-  # - display
-  # - underglow
 siblings:
   - gbEnki_left
   - gbEnki_right
+outputs:
+  - usb
+  - ble
