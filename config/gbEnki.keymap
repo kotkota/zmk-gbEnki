@@ -394,13 +394,13 @@
         ru_on: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_on 1 &kp LS(LA(LC(LG(N))))>;
+            bindings = <&tog 1 &kp LS(LA(LC(LG(N))))>;
         };
 
         ru_off: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_off 1 &kp LS(LA(LC(LG(M))))>;
+            bindings = <&tog 1 &kp LS(LA(LC(LG(M))))>;
         };
 
         tag_open: html_tag_open {
