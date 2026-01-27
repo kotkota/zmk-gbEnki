@@ -24,6 +24,8 @@
 
 // #define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
+// #define ADAPTIVE_KEYS
+// #define LEADER_KEY
 
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
@@ -326,11 +328,13 @@
             layers = <1 0>;
         };
 
+        #ifdef ADAPTIVE_KEYS
         leader-key {
             bindings = <&ak_leader>;
             key-positions = <25 26>;
             layers = <1 0>;
         };
+        #endif
     };
 
     macros {
@@ -449,6 +453,7 @@
     behaviors {
         /omit-if-no-ref/
 
+        #ifdef LEADER_KEY
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
@@ -513,7 +518,9 @@
                 bindings = <&st>;
             };
         };
+        #endif
 
+        #ifdef ADAPTIVE_KEYS
         ak_leader: ak_leader {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -525,6 +532,7 @@
                 bindings = <&kp H &kp U &kp S &kp H &kp A &kp K &kp O &kp V &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             };
         };
+        #endif
 
         playnp: play_next_previous_media {
             compatible = "zmk,behavior-tap-dance";
