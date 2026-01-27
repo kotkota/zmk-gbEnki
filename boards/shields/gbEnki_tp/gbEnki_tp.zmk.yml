@@ -1,15 +1,11 @@
 file_format: "1"
-id: gbEnki
-name: gbEnki
+id: gbEnki_tp
+name: gbEnki TP
 type: shield
 url: https://github.com/aroun/fenki/
 requires: [nice_nano_v2]
-# exposes: [i2c_oled]
 features:
   - keys
 siblings:
-  - gbEnki_left
-  - gbEnki_right
-outputs:
-  - usb
-  - ble
+  - gbEnki_tp_left
+  - gbEnki_tp_right

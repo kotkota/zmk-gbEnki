@@ -8,11 +8,10 @@
 # So, you need to define that the central side is the one to which the
 # pointing device is connected to.
 
-if SHIELD_GBENKI_RIGHT
-config NANOPB
-    default n
+if SHIELD_GBENKI_TP_RIGHT
+
 config ZMK_KEYBOARD_NAME
-    default "gbEnki"
+    default "gbEnki TP"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -20,7 +19,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 endif
 
 # Options that should be enabled on both sides
-if SHIELD_GBENKI_LEFT || SHIELD_GBENKI_RIGHT
+if SHIELD_GBENKI_TP_LEFT || SHIELD_GBENKI_TP_RIGHT
 
 config ZMK_SPLIT
     default y

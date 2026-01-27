@@ -16,7 +16,6 @@
     interrupts = < 6 0 >;
 };
 
-
 &clock {
     interrupts = < 0 3 >;
 };
@@ -194,6 +193,9 @@
 
 
 &pinctrl {
+	// This pinctrl state is used for receiving
+	// For `UART_TX`, set an unused and unexposed pin
+	// For `UART_RX`, set the PS/2 SDA pin number
 	uart0_ps2_default: uart0_ps2_default {
 		group1 {
 			psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
@@ -201,6 +203,7 @@
 		};
 	};
 
+	// Set this to the same pins as uart0_ps2_default
 	uart0_ps2_sleep: uart0_ps2_sleep {
 		group1 {
 			psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
@@ -209,6 +212,14 @@
 		};
 	};
 
+	// The nrf52 UART controller is not compatible with the PS/2
+	// transmission frame. So the PS/2 UART driver doesn't use UART for
+	// transmissions and instead use GPIO bit-banging.
+	//
+	// When the driver switches to transmit mode, it frees up the SDA pin by
+    // switching the UART controller to unexposed/unused pins.
+	//
+	// Then it configures the GPIO controller to use the SCL and SDA pins
 	uart0_ps2_off: uart0_ps2_off {
 		group1 {
 			psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
@@ -219,6 +230,7 @@
 
 
 #ifdef MOUSE_PS2_DRIVER_UART
+
     &uart0 {
         status = "disabled";
         compatible = "nordic,nrf-uarte";
@@ -236,7 +248,9 @@
             sda-gpios = MOUSE_PS2_PIN_SDA_PRO_MICRO;
         };
     };
+
 #else
+
     / {
         gpio_ps2: gpio_ps2 {
             status = "disabled";
@@ -246,59 +260,34 @@
             sda-gpios = MOUSE_PS2_PIN_SDA_PRO_MICRO;
         };
     };
+
 #endif
 
 
 / {
     mouse_ps2: mouse_ps2 {
-
+		status = "disabled";
         compatible = "zmk,input-mouse-ps2";
 
-        #ifdef MOUSE_PS2_DRIVER_UART
-	        ps2-device = <&uart_ps2>;
-        #else
-	        ps2-device = <&gpio_ps2>;
-        #endif
+#ifdef MOUSE_PS2_DRIVER_UART
+	    ps2-device = <&uart_ps2>;
+#else
+	    ps2-device = <&gpio_ps2>;
+#endif
 
-        #ifdef MOUSE_PS2_PIN_RST_PRO_MICRO
-            rst-gpios = MOUSE_PS2_PIN_RST_PRO_MICRO;
-        #endif
+#ifdef MOUSE_PS2_PIN_RST_PRO_MICRO
+        rst-gpios = MOUSE_PS2_PIN_RST_PRO_MICRO;
+#endif
     };
 
-    //mouse_ps2_input_listener: mouse_ps2_input_listener {
-    //    compatible = "zmk,input-listener-ps2";
-    //    status = "disabled";
-    //
-    //    device = <&mouse_ps2>;
-    //
-	//	// Some of the available settings depend on the keymap. So they
-	//	// are adjusted in...
-	//	// zmk-config/config/includes/mouse_tp.dtsi
-    //};
-};
+    mouse_ps2_input_listener: mouse_ps2_input_listener {
+        compatible = "zmk,input-listener-ps2";
+        status = "disabled";
 
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-/{
-    trackpoint_listener: trackpoint_listener {
-        compatible = "zmk,input-listener";
         device = <&mouse_ps2>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_scaler 0 1>;
-        scroller {
-            layers = <3>;
-            //process-next;
-            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 8>,<&zip_xy_to_scroll_mapper>;
-        };
-        mouse {
-            layers = <9>;
-            input-processors =
-                <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>
-                //, <&zip_temp_layer 9 500>
-                ;
-        };
 
+		// Some of the available settings depend on the keymap. So they
+		// are adjusted in...
+		// zmk-config/config/includes/mouse_tp.dtsi
     };
-
-
 };
