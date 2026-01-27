@@ -10,10 +10,19 @@
 / {
     chosen {
         // zephyr,display = &oled;
-        zmk,physical-layout = &default_layout;
         zmk,kscan = &kscan0;
         // zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &default_layout;
         // zmk,backlight = &backlight;
+    };
+
+    keypad_position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        physical_layout0 {
+            physical-layout = <&default_layout>;
+            positions = <>;
+        };
     };
 
     default_transform: keymap_transform_0 {

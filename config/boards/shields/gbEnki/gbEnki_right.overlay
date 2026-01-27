@@ -5,6 +5,7 @@
  */
 
 #include "gbEnki.dtsi"
+#include "trackpoint.dtsi"
 
 &default_transform {
     col-offset = <6>;
