@@ -1,4 +1,4 @@
-layout: {zmk_keyboard: gbEnki, layout_name: default_layout}
+layout: {zmk_keyboard: gbEnki}
 layers:
   Default:
   - {t: '$$mdi:keyboard-esc$$', h: System}
@@ -337,7 +337,7 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', h: '2'}
   - BT CLR ALL
   - ''
-  - $$mdi:lock-open-variant-outline$$
+  - ''
   - $$mdi:reload-alert$$
   - $$mdi:console$$
   - ''
