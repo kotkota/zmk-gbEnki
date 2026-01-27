@@ -68,7 +68,10 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    chosen { zmk,physical-layout = &default_layout; };
+    chosen {
+      zmk,physical-layout = &default_layout;
+      zephyr,console = &cdc_acm_uart;
+    };
 
     combos {
         compatible = "zmk,combos";
