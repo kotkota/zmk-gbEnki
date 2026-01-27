@@ -6,11 +6,11 @@
 #
 ---
 include:
-  - board: nice_nano@2.0.0
+  - board: nice_nano
     shield: gbEnki_left
 
-  - board: nice_nano@2.0.0
+  - board: nice_nano
     shield: gbEnki_right
 
-  - board: nice_nano@2.0.0
+  - board: nice_nano
     shield: settings_reset
