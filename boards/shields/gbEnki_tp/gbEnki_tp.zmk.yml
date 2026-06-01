@@ -2,7 +2,7 @@ file_format: "1"
 id: gbEnki_tp
 name: gbEnki TP
 type: shield
-url: https://github.com/aroun/fenki/
+url: https://github.com/aroum/fenki/
 requires: [nice_nano_v2]
 features:
   - keys
